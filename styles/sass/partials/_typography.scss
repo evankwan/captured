@@ -3,5 +3,12 @@ html {
 }
 
 h1 {
-	@include fontSet($playfairStack, 13.8rem, bold, italic, center, 0, 1.2);
+	&.header__title--home {
+		@include fontSet($playfairStack, 13.8rem, bold, italic, center, 0, 1.2);
+	}
+	
+	&.header__title--secondary {
+		@include fontSet($playfairStack, 8rem, bold, italic, center, 0, 92px);
+		text-transform: uppercase;
+	}
 }
