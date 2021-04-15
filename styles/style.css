@@ -374,11 +374,11 @@ p {
   background-image: url(../../assets/header-image.jpg);
   background-position: center top;
   background-size: cover;
-  height: 75vh;
+  height: 85vh;
   width: 100%;
 }
 
-.headerWrapper {
+.headerHome .headerWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,7 +396,7 @@ p {
   position: relative;
 }
 
-.topNav {
+.headerHome .headerWrapper .topNav {
   margin: 10px 0;
   padding: 20px 0;
   position: absolute;
@@ -404,7 +404,7 @@ p {
   top: 0;
 }
 
-.topNav .topNavList {
+.headerHome .headerWrapper .topNav .topNavList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,18 +419,15 @@ p {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-}
-
-.topNav .topNavList .topNavListItem {
   list-style: none;
 }
 
-.topNav .topNavList .topNavListItem a {
+.headerHome .headerWrapper .topNav .topNavList a {
   color: #2c2c2c;
   margin: 0 18px;
   padding: 10px 2px;
 }
 
-.topNav .topNavList .topNavListItem a.active {
+.headerHome .headerWrapper .topNav .topNavList a.active {
   border-bottom: 3px solid #4ceea7;
 }
