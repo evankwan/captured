@@ -1,6 +1,15 @@
 // utility classes
 .wrapper {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1300px;
     margin: 0 auto;
+}
+
+.imageContainer {
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
 }

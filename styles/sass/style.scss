@@ -6,9 +6,10 @@
 
 .headerHome {
     background-image: url(../../assets/header-image.jpg);
-    background-position: center top;
+    background-position: center center;
     background-size: cover;
-    height: 85vh;
+    position: relative;
+    height: 80vh;
     width: 100%;
 
     .headerWrapper {
@@ -17,11 +18,12 @@
         position: relative;
 
         .topNav {
-            margin: 10px 0;
+            margin: 15px 0;
             padding: 20px 0;
             position: absolute;
             right: 0;
             top: 0;
+            z-index: 10;
 
             .topNavList {
                 @include setFlex(row, space-between, center);
@@ -30,14 +32,37 @@
                 
                 & a {
                     color: $black;
-                    margin: 0 18px;
-                    padding: 10px 2px;
+                    margin: 0 25px;
+                    padding: 10px 4px;
 
                     &.active {
                         border-bottom: 3px solid $seaGreen;
                     }
                 }
+
+                & li:last-child a {
+                    margin-right: 0;
+                }
             }
+        }
+
+        .homeTitle {
+            margin-bottom: 50px;
+            z-index: 10;
+        }
+    }
+
+    .headerImageContainer {
+        border: 60px solid $canary;
+        border-right: none;
+        bottom: -30%;
+        height: 760px;
+        position: absolute;
+        right: 0;
+        width: 760px;
+
+        img {
+            box-shadow: 0 0 20px $canary;
         }
     }
 }
