@@ -3,12 +3,45 @@ html {
 }
 
 h1 {
-	&.header__title--home {
+	&.homeTitle {
 		@include fontSet($playfairStack, 13.8rem, bold, italic, center, 0, 1.2);
 	}
 	
-	&.header__title--secondary {
+	&.secondaryTitle {
 		@include fontSet($playfairStack, 8rem, bold, italic, center, 0, 92px);
 		text-transform: uppercase;
 	}
+}
+
+h2 {
+	.aboutTitle {
+		@include fontSet($playfairStack, 4.2rem, bold italic, center, 1px, 1.2);
+	}
+
+	.blogTitle {
+		@include fontSet($playfairStack, 4.2rem, bold italic, left, 1px, 1.2);
+	}
+}
+
+h3 {
+	.sectionHeading {
+		@include fontSet($playfairStack, 3.2rem, bold, italic, center, 1px, 1.2);
+	}
+
+	.emailHeading {
+		@include fontSet($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2);
+	}
+}
+
+.topNav a {
+	@include fontSet($playfairStack, 2.0rem, bold, italic, center, 1px, 29px);
+}
+
+.button {
+	@include fontSet($playfairStack, 2.0rem, bold, italic, center, 1px, 32px);
+}
+
+p {
+	@include fontSet($robotoStack, 2.0rem, default, default, default, 1px, 32px);
+
 }
