@@ -3,3 +3,44 @@
 @import "partials/mixins";
 @import "partials/utils";
 @import "partials/typography";
+
+.headerHome {
+    background-image: url(../../assets/header-image.jpg);
+    background-position: center top;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+}
+.headerWrapper {
+    @include setFlex(column, flex-end, center);
+    height: 100%;
+    position: relative;
+}
+
+.topNav {
+    margin: 10px 0;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .topNavList {
+        @include setFlex(row, space-between, center);
+        margin: 0;
+
+        .topNavListItem {
+            list-style: none;
+
+            & a {
+                color: $black;
+                margin: 0 18px;
+                padding: 10px 2px;
+
+                &.active {
+                    border-bottom: 3px solid $seaGreen;
+                }
+            }
+        }
+    }
+    
+}

@@ -3,45 +3,60 @@ html {
 }
 
 h1 {
+	@include resetMarginAndPadding();
+
 	&.homeTitle {
-		@include fontSet($playfairStack, 13.8rem, bold, italic, center, 0, 1.2);
+		@include setFont($playfairStack, 13.8rem, bold, italic, center, 0, 1.2, uppercase);
 	}
 	
 	&.secondaryTitle {
-		@include fontSet($playfairStack, 8rem, bold, italic, center, 0, 92px);
-		text-transform: uppercase;
+		@include setFont($playfairStack, 8rem, bold, italic, center, 0, 92px, uppercase);
 	}
 }
 
 h2 {
+	@include resetMarginAndPadding();
+
 	.aboutTitle {
-		@include fontSet($playfairStack, 4.2rem, bold italic, center, 1px, 1.2);
+		@include setFont($playfairStack, 4.2rem, bold italic, center, 1px, 1.2, uppercase);
 	}
 
 	.blogTitle {
-		@include fontSet($playfairStack, 4.2rem, bold italic, left, 1px, 1.2);
+		@include setFont($playfairStack, 4.2rem, bold italic, left, 1px, 1.2, uppercase);
 	}
 }
 
 h3 {
+	@include resetMarginAndPadding();
+
 	.sectionHeading {
-		@include fontSet($playfairStack, 3.2rem, bold, italic, center, 1px, 1.2);
+		@include setFont($playfairStack, 3.2rem, bold, italic, center, 1px, 1.2, uppercase);
 	}
 
 	.emailHeading {
-		@include fontSet($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2);
+		@include setFont($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2, uppercase);
 	}
 }
 
 .topNav a {
-	@include fontSet($playfairStack, 2.0rem, bold, italic, center, 1px, 29px);
+	@include resetMarginAndPadding();
+
+	@include setFont($playfairStack, 2.0rem, bold, italic, center, 1px, 29px, uppercase);
 }
 
 .button {
-	@include fontSet($playfairStack, 2.0rem, bold, italic, center, 1px, 32px);
+	@include resetMarginAndPadding();
+
+	@include setFont($playfairStack, 2.0rem, bold, italic, center, 1px, 32px, uppercase);
 }
 
 p {
-	@include fontSet($robotoStack, 2.0rem, default, default, default, 1px, 32px);
+	@include resetMarginAndPadding();
+	
+	@include setFont($robotoStack, 2.0rem, default, default, default, 1px, 32px, none);
+}
 
+.topNav a,
+.button {
+	text-decoration: none;
 }
