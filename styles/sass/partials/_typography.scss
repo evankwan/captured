@@ -17,23 +17,23 @@ h1 {
 h2 {
 	@include resetMarginAndPadding();
 
-	.aboutTitle {
-		@include setFont($playfairStack, 4.2rem, bold italic, center, 1px, 1.2, uppercase);
+	&.aboutTitle {
+		@include setFont($playfairStack, 4.2rem, bold, italic, center, 1px, 1.2, uppercase);
 	}
 
-	.blogTitle {
-		@include setFont($playfairStack, 4.2rem, bold italic, left, 1px, 1.2, uppercase);
+	&.blogTitle {
+		@include setFont($playfairStack, 4.2rem, bold, italic, left, 1px, 1.2, uppercase);
 	}
 }
 
 h3 {
 	@include resetMarginAndPadding();
 
-	.sectionHeading {
+	&.sectionHeading {
 		@include setFont($playfairStack, 3.2rem, bold, italic, center, 1px, 1.2, uppercase);
 	}
 
-	.emailHeading {
+	&.emailHeading {
 		@include setFont($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2, uppercase);
 	}
 }
@@ -45,15 +45,13 @@ h3 {
 }
 
 .button {
-	@include resetMarginAndPadding();
-
 	@include setFont($playfairStack, 2.0rem, bold, italic, center, 1px, 32px, uppercase);
 }
 
 p {
 	@include resetMarginAndPadding();
-	
-	@include setFont($robotoStack, 2.0rem, default, default, default, 1px, 32px, none);
+
+	@include setFont($robotoStack, 2.0rem, default, default, default, 0, 32px, none);
 }
 
 .topNav a,

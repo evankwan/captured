@@ -235,10 +235,11 @@ html {
   overflow: hidden;
 }
 
-.wrapper {
-  width: 95%;
-  max-width: 1300px;
-  margin: 0 auto;
+.button {
+  background: #4ceea7;
+  color: #2c2c2c;
+  display: inline-block;
+  padding: 10px 20px;
 }
 
 .imageContainer {
@@ -247,7 +248,14 @@ html {
 
 .imageContainer img {
   display: block;
+  height: 100%;
   width: 100%;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 html {
@@ -286,26 +294,26 @@ h2 {
   padding: 0;
 }
 
-h2 .aboutTitle {
+h2.aboutTitle {
   font-family: "Playfair Display", serif;
   font-size: 4.2rem;
-  font-weight: bold italic;
-  font-style: center;
-  text-align: 1px;
-  letter-spacing: 1.2;
-  line-height: uppercase;
-  text-transform: none;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-h2 .blogTitle {
+h2.blogTitle {
   font-family: "Playfair Display", serif;
   font-size: 4.2rem;
-  font-weight: bold italic;
-  font-style: left;
-  text-align: 1px;
-  letter-spacing: 1.2;
-  line-height: uppercase;
-  text-transform: none;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -313,7 +321,7 @@ h3 {
   padding: 0;
 }
 
-h3 .sectionHeading {
+h3.sectionHeading {
   font-family: "Playfair Display", serif;
   font-size: 3.2rem;
   font-weight: bold;
@@ -324,7 +332,7 @@ h3 .sectionHeading {
   text-transform: uppercase;
 }
 
-h3 .emailHeading {
+h3.emailHeading {
   font-family: "Playfair Display", serif;
   font-size: 2.6rem;
   font-weight: bold;
@@ -349,8 +357,6 @@ h3 .emailHeading {
 }
 
 .button {
-  margin: 0;
-  padding: 0;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-weight: bold;
@@ -369,7 +375,7 @@ p {
   font-weight: default;
   font-style: default;
   text-align: default;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   line-height: 32px;
   text-transform: none;
 }
@@ -429,8 +435,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
   list-style: none;
+  margin: 0;
 }
 
 .headerHome .headerWrapper .topNav .topNavList a {
@@ -455,7 +461,7 @@ p {
 .headerHome .headerImageContainer {
   border: 60px solid #fdfa69;
   border-right: none;
-  bottom: -30%;
+  bottom: -25%;
   height: 760px;
   position: absolute;
   right: 0;
@@ -465,4 +471,40 @@ p {
 .headerHome .headerImageContainer img {
   -webkit-box-shadow: 0 0 20px #fdfa69;
           box-shadow: 0 0 20px #fdfa69;
+}
+
+.aboutSection {
+  background-color: #4ceea815;
+  height: 80vh;
+}
+
+.aboutSection .aboutSectionWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.aboutSection .aboutSectionWrapper h2,
+.aboutSection .aboutSectionWrapper p {
+  padding: 0 15px;
+  width: 85%;
+}
+
+.aboutSection .aboutSectionWrapper > * {
+  margin: 20px 0;
+}
+
+.guidesSection {
+  height: 80vh;
 }

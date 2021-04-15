@@ -14,6 +14,7 @@
 
     .headerWrapper {
         @include setFlex(column, flex-end, center);
+
         height: 100%;
         position: relative;
 
@@ -27,8 +28,9 @@
 
             .topNavList {
                 @include setFlex(row, space-between, center);
-                margin: 0;
+
                 list-style: none;
+                margin: 0;
                 
                 & a {
                     color: $black;
@@ -55,7 +57,7 @@
     .headerImageContainer {
         border: 60px solid $canary;
         border-right: none;
-        bottom: -30%;
+        bottom: -25%;
         height: 760px;
         position: absolute;
         right: 0;
@@ -65,6 +67,31 @@
             box-shadow: 0 0 20px $canary;
         }
     }
+}
+
+.aboutSection {
+    background-color: $seaGreenBackground;
+    height: 80vh;
+
+    .aboutSectionWrapper {
+        @include setFlex(column, center, center);
+
+        height: 100%;
+
+        h2,
+        p {
+            padding: 0 15px;
+            width: 85%;
+        }
+
+        & > * {
+            margin: 20px 0;
+        }
+    }
+}
+
+.guidesSection {
+    height: 80vh;
 }
 
 
