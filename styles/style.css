@@ -390,7 +390,7 @@ p {
   background-position: center center;
   background-size: cover;
   position: relative;
-  height: 80vh;
+  height: 82vh;
   width: 100%;
 }
 
@@ -460,12 +460,13 @@ p {
 
 .headerHome .headerImageContainer {
   border: 60px solid #fdfa69;
+  border-left: 50px solid #fdfa69;
   border-right: none;
-  bottom: -25%;
-  height: 760px;
+  bottom: -200px;
+  height: 780px;
   position: absolute;
   right: 0;
-  width: 760px;
+  width: 780px;
 }
 
 .headerHome .headerImageContainer img {
@@ -502,7 +503,7 @@ p {
 }
 
 .aboutSection .aboutSectionWrapper > * {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .guidesSection {

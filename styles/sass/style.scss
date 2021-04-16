@@ -9,7 +9,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
-    height: 80vh;
+    height: 82vh;
     width: 100%;
 
     .headerWrapper {
@@ -56,12 +56,13 @@
 
     .headerImageContainer {
         border: 60px solid $canary;
+        border-left: 50px solid $canary;
         border-right: none;
-        bottom: -25%;
-        height: 760px;
+        bottom: -200px;
+        height: 780px;
         position: absolute;
         right: 0;
-        width: 760px;
+        width: 780px;
 
         img {
             box-shadow: 0 0 20px $canary;
@@ -85,7 +86,7 @@
         }
 
         & > * {
-            margin: 20px 0;
+            margin: 10px 0;
         }
     }
 }
