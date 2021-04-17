@@ -59,10 +59,9 @@
         border-left: 50px solid $canary;
         border-right: none;
         bottom: -200px;
-        height: 780px;
         position: absolute;
         right: 0;
-        width: 780px;
+        width: 45%;
 
         img {
             box-shadow: 0 0 20px $canary;
@@ -72,7 +71,7 @@
 
 .aboutSection {
     background-color: $seaGreenBackground;
-    height: 80vh;
+    height: 900px;
 
     .aboutSectionWrapper {
         @include setFlex(column, center, center);
@@ -86,13 +85,27 @@
         }
 
         & > * {
-            margin: 10px 0;
+            margin: 15px 0;
         }
     }
 }
 
 .guidesSection {
-    height: 80vh;
+    height: 900px;
+    padding: 60px 0;
+
+    .guidesGridContainer {
+        @include setGrid(repeat(2, 1fr), repeat(2, 300px), 50px);
+
+        div {
+            border: 1px solid red;
+        }
+    }
+}
+
+.linksSection {
+    height: 900px;
+    background: $seaGreenBackground;
 }
 
 

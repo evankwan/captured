@@ -262,6 +262,17 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: default;
+  font-style: default;
+  text-align: default;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -463,10 +474,9 @@ p {
   border-left: 50px solid #fdfa69;
   border-right: none;
   bottom: -200px;
-  height: 780px;
   position: absolute;
   right: 0;
-  width: 780px;
+  width: 45%;
 }
 
 .headerHome .headerImageContainer img {
@@ -476,7 +486,7 @@ p {
 
 .aboutSection {
   background-color: #4ceea815;
-  height: 80vh;
+  height: 900px;
 }
 
 .aboutSection .aboutSectionWrapper {
@@ -503,9 +513,29 @@ p {
 }
 
 .aboutSection .aboutSectionWrapper > * {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .guidesSection {
-  height: 80vh;
+  height: 900px;
+  padding: 60px 0;
+}
+
+.guidesSection .guidesGridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (300px)[2];
+      grid-template-rows: repeat(2, 300px);
+  grid-gap: 50px;
+}
+
+.guidesSection .guidesGridContainer div {
+  border: 1px solid red;
+}
+
+.linksSection {
+  height: 900px;
+  background: #4ceea815;
 }

@@ -20,3 +20,10 @@
     line-height: $lineHeight;
     text-transform: $transform;
 }
+
+@mixin setGrid($columns, $rows, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-gap: $gap;
+}

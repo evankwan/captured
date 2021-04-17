@@ -2,6 +2,11 @@ html {
 	font-size: 62.5%;
 }
 
+
+body {
+	@include setFont($playfairStack, 2rem, default, default, default, 0, 32px, none);
+}
+
 h1 {
 	@include resetMarginAndPadding();
 
