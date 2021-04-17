@@ -254,7 +254,7 @@ html {
 
 .wrapper {
   width: 95%;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -337,7 +337,7 @@ h3.sectionHeading {
   font-size: 3.2rem;
   font-weight: bold;
   font-style: italic;
-  text-align: center;
+  text-align: default;
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -376,6 +376,7 @@ h3.emailHeading {
   letter-spacing: 1px;
   line-height: 32px;
   text-transform: uppercase;
+  border: none;
 }
 
 p {
@@ -479,14 +480,9 @@ p {
   width: 45%;
 }
 
-.headerHome .headerImageContainer img {
-  -webkit-box-shadow: 0 0 20px #fdfa69;
-          box-shadow: 0 0 20px #fdfa69;
-}
-
 .aboutSection {
   background-color: #4ceea815;
-  height: 900px;
+  height: 800px;
 }
 
 .aboutSection .aboutSectionWrapper {
@@ -517,8 +513,8 @@ p {
 }
 
 .guidesSection {
-  height: 900px;
-  padding: 60px 0;
+  height: 850px;
+  position: relative;
 }
 
 .guidesSection .guidesGridContainer {
@@ -526,16 +522,67 @@ p {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (300px)[2];
-      grid-template-rows: repeat(2, 300px);
-  grid-gap: 50px;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 80px;
+  height: 100%;
 }
 
-.guidesSection .guidesGridContainer div {
-  border: 1px solid red;
+.guidesSection .guidesGridContainer .guidesImageContainer1 .imageContainer,
+.guidesSection .guidesGridContainer .guidesImageContainer2 .imageContainer {
+  position: absolute;
+  width: 40%;
+}
+
+.guidesSection .guidesGridContainer .guidesImageContainer1 .imageContainer {
+  -webkit-box-shadow: 40px 40px 0 0px #fdfa69;
+          box-shadow: 40px 40px 0 0px #fdfa69;
+  left: 0%;
+  top: -40px;
+}
+
+.guidesSection .guidesGridContainer .guidesImageContainer2 .imageContainer {
+  bottom: -40px;
+  -webkit-box-shadow: -40px 40px 0 0px #fdfa69;
+          box-shadow: -40px 40px 0 0px #fdfa69;
+  right: 0%;
+}
+
+.guidesSection .guidesGridContainer .guidesTextContainer1,
+.guidesSection .guidesGridContainer .guidesTextContainer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+}
+
+.guidesSection .guidesGridContainer .guidesTextContainer1 *,
+.guidesSection .guidesGridContainer .guidesTextContainer2 * {
+  margin: 15px 0;
+}
+
+.guidesSection .guidesGridContainer .guidesTextContainer1 {
+  padding-left: 100px;
+}
+
+.guidesSection .guidesGridContainer .guidesTextContainer2 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 100px;
 }
 
 .linksSection {
-  height: 900px;
   background: #4ceea815;
+  height: 900px;
 }

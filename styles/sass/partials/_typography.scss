@@ -35,7 +35,7 @@ h3 {
 	@include resetMarginAndPadding();
 
 	&.sectionHeading {
-		@include setFont($playfairStack, 3.2rem, bold, italic, center, 1px, 1.2, uppercase);
+		@include setFont($playfairStack, 3.2rem, bold, italic, default, 1px, 1.2, uppercase);
 	}
 
 	&.emailHeading {
@@ -51,6 +51,7 @@ h3 {
 
 .button {
 	@include setFont($playfairStack, 2.0rem, bold, italic, center, 1px, 32px, uppercase);
+	border: none;
 }
 
 p {

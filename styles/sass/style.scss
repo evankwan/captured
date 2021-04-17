@@ -62,16 +62,12 @@
         position: absolute;
         right: 0;
         width: 45%;
-
-        img {
-            box-shadow: 0 0 20px $canary;
-        }
     }
 }
 
 .aboutSection {
     background-color: $seaGreenBackground;
-    height: 900px;
+    height: 800px;
 
     .aboutSectionWrapper {
         @include setFlex(column, center, center);
@@ -91,21 +87,65 @@
 }
 
 .guidesSection {
-    height: 900px;
-    padding: 60px 0;
+    height: 850px;
+    position: relative;
 
     .guidesGridContainer {
-        @include setGrid(repeat(2, 1fr), repeat(2, 300px), 50px);
+        @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 80px);
 
-        div {
-            border: 1px solid red;
+        height: 100%;
+
+        .guidesImageContainer1,
+        .guidesImageContainer2 {
+            .imageContainer {
+                position: absolute;
+                width: 40%;
+            }
+        }
+
+        .guidesImageContainer1 {
+            .imageContainer {
+                box-shadow: 40px 40px 0 0px $canary;
+                left: 0%;
+                top: -40px;
+            }
+        }
+
+        .guidesImageContainer2 {
+            .imageContainer {
+                bottom: -40px;
+                box-shadow: -40px 40px 0 0px $canary;
+                right: 0%;
+            }
+        }
+
+        .guidesTextContainer1,
+        .guidesTextContainer2 {
+            @include setFlex(column, center, flex-start);
+
+            margin: 0 auto;
+
+            * {
+                margin: 15px 0;
+            }
+        }
+
+        .guidesTextContainer1 {
+            padding-left: 100px;
+        }
+
+        .guidesTextContainer2 {
+            align-items: flex-end;
+            padding-right: 100px;
         }
     }
 }
 
 .linksSection {
-    height: 900px;
     background: $seaGreenBackground;
+    height: 900px;
 }
+
+
 
 
