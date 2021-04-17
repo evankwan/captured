@@ -242,6 +242,14 @@ html {
   padding: 10px 20px;
 }
 
+.footer {
+  background-color: #2c2c2c;
+  color: #fafafa;
+  font-weight: 300;
+  padding: 10px 0;
+  text-align: center;
+}
+
 .imageContainer {
   overflow: hidden;
 }
@@ -438,7 +446,7 @@ p {
   text-decoration: none;
 }
 
-.headerHome {
+.homeHeader {
   background-image: url(../../assets/header-image.jpg);
   background-position: center center;
   background-size: cover;
@@ -448,7 +456,7 @@ p {
   width: 100%;
 }
 
-.headerHome .headerWrapper {
+.homeHeader .homeHeaderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,16 +474,17 @@ p {
   position: relative;
 }
 
-.headerHome .headerWrapper .homeTitle {
+.homeHeader .homeHeaderContainer .homeTitle {
   margin-bottom: 50px;
   z-index: 10;
 }
 
-.headerHome .headerImageContainer {
+.homeHeader .headerImageContainer {
   border: 60px solid #fdfa69;
   border-left: 50px solid #fdfa69;
   border-right: none;
   bottom: -200px;
+  max-width: 800px;
   position: absolute;
   right: 0;
   width: 45%;
@@ -774,10 +783,41 @@ p {
   padding: 0 20px;
 }
 
-footer {
+.footer {
   background-color: #2c2c2c;
   color: #fafafa;
   font-weight: 300;
   padding: 10px 0;
   text-align: center;
+}
+
+.blogHeader {
+  background-image: url(../assets/blog-header.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 65vh;
+  max-height: 600px;
+}
+
+.blogHeader .blogHeaderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.blogMain {
+  background-color: #4ceea815;
+  position: relative;
 }

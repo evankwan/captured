@@ -1,0 +1,19 @@
+.blogHeader {
+    background-image: url(../assets/blog-header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 65vh;
+    max-height: 600px;
+
+    .blogHeaderContainer {
+        @include setFlex(column, center, center);
+
+        height: 100%;
+        position: relative;
+    }
+}
+
+.blogMain {
+    background-color: $seaGreenBackground;
+    position: relative;
+}
