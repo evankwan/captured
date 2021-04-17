@@ -817,7 +817,37 @@ p {
   position: relative;
 }
 
+.blogHeader .blogHeaderContainer .blogTitleContainer {
+  height: 130px;
+  max-width: 320px;
+  width: 25%;
+}
+
+.blogHeader .blogHeaderContainer .blogTitleContainer h1 {
+  text-align: left;
+}
+
+.blogHeader .blogPostImageContainer {
+  -webkit-box-shadow: -40px 60px 0 0 #fdfa69;
+          box-shadow: -40px 60px 0 0 #fdfa69;
+  position: absolute;
+  right: 0;
+  top: 350px;
+  width: 60%;
+}
+
 .blogMain {
   background-color: #4ceea815;
+  padding-top: 150px;
   position: relative;
+}
+
+.blogMain .blogContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 5fr;
+      grid-template-columns: 2fr 5fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 50px;
 }

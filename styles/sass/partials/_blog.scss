@@ -10,10 +10,33 @@
 
         height: 100%;
         position: relative;
+
+        .blogTitleContainer {
+            height: 130px;
+            max-width: 320px;
+            width: 25%;
+
+            h1 {
+                text-align: left;
+            }
+        }
+    }
+
+    .blogPostImageContainer {
+        box-shadow: -40px 60px 0 0 $canary;
+        position: absolute;
+        right: 0;
+        top: 350px;
+        width: 60%;
     }
 }
 
 .blogMain {
     background-color: $seaGreenBackground;
+    padding-top: 150px;
     position: relative;
+
+    .blogContainer {
+        @include setGrid(2fr 5fr, 1fr, 50px);
+    }
 }
