@@ -22,7 +22,7 @@ h1 {
 h2 {
 	@include resetMarginAndPadding();
 
-	&.aboutTitle {
+	&.sectionTitle {
 		@include setFont($playfairStack, 4.2rem, bold, italic, center, 1px, 1.2, uppercase);
 	}
 

@@ -202,6 +202,30 @@
     width: 100%;
 }
 
+.featureSection {
+    background-color: $seaGreenBackground;
+    height: 550px;
 
+    .featureContainer {
+        @include setFlex(row, space-between, center);
+
+        height: 100%;
+
+        .featureImageContainer {
+            flex-basis: calc(100% / 3);
+
+            .imageContainer {
+                box-shadow: 40px 40px 0 0 $canary;
+                width: 300px;
+            }
+        }
+
+        .featureTextContainer {
+            @include setFlex(column, space-between, flex-start);
+            flex-basis: calc((100% / 3) * 2);
+            height: 60%;
+        }
+    }
+}
 
 
