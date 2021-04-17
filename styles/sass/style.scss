@@ -143,45 +143,63 @@
 
 .linksSection {
     background: $seaGreenBackground;
-    height: 850px;
+    height: 650px;
 
     .linksGridContainer {
-        @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 0);
+        @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 20px);
 
+        height: 100%;
         margin: 0 auto;
-        padding: 100px;
+        padding: 100px 20px;
         width: 100%;
 
         .linkContainer {
             @include setFlex(row, space-between, flex-start);
 
+            margin: 50px 0 0;
             width: 100%;
 
             .linkIconContainer {
                 @include setFlex(row, center, center);
 
-                background: $seaGreen;
+                background-color: $seaGreen;
                 border-radius: 50%;
-                flex-basis: 50px;
-                height: 50px;
-                width: 50px;
+                height: 55px;
+                width: 55px;
             }
 
             .fa-camera {
-                font-size: 3rem;
+                font-size: 3.6rem;
             }
 
             .fa-users,
             .fa-file {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+
+            .fa-phone {
+                font-size: 2.4rem;
             }
 
             .linkTextContainer {
                 margin-left: 20px;
-                width: calc(100% - 70px);
+                padding-top: 10px;
+                width: calc(100% - 75px);
+
+                .sectionHeading {
+                    margin-bottom: 20px;
+                }
             }
         }
     }
+}
+
+.imageBreak {
+    background-image: url(../../assets/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
 }
 
 

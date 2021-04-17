@@ -584,7 +584,7 @@ p {
 
 .linksSection {
   background: #4ceea815;
-  height: 850px;
+  height: 650px;
 }
 
 .linksSection .linksGridContainer {
@@ -594,9 +594,10 @@ p {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  grid-gap: 0;
+  grid-gap: 20px;
+  height: 100%;
   margin: 0 auto;
-  padding: 100px;
+  padding: 100px 20px;
   width: 100%;
 }
 
@@ -614,6 +615,7 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 50px 0 0;
   width: 100%;
 }
 
@@ -631,24 +633,39 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #4ceea7;
+  background-color: #4ceea7;
   border-radius: 50%;
-  -ms-flex-preferred-size: 50px;
-      flex-basis: 50px;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
 }
 
 .linksSection .linksGridContainer .linkContainer .fa-camera {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 .linksSection .linksGridContainer .linkContainer .fa-users,
 .linksSection .linksGridContainer .linkContainer .fa-file {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+}
+
+.linksSection .linksGridContainer .linkContainer .fa-phone {
+  font-size: 2.4rem;
 }
 
 .linksSection .linksGridContainer .linkContainer .linkTextContainer {
   margin-left: 20px;
-  width: calc(100% - 70px);
+  padding-top: 10px;
+  width: calc(100% - 75px);
+}
+
+.linksSection .linksGridContainer .linkContainer .linkTextContainer .sectionHeading {
+  margin-bottom: 20px;
+}
+
+.imageBreak {
+  background-image: url(../../assets/banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
 }
