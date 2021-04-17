@@ -322,11 +322,6 @@ body {
   text-transform: none;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
 h1.homeTitle {
   font-family: "Playfair Display", serif;
   font-size: 13.8rem;
@@ -349,11 +344,6 @@ h1.secondaryTitle {
   text-transform: uppercase;
 }
 
-h2 {
-  margin: 0;
-  padding: 0;
-}
-
 h2.sectionTitle {
   font-family: "Playfair Display", serif;
   font-size: 4.2rem;
@@ -374,11 +364,6 @@ h2.blogTitle {
   line-height: 1.2;
   text-align: left;
   text-transform: uppercase;
-}
-
-h3 {
-  margin: 0;
-  padding: 0;
 }
 
 h3.sectionHeading {
@@ -404,8 +389,6 @@ h3.emailHeading {
 }
 
 .topNav a {
-  margin: 0;
-  padding: 0;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-style: italic;
@@ -429,8 +412,6 @@ h3.emailHeading {
 }
 
 p {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-style: default;
@@ -439,6 +420,15 @@ p {
   line-height: 32px;
   text-align: default;
   text-transform: none;
+}
+
+h1,
+h2,
+h3,
+p,
+.topNav a {
+  margin: 0;
+  padding: 0;
 }
 
 .topNav a,
@@ -821,6 +811,7 @@ p {
   height: 130px;
   max-width: 320px;
   width: 25%;
+  z-index: 20;
 }
 
 .blogHeader .blogHeaderContainer .blogTitleContainer h1 {
@@ -843,11 +834,57 @@ p {
 }
 
 .blogMain .blogContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 5fr;
-      grid-template-columns: 2fr 5fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-gap: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.blogMain .blogContainer .blogSideBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: default;
+      -ms-flex-align: default;
+          align-items: default;
+  background: #fafafa;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  padding: 400px 20px 0;
+}
+
+.blogMain .blogContainer .blogSideBar .sideBlogImageContainer {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+.blogMain .blogContainer .blogSideBar .aboutContainer > h3,
+.blogMain .blogContainer .blogSideBar .recentPostsContainer > h3 {
+  margin-bottom: 25px;
+}
+
+.blogMain .blogContainer .blogSideBar .aboutContainer {
+  margin-bottom: 50px;
+}
+
+.blogMain .blogContainer .articleContainer {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
 }

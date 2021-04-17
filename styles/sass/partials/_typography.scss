@@ -2,14 +2,11 @@ html {
 	font-size: 62.5%;
 }
 
-
 body {
 	@include setFont($playfairStack, 2rem, default, default, default, 0, 32px, none);
 }
 
 h1 {
-	@include resetMarginAndPadding();
-
 	&.homeTitle {
 		@include setFont($playfairStack, 13.8rem, bold, italic, center, 0, 1.2, uppercase);
 	}
@@ -20,8 +17,6 @@ h1 {
 }
 
 h2 {
-	@include resetMarginAndPadding();
-
 	&.sectionTitle {
 		@include setFont($playfairStack, 4.2rem, bold, italic, center, 1px, 1.2, uppercase);
 	}
@@ -32,8 +27,6 @@ h2 {
 }
 
 h3 {
-	@include resetMarginAndPadding();
-
 	&.sectionHeading {
 		@include setFont($playfairStack, 3.2rem, bold, italic, default, 1px, 1.2, uppercase);
 	}
@@ -44,8 +37,6 @@ h3 {
 }
 
 .topNav a {
-	@include resetMarginAndPadding();
-
 	@include setFont($playfairStack, 2.0rem, bold, italic, center, 1px, 29px, uppercase);
 }
 
@@ -55,9 +46,15 @@ h3 {
 }
 
 p {
-	@include resetMarginAndPadding();
-
 	@include setFont($robotoStack, 2.0rem, default, default, default, 0, 32px, none);
+}
+
+h1,
+h2,
+h3,
+p,
+.topNav a {
+	@include resetMarginAndPadding();
 }
 
 .topNav a,
