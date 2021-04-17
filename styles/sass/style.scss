@@ -223,8 +223,19 @@
 
         .featureTextContainer {
             @include setFlex(column, space-between, flex-start);
+
             flex-basis: calc(((100% / 3) * 2) - 10px);
             height: 60%;
+
+            .featureTextContainerInner {
+                @include setFlex(column, space-between, flex-start);
+
+                margin-bottom: 50px;
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }
@@ -233,12 +244,20 @@
     @include setFlex(column, center, center);
 
     background-color: $white;
-    height: 550px;
+    height: 600px;
 
     .galleryGridContainer {
         @include setGrid(repeat(3, 1fr), 1fr, 40px);
 
         padding: 0 20px;
     }
+}
+
+footer {
+    background-color: $black;
+    color: $white;
+    font-weight: 300;
+    padding: 10px 0;
+    text-align: center;
 }
 
