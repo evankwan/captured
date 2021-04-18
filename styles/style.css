@@ -827,17 +827,18 @@ a,
 .blogMain {
   background-color: #4ceea815;
   padding-top: 150px;
-  position: relative;
 }
 
 .blogMain .blogContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5fr 10fr;
-      grid-template-columns: 5fr 10fr;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
   grid-gap: 7.8%;
+  position: relative;
+  row-gap: 40px;
 }
 
 .blogMain .blogContainer .blogSideBar {
@@ -855,8 +856,11 @@ a,
       -ms-flex-align: default;
           align-items: default;
   background: #fafafa;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
   height: 900px;
   margin-left: 33%;
   padding: 450px 20px 0 20px;
@@ -866,7 +870,7 @@ a,
 .blogMain .blogContainer .blogSideBar .sideBlogImageContainer {
   position: absolute;
   left: 0;
-  top: 130px;
+  top: -20px;
   width: 32%;
 }
 
@@ -903,24 +907,40 @@ a,
   width: 5px;
 }
 
-.blogMain .blogContainer .articleContainer {
-  -webkit-box-shadow: -6px 6px 0 0 #fdfa69;
-          box-shadow: -6px 6px 0 0 #fdfa69;
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
-  padding: 375px 65px 0 60px;
-  position: relative;
-}
-
-.blogMain .blogContainer .articleContainer .blogPostImageContainer {
+.blogMain .blogContainer .blogPostImageContainer {
   -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
           box-shadow: -40px 40px 0 0 #fdfa69;
   position: absolute;
-  left: 34px;
-  top: -12%;
-  width: calc(100% - 34px);
+  right: 0;
+  top: -11%;
+  width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
+}
+
+.blogMain .blogContainer .articleContainer {
+  -webkit-box-shadow: -6px 6px 0 0 #fdfa69;
+          box-shadow: -6px 6px 0 0 #fdfa69;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 375px 0 20px 60px;
+  position: relative;
+  width: 85%;
+}
+
+.blogMain .blogContainer .articleContainer .article p {
+  margin-bottom: 1rem;
 }
 
 .blogMain .blogContainer .articleContainer .article .blogDate {
   margin-bottom: 60px;
+}
+
+.blogMain .blogContainer .commentsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
 }

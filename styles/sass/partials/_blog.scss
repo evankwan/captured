@@ -27,16 +27,18 @@
 .blogMain {
     background-color: $seaGreenBackground;
     padding-top: 150px;
-    position: relative;
 
     .blogContainer {
-        @include setGrid(5fr 10fr, repeat(2, 1fr), 7.8%);
+        @include setGrid(1fr 2fr, repeat(2, auto), 7.8%);
+
+        position: relative;
+        row-gap: 40px;
 
         .blogSideBar {
             @include setFlex(column, space-between, default);
 
             background: $white;
-            flex-basis: 30%;
+            grid-area: 1 / 1 / 2 / 2;
             height: 900px;
             margin-left: 33%;
             padding: 450px 20px 0 20px;
@@ -45,7 +47,7 @@
             .sideBlogImageContainer {
                 position: absolute;
                 left: 0;
-                top: 130px;
+                top: -20px;
                 width: 32%;
             }
 
@@ -83,26 +85,37 @@
             }
         }
 
+        .blogPostImageContainer {
+            box-shadow: -40px 40px 0 0 $canary;
+            position: absolute;
+            right: 0;
+            top: -11%;
+            width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
+            // z-index: 10;
+        }
+
         .articleContainer {
             box-shadow: -6px 6px 0 0 $canary;
-            flex-basis: 65%;
-            padding: 375px 65px 0 60px;
-            position: relative;
+            grid-area: 1 / 2 / 2 / 3;
 
-            .blogPostImageContainer {
-                box-shadow: -40px 40px 0 0 $canary;
-                position: absolute;
-                left: 34px;
-                top: -12%;
-                width: calc(100% - 34px);
-                // z-index: 10;
-            }
+            // max-width: 840px;
+            padding: 375px 0 20px 60px;
+            position: relative;
+            width: 85%;
 
             .article {
+                p {
+                    margin-bottom: 1rem;
+                }
+
                 .blogDate {
                     margin-bottom: 60px;
                 }
             }
+        }
+
+        .commentsContainer {
+            grid-area: 2 / 2 / 3 / 3;
         }
     }
 }
