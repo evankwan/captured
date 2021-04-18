@@ -64,44 +64,53 @@
                 </article>
             </div>
             <div class="commentsContainer">
-                <h3 class="sectionHeading">Comments</h3>
-                <div class="commentContainer">
-                    <div class="imageContainer">
-                        <img src="./assets/comment-1.jpg" alt="the profile picture for the person who left the first comment">
+                <div class="commentsListContainer">
+                    <h3 class="sectionHeading">Comments</h3>
+                    <div class="commentContainer">
+                        <div class="imageContainer">
+                            <img src="./assets/comment-1.jpg" alt="the profile picture for the person who left the first comment">
+                        </div>
+                    
+                        <div class="commentTextContainer">
+                            <p class="commentByLine">Tuesday, October 9th, 2018 by Jeremy</p>
+                            <p class="comment">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus,
+                                vitae
+                                ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. DOnec euismod scelerisque
+                                ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
+                        </div>
                     </div>
-                    <div class="commentTextContainer">
-                        <p>Tuesday, October 9th, 2018 by Jeremy</p>
-                        <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae
-                            ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. DOnec euismod scelerisque
-                            ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
-                    </div>
-            
+                    
                     <div class="commentContainer">
                         <div class="imageContainer">
                             <img src="./assets/comment-2.jpg" alt="the profile picture for the person who left the second comment">
                         </div>
                         <div class="commentTextContainer">
-                            <p>Tuesday, October 10th, 2018 by Julia</p>
-                            <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin
+                            <p class="commentByLine">Tuesday, October 10th, 2018 by Julia</p>
+                            <p class="comment">Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc
+                                sollicitudin
                                 ultrices. DOnec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
                         </div>
                     </div>
                 </div>
-            
-                <div class="commentsFormContainer">
-                    <form>
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name">
-            
-                        <label for="email">Email address</label>
-                        <input type="email" name="email" id="email">
-            
-                        <label for="comment">Comment</label>
-                        <textarea name="comment" id="comment"></textarea>
-            
-                        <button class="button" type="submit">Post Comment</button>
-                    </form>
-                </div>
+
+                <form class="commentsForm">
+                    <div class="formNameFieldContainer">
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" name="name" placeholder="Name" id="name" class="commentNameField commentFormField">
+                    </div>
+                    
+                    <div class="formEmailFieldContainer">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" name="email" placeholder="Email Address" id="email" class="commentEmailField commentFormField">
+                    </div>
+        
+                    <div class="formCommentFieldContainer">
+                        <label class="sr-only" for="comment">Comment</label>
+                        <textarea name="comment" placeholder="Comment" id="comment" class="commentField commentFormField"></textarea>
+                    </div>
+
+                    <button class="button commentSubmitButton" type="submit">Post Comment</button>
+                </form>
             </div>
         </div>
     </main>

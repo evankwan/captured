@@ -9,16 +9,50 @@
 	<title>Captured | Contact</title>
 </head>
 <body>
-	<header>
-		<nav class="topNav">
-			<ul class="topNavList">
-				<li class="topNavListItem"><a href="index.html">Home</a></li>
-				<li class="topNavListItem"><a href="#about">About</a></li>
-				<li class="topNavListItem"><a href="blog.html">Blog</a></li>
-				<li class="topNavListItem"><a href="contact.html" class="active">Contact</a></li>
-			</ul>
-		</nav>
-		<h1 class="secondaryTitle">Get In Touch</h1>
+	<header class="contactHeader">
+		<div class="wrapper contactHeaderContainer">
+			<nav class="topNav">
+				<ul class="topNavList">
+					<li class="topNavListItem"><a href="index.html">Home</a></li>
+					<li class="topNavListItem"><a href="#about">About</a></li>
+					<li class="topNavListItem"><a href="blog.html">Blog</a></li>
+					<li class="topNavListItem"><a href="contact.html" class="active">Contact</a></li>
+				</ul>
+			</nav>
+			
+		</div>
 	</header>
+
+	<main>
+		<div class="wrapper contactPageGridContainer">
+			<aside>
+			
+			</aside>
+			
+			<div class="rightContainer">
+				<h1 class="secondaryTitle">Get In Touch</h1>
+				<form class="contactForm">
+					<div class="formNameFieldContainer">
+						<label class="sr-only" for="name">Name</label>
+						<input type="text" name="name" placeholder="Name" id="name" class="contactNameField contactFormField">
+					</div>
+			
+					<div class="formEmailFieldContainer">
+						<label class="sr-only" for="email">Email address</label>
+						<input type="email" name="email" placeholder="Email Address" id="email"
+							class="contactEmailField contactFormField">
+					</div>
+			
+					<div class="formCommentFieldContainer">
+						<label class="sr-only" for="comment">Comment</label>
+						<textarea name="comment" placeholder="Comment" id="comment"
+							class="contactMessageField contactFormField"></textarea>
+					</div>
+			
+					<button class="button contactSubmitButton" type="submit">Post Comment</button>
+				</form>
+			</div>
+		</div>
+	</main>
 </body>
 </html>

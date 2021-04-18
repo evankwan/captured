@@ -912,7 +912,7 @@ a,
           box-shadow: -40px 40px 0 0 #fdfa69;
   position: absolute;
   right: 0;
-  top: -11%;
+  top: -16%;
   width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
 
@@ -943,4 +943,144 @@ a,
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 2 / 2 / 3 / 3;
+  width: 85%;
+}
+
+.blogMain .blogContainer .commentsContainer .commentsListContainer {
+  margin-right: 20px;
+  padding-left: 40px;
+}
+
+.blogMain .blogContainer .commentsContainer .sectionHeading {
+  margin-bottom: 40px;
+}
+
+.blogMain .blogContainer .commentsContainer .commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 8rem;
+}
+
+.blogMain .blogContainer .commentsContainer .commentContainer .imageContainer {
+  -ms-flex-preferred-size: 92px;
+      flex-basis: 92px;
+  width: 92px;
+}
+
+.blogMain .blogContainer .commentsContainer .commentContainer .commentTextContainer {
+  -ms-flex-preferred-size: calc(100% - 92px - 4%);
+      flex-basis: calc(100% - 92px - 4%);
+}
+
+.blogMain .blogContainer .commentsContainer .commentContainer .commentTextContainer .commentByLine {
+  margin-bottom: 1rem;
+}
+
+.blogMain .blogContainer .commentsForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 80px;
+}
+
+.blogMain .blogContainer .commentsForm .commentFormField {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #4ceea7;
+  color: #2c2c2c;
+  padding: 30px;
+  width: 100%;
+}
+
+.blogMain .blogContainer .commentsForm .commentField {
+  border: 2px solid #4ceea7;
+  height: 100%;
+  resize: none;
+}
+
+.blogMain .blogContainer .commentsForm .commentSubmitButton {
+  margin: 10px 0;
+}
+
+.blogMain .blogContainer .commentsForm .formNameFieldContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.blogMain .blogContainer .commentsForm .formEmailFieldContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.blogMain .blogContainer .commentsForm .formCommentFieldContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 4 / 3;
+}
+
+.blogMain .blogContainer .commentsForm .commentSubmitButton {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+.contactHeader {
+  background-image: url(../assets/contact-header.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 60vh;
+  max-height: 600px;
+}
+
+.contactHeader .contactHeaderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.contactPageGridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 11fr;
+      grid-template-columns: 5fr 11fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 0;
 }

@@ -89,7 +89,7 @@
             box-shadow: -40px 40px 0 0 $canary;
             position: absolute;
             right: 0;
-            top: -11%;
+            top: -16%;
             width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
             // z-index: 10;
         }
@@ -116,6 +116,76 @@
 
         .commentsContainer {
             grid-area: 2 / 2 / 3 / 3;
+            width: 85%;
+
+            .commentsListContainer {
+                margin-right: 20px;
+                padding-left: 40px;
+            }
+
+            .sectionHeading {
+                margin-bottom: 40px;
+            }
+
+            .commentContainer {
+                @include setFlex(row, space-between, flex-start);
+
+                margin-bottom: 8rem;
+
+                .imageContainer {
+                    flex-basis: 92px;
+                    width: 92px;
+                }
+
+                .commentTextContainer {
+                    flex-basis: calc(100% - 92px - 4%);
+
+                    .commentByLine {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        .commentsForm {
+            @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
+
+            margin-bottom: 80px;
+
+            .commentFormField {
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid $seaGreen;
+                color: $black;
+                padding: 30px;
+                width: 100%;
+            }
+
+            .commentField {
+                border: 2px solid $seaGreen;
+                height: 100%;
+                resize: none;
+            }
+
+            .commentSubmitButton {
+                margin: 10px 0;
+            }
+
+            .formNameFieldContainer {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            .formEmailFieldContainer {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            .formCommentFieldContainer {
+                grid-area: 2 / 1 / 4 / 3;
+            }
+
+            .commentSubmitButton {
+                grid-area: 4 / 1 / 5 / 3;
+            }
         }
     }
 }
