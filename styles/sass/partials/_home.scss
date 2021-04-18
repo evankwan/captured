@@ -67,14 +67,13 @@
             .imageContainer {
                 max-width: 700px;
                 position: absolute;
-                transition: all 0.3s ease;
-                width: 110%;
+                width: 50%;
             }
         }
 
         .guidesImageContainer1 {
             .imageContainer {
-                box-shadow: 40px 40px 0 0px $canary;
+                box-shadow: 40px 40px 0 0 $canary;
                 left: 0;
                 top: -40px;
             }
@@ -84,7 +83,7 @@
             .imageContainer {
                 bottom: -40px;
                 box-shadow: -40px 40px 0 0px $canary;
-                right: 0%;
+                right: 0;
             }
         }
 
@@ -195,6 +194,7 @@
 
             flex-basis: calc(((100% / 3) * 2) - 10px);
             height: 60%;
+            transition: all 0.3s ease;
 
             .featureTextContainerInner {
                 @include setFlex(column, space-between, flex-start);
@@ -233,5 +233,15 @@
 @media (min-width: 1600px) {
     .guidesGridContainer {
         position: relative;
+    }
+}
+
+@media (max-width: 1200px) {
+    .featureSection {
+        .featureContainer {
+            .featureTextContainer {
+                margin-left: 50px;
+            }
+        }
     }
 }

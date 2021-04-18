@@ -539,14 +539,12 @@ a,
 .guidesSection .guidesGridContainer .guidesImageContainer2 .imageContainer {
   max-width: 700px;
   position: absolute;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  width: 110%;
+  width: 50%;
 }
 
 .guidesSection .guidesGridContainer .guidesImageContainer1 .imageContainer {
-  -webkit-box-shadow: 40px 40px 0 0px #fdfa69;
-          box-shadow: 40px 40px 0 0px #fdfa69;
+  -webkit-box-shadow: 40px 40px 0 0 #fdfa69;
+          box-shadow: 40px 40px 0 0 #fdfa69;
   left: 0;
   top: -40px;
 }
@@ -555,7 +553,7 @@ a,
   bottom: -40px;
   -webkit-box-shadow: -40px 40px 0 0px #fdfa69;
           box-shadow: -40px 40px 0 0px #fdfa69;
-  right: 0%;
+  right: 0;
 }
 
 .guidesSection .guidesGridContainer .guidesTextContainer1,
@@ -731,6 +729,8 @@ a,
   -ms-flex-preferred-size: calc(((100% / 3) * 2) - 10px);
       flex-basis: calc(((100% / 3) * 2) - 10px);
   height: 60%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .featureSection .featureContainer .featureTextContainer .featureTextContainerInner {
@@ -794,6 +794,12 @@ a,
 @media (min-width: 1600px) {
   .guidesGridContainer {
     position: relative;
+  }
+}
+
+@media (max-width: 1200px) {
+  .featureSection .featureContainer .featureTextContainer {
+    margin-left: 50px;
   }
 }
 
