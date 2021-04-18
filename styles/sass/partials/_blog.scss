@@ -87,18 +87,18 @@
 
         .blogPostImageContainer {
             box-shadow: -40px 40px 0 0 $canary;
+            max-width: 1000px;
             position: absolute;
-            right: 0;
-            top: -16%;
+            left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
+            top: -400px;
             width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
-            // z-index: 10;
         }
 
         .articleContainer {
             box-shadow: -6px 6px 0 0 $canary;
             grid-area: 1 / 2 / 2 / 3;
 
-            // max-width: 840px;
+            max-width: 1000px;
             padding: 375px 0 20px 60px;
             position: relative;
             width: 85%;
@@ -116,6 +116,7 @@
 
         .commentsContainer {
             grid-area: 2 / 2 / 3 / 3;
+            max-width: 1000px;
             width: 85%;
 
             .commentsListContainer {

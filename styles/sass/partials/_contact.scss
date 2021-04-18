@@ -15,16 +15,22 @@
 
 .contactPageMain {
     background-color: $seaGreenBackground;
+    height: 55vh;
+    max-height: 700px;
     width: 100%;
 
     .contactPageGridContainer {
         @include setGrid(5fr 11fr, 1fr, 0);
 
+        height: 100%;
         position: relative;
         width: 100%;
 
         .contactPageSideContact {
-            margin: 150px 60px;
+            @include setFlex(column, center, center);
+
+            height: 100%;
+            margin: 0 60px;
             width: 300px;
 
             .socialIcons {

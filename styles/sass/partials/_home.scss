@@ -60,19 +60,22 @@
         @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 80px);
 
         height: 100%;
+        max-width: 1600px;
 
         .guidesImageContainer1,
         .guidesImageContainer2 {
             .imageContainer {
+                max-width: 700px;
                 position: absolute;
-                width: 40%;
+                transition: all 0.3s ease;
+                width: 110%;
             }
         }
 
         .guidesImageContainer1 {
             .imageContainer {
                 box-shadow: 40px 40px 0 0px $canary;
-                left: 0%;
+                left: 0;
                 top: -40px;
             }
         }
@@ -225,4 +228,10 @@
     font-weight: 300;
     padding: 10px 0;
     text-align: center;
+}
+
+@media (min-width: 1600px) {
+    .guidesGridContainer {
+        position: relative;
+    }
 }
