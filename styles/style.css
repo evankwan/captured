@@ -449,6 +449,8 @@ a,
   position: relative;
   height: 82vh;
   max-height: 850px;
+  -webkit-transition: background-position 0.5s ease;
+  transition: background-position 0.5s ease;
   width: 100%;
 }
 
@@ -483,6 +485,8 @@ a,
   max-width: 800px;
   position: absolute;
   right: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   width: 45%;
 }
 
@@ -798,8 +802,149 @@ a,
 }
 
 @media (max-width: 1200px) {
+  .guidesSection {
+    height: 950px;
+  }
+  .guidesSection .guidesGridContainer {
+    row-gap: 0;
+  }
   .featureSection .featureContainer .featureTextContainer {
-    margin-left: 50px;
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homeHeader {
+    background-position: left top;
+  }
+  .homeHeader .homeHeaderContainer .homeTitle {
+    margin-bottom: 0;
+  }
+  .homeHeader .headerImageContainer {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  .homeHeader .topNav .topNavList a {
+    margin: 0 15px;
+  }
+  .aboutSection {
+    height: 100%;
+    padding: 100px 0;
+  }
+  .guidesSection {
+    height: 100%;
+  }
+  .guidesSection .guidesGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+  }
+  .guidesSection .guidesGridContainer > * {
+    margin-bottom: 50px;
+  }
+  .guidesSection .guidesGridContainer .guidesImageContainer1 .imageContainer,
+  .guidesSection .guidesGridContainer .guidesImageContainer2 .imageContainer {
+    margin: 0 auto;
+    position: static;
+    width: 90%;
+  }
+  .guidesSection .guidesGridContainer .guidesTextContainer {
+    padding: 0 50px;
+    width: 70%;
+  }
+  .guidesSection .guidesGridContainer .guidesTextContainer .sectionHeading {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  .guidesSection .guidesGridContainer .guidesTextContainer .button {
+    margin: 0 auto 40px;
+  }
+  .linksSection {
+    height: 100%;
+  }
+  .linksSection .linksGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 25px 20px;
+  }
+  .linksSection .linksGridContainer .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 25px 0;
+    width: 70%;
+  }
+  .linksSection .linksGridContainer .linkContainer .linkTextContainer {
+    margin-left: 0;
+    text-align: center;
+  }
+  .featureSection {
+    height: 100%;
+  }
+  .featureSection .featureContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .featureSection .featureContainer .featureTextContainer {
+    margin: 40px 0;
+  }
+  .featureSection .featureContainer .featureTextContainer .featureTextContainerInner .sectionTitle {
+    margin: 10px auto;
+  }
+  .featureSection .featureContainer .featureTextContainer .button {
+    margin: 0 auto;
+  }
+  .gallerySection {
+    height: 100%;
+    padding: 50px 0;
+  }
+  .gallerySection .galleryGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

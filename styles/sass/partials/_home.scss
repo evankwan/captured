@@ -5,6 +5,7 @@
     position: relative;
     height: 82vh;
     max-height: 850px;
+    transition: background-position 0.5s ease;
     width: 100%;
 
     .homeHeaderContainer {
@@ -27,6 +28,7 @@
         max-width: 800px;
         position: absolute;
         right: 0;
+        transition: all 1s ease;
         width: 45%;
     }
 }
@@ -237,11 +239,135 @@
 }
 
 @media (max-width: 1200px) {
-    .featureSection {
-        .featureContainer {
-            .featureTextContainer {
-                margin-left: 50px;
+    .guidesSection {
+        height: 950px;
+
+        .guidesGridContainer {
+            row-gap: 0;
+        }
+    }
+    
+    .featureSection .featureContainer .featureTextContainer {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .homeHeader {
+        background-position: left top;
+
+        .homeHeaderContainer .homeTitle {
+            margin-bottom: 0;
+        }
+        .headerImageContainer {
+            transform: translateX(200%);
+        }
+        
+        .topNav .topNavList a {
+            margin: 0 15px;
+        }
+    }
+
+    .aboutSection {
+        height: 100%;
+        padding: 100px 0;
+    }
+
+    .guidesSection {
+        height: 100%;
+
+        .guidesGridContainer {
+            @include setFlex(column, space-between, center);
+
+            padding: 20px 0;
+
+            & > * {
+                margin-bottom: 50px;
+            }
+
+            .guidesImageContainer1 .imageContainer,
+            .guidesImageContainer2 .imageContainer {
+                margin: 0 auto;
+                position: static;
+                width: 90%;
+            }
+
+            .guidesTextContainer {
+                padding: 0 50px;
+                width: 70%;
+
+                .sectionHeading {
+                    margin: 20px auto 0;
+                    text-align: center;
+                }
+
+                .button {
+                    margin: 0 auto 40px;
+                }
             }
         }
     }
+
+    .linksSection {
+        height: 100%;
+
+        .linksGridContainer {
+            @include setFlex(column, space-around, center);
+            padding: 25px 20px;
+
+            .linkContainer {
+                @include setFlex(column, space-between, center);
+
+                margin: 25px 0;
+                width: 70%;
+
+                .linkTextContainer {
+                    margin-left: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .featureSection {
+        height: 100%;
+
+        .featureContainer {
+            flex-direction: column;
+
+            .featureTextContainer {
+                margin: 40px 0;
+                
+                .featureTextContainerInner .sectionTitle {
+                    margin: 10px auto;
+                }
+
+                .button {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .gallerySection {
+        height: 100%;
+        padding: 50px 0;
+
+        .galleryGridContainer {
+            @include setFlex(column, space-between, center);
+        }
+    }
 }
+
+// .gallerySection {
+//     @include setFlex(column, center, center);
+
+//     background-color: $white;
+//     height: 600px;
+
+//     .galleryGridContainer {
+//         @include setGrid(repeat(3, 1fr), 1fr, 40px);
+
+//         padding: 0 20px;
+//     }
+// }
