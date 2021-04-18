@@ -60,7 +60,15 @@
             }
 
             .aboutContainer {
-                margin-bottom: 50px;
+                margin-bottom: 60px;
+
+                p {
+                    padding: 0 5px;
+                }
+            }
+
+            .recentPostsLink {
+                list-style: none;
             }
         }
 

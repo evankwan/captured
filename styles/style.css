@@ -260,6 +260,12 @@ html {
   width: 100%;
 }
 
+.inlineLink {
+  color: #2c2c2c;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .topNav {
   margin: 15px 0;
   padding: 20px 0;
@@ -431,7 +437,7 @@ p,
   padding: 0;
 }
 
-.topNav a,
+a,
 .button {
   text-decoration: none;
 }
@@ -881,7 +887,15 @@ p,
 }
 
 .blogMain .blogContainer .blogSideBar .aboutContainer {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+}
+
+.blogMain .blogContainer .blogSideBar .aboutContainer p {
+  padding: 0 5px;
+}
+
+.blogMain .blogContainer .blogSideBar .recentPostsLink {
+  list-style: none;
 }
 
 .blogMain .blogContainer .articleContainer {
