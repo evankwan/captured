@@ -821,8 +821,8 @@ a,
     margin-bottom: 0;
   }
   .homeHeader .headerImageContainer {
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
+    border: none;
+    width: 0;
   }
   .homeHeader .topNav .topNavList a {
     margin: 0 15px;

@@ -260,7 +260,8 @@
             margin-bottom: 0;
         }
         .headerImageContainer {
-            transform: translateX(200%);
+            border: none;
+            width: 0;
         }
         
         .topNav .topNavList a {
