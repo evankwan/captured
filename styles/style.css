@@ -1075,7 +1075,12 @@ a,
   position: relative;
 }
 
-.contactPageGridContainer {
+.contactPageMain {
+  background-color: #4ceea815;
+  width: 100%;
+}
+
+.contactPageMain .contactPageGridContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5fr 11fr;
@@ -1083,4 +1088,80 @@ a,
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-gap: 0;
+  width: 100%;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer {
+  position: relative;
+  top: -350px;
+  z-index: 10;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer h1 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 40px;
+  background-color: #fafafa;
+  margin-bottom: 80px;
+  padding: 70px;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactFormField {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #4ceea7;
+  color: #2c2c2c;
+  padding: 30px;
+  width: 100%;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactMessageField {
+  border: 2px solid #4ceea7;
+  height: 100%;
+  resize: none;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactSubmitButton {
+  margin: 10px 0;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formNameFieldContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formEmailFieldContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formCommentFieldContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 4 / 3;
+}
+
+.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactSubmitButton {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 1 / 5 / 3;
 }
