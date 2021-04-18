@@ -1093,7 +1093,7 @@ a,
 }
 
 .contactPageMain .contactPageGridContainer .contactPageSideContact {
-  margin: 150px 70px;
+  margin: 150px 60px;
   width: 300px;
 }
 
@@ -1128,7 +1128,7 @@ a,
   position: absolute;
   right: 0;
   top: -350px;
-  width: 60%;
+  width: 68%;
 }
 
 .contactPageMain .contactPageGridContainer .rightContainer h1 {
@@ -1167,7 +1167,7 @@ a,
 }
 
 .contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactSubmitButton {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .contactPageMain .contactPageGridContainer .rightContainer .contactForm .formNameFieldContainer {
