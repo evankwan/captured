@@ -1088,13 +1088,47 @@ a,
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-gap: 0;
+  position: relative;
   width: 100%;
 }
 
+.contactPageMain .contactPageGridContainer .contactPageSideContact {
+  margin: 150px 70px;
+  width: 300px;
+}
+
+.contactPageMain .contactPageGridContainer .contactPageSideContact .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.4rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.contactPageMain .contactPageGridContainer .contactPageSideContact .socialIcons .socialIcon {
+  margin-right: 25px;
+}
+
+.contactPageMain .contactPageGridContainer .contactPageSideContact .emailHeading {
+  margin-bottom: 2rem;
+}
+
 .contactPageMain .contactPageGridContainer .rightContainer {
-  position: relative;
+  position: absolute;
+  right: 0;
   top: -350px;
-  z-index: 10;
+  width: 60%;
 }
 
 .contactPageMain .contactPageGridContainer .rightContainer h1 {
@@ -1111,6 +1145,8 @@ a,
       grid-template-rows: repeat(4, 1fr);
   grid-gap: 40px;
   background-color: #fafafa;
+  -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
+          box-shadow: -40px 40px 0 0 #fdfa69;
   margin-bottom: 80px;
   padding: 70px;
 }

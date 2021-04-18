@@ -20,13 +20,35 @@
     .contactPageGridContainer {
         @include setGrid(5fr 11fr, 1fr, 0);
 
+        position: relative;
         width: 100%;
 
-        .rightContainer {
+        .contactPageSideContact {
+            margin: 150px 70px;
+            width: 300px;
 
-            position: relative;
+            .socialIcons {
+                @include setFlex(row, flex-start, center);
+
+                font-size: 2.4rem;
+                list-style: none;
+                padding-left: 0;
+
+                .socialIcon {
+                    margin-right: 25px;
+                }
+            }
+
+            .emailHeading {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .rightContainer {
+            position: absolute;
+            right: 0;
             top: -350px;
-            z-index: 10;
+            width: 60%;
 
             h1 {
                 margin-bottom: 20px;
@@ -37,6 +59,7 @@
                 @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
 
                 background-color: $white;
+                box-shadow: -40px 40px 0 0 $canary;
                 margin-bottom: 80px;
                 padding: 70px;
 
