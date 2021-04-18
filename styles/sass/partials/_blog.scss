@@ -22,15 +22,6 @@
             }
         }
     }
-
-    .blogPostImageContainer {
-        box-shadow: -40px 60px 0 0 $canary;
-        position: absolute;
-        right: 0;
-        top: 350px;
-        width: 60%;
-        // z-index: 10;
-    }
 }
 
 .blogMain {
@@ -39,19 +30,23 @@
     position: relative;
 
     .blogContainer {
-        @include setFlex(row, space-between, flex-start);
+        @include setGrid(5fr 10fr, repeat(2, 1fr), 7.8%);
 
         .blogSideBar {
             @include setFlex(column, space-between, default);
 
             background: $white;
             flex-basis: 30%;
-            padding: 400px 20px 0;
+            height: 900px;
+            margin-left: 33%;
+            padding: 450px 20px 0 20px;
+            width: 75%;
 
             .sideBlogImageContainer {
                 position: absolute;
                 left: 0;
-                top: 100px;
+                top: 130px;
+                width: 32%;
             }
 
             .aboutContainer > h3,
@@ -69,11 +64,45 @@
 
             .recentPostsLink {
                 list-style: none;
+
+                .recentPost {
+                    margin-bottom: 5px;
+                    position: relative;
+
+                    &::before {
+                        background-color: $seaGreen;
+                        border-radius: 50%;
+                        content: '';
+                        height: 5px;
+                        left: -30px;
+                        position: absolute;
+                        top: calc(30% + 5px);
+                        width: 5px;
+                    }
+                }
             }
         }
 
         .articleContainer {
+            box-shadow: -6px 6px 0 0 $canary;
             flex-basis: 65%;
+            padding: 375px 65px 0 60px;
+            position: relative;
+
+            .blogPostImageContainer {
+                box-shadow: -40px 40px 0 0 $canary;
+                position: absolute;
+                left: 34px;
+                top: -12%;
+                width: calc(100% - 34px);
+                // z-index: 10;
+            }
+
+            .article {
+                .blogDate {
+                    margin-bottom: 60px;
+                }
+            }
         }
     }
 }

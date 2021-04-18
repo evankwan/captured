@@ -23,14 +23,10 @@
                 <h1 class="secondaryTitle">Blog</h1>
             </div>
         </div>
-        <div class="imageContainer blogPostImageContainer">
-            <img src="./assets/blog-post-image.jpg"
-                alt="a woman sitting in a field of flowers taking a picture of trees in the sunset">
-        </div>
     </header>
 
     <main class="blogMain">
-        <div class="wrapper blogContainer">
+        <div class="blogContainer">
             <aside class="blogSideBar">
                 <div class="imageContainer sideBlogImageContainer">
                     <img src="./assets/side-blog-image.jpg" alt="a person holding a camera lens over a backdrop of water and mountains">
@@ -52,9 +48,12 @@
             </aside>
 
             <div class="articleContainer">
-                <article>
+                <div class="imageContainer blogPostImageContainer">
+                    <img src="./assets/blog-post-image.jpg" alt="a woman sitting in a field of flowers taking a picture of trees in the sunset">
+                </div>
+                <article class="article">
                     <h2 class="blogTitle">Finding great locations</h2>
-                    <p>Monday, May 4th 2021 by Dieula</p>
+                    <p class="blogDate">Monday, May 4th 2021 by Dieula</p>
                     <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam.</p>
                     <p>In imperdiet eros id lacus vesitibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel justo. Maecenas semper suscipit nunc, sed aliquam sapien convallis eu. Nulla ut turpis in diam dapibus consequat. Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacu.</p>
                     <p>Lorem ipsem dolor sit amet, cosectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. Un volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molesetie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh. Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec vehicula rhoncus mattisl Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit. Praesent facilisis dolor sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor posuere luctus.</p>
@@ -64,16 +63,16 @@
                     <p>In imperdiet eros id lacus vesitibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel
                     justo. Maecenas semper suscipit nunc, sed aliquam</p>
                 </article>
-                <div class="commentsContainer">
-                    <h3 class="sectionHeading">Comments</h3>
-                    <div class="commentContainer">
-                        <div class="imageContainer">
-                            <img src="./assets/comment-1.jpg" alt="the profile picture for the person who left the first comment">
-                        </div>
-                        <div class="commentTextContainer">
-                            <p>Tuesday, October 9th, 2018 by Jeremy</p>
-                            <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. DOnec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
-                        </div>
+            </div>
+            <div class="commentsContainer">
+                <h3 class="sectionHeading">Comments</h3>
+                <div class="commentContainer">
+                    <div class="imageContainer">
+                        <img src="./assets/comment-1.jpg" alt="the profile picture for the person who left the first comment">
+                    </div>
+                    <div class="commentTextContainer">
+                        <p>Tuesday, October 9th, 2018 by Jeremy</p>
+                        <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. DOnec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
                     </div>
 
                     <div class="commentContainer">
@@ -82,10 +81,12 @@
                         </div>
                         <div class="commentTextContainer">
                             <p>Tuesday, October 10th, 2018 by Julia</p>
-                            <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. DOnec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
+                            <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin
+                                ultrices. DOnec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="commentsFormContainer">
                     <form>
                         <label for="name">Name</label>

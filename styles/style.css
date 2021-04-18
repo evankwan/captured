@@ -824,15 +824,6 @@ a,
   text-align: left;
 }
 
-.blogHeader .blogPostImageContainer {
-  -webkit-box-shadow: -40px 60px 0 0 #fdfa69;
-          box-shadow: -40px 60px 0 0 #fdfa69;
-  position: absolute;
-  right: 0;
-  top: 350px;
-  width: 60%;
-}
-
 .blogMain {
   background-color: #4ceea815;
   padding-top: 150px;
@@ -840,19 +831,13 @@ a,
 }
 
 .blogMain .blogContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 10fr;
+      grid-template-columns: 5fr 10fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 7.8%;
 }
 
 .blogMain .blogContainer .blogSideBar {
@@ -872,13 +857,17 @@ a,
   background: #fafafa;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-  padding: 400px 20px 0;
+  height: 900px;
+  margin-left: 33%;
+  padding: 450px 20px 0 20px;
+  width: 75%;
 }
 
 .blogMain .blogContainer .blogSideBar .sideBlogImageContainer {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 130px;
+  width: 32%;
 }
 
 .blogMain .blogContainer .blogSideBar .aboutContainer > h3,
@@ -898,7 +887,40 @@ a,
   list-style: none;
 }
 
+.blogMain .blogContainer .blogSideBar .recentPostsLink .recentPost {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.blogMain .blogContainer .blogSideBar .recentPostsLink .recentPost::before {
+  background-color: #4ceea7;
+  border-radius: 50%;
+  content: '';
+  height: 5px;
+  left: -30px;
+  position: absolute;
+  top: calc(30% + 5px);
+  width: 5px;
+}
+
 .blogMain .blogContainer .articleContainer {
+  -webkit-box-shadow: -6px 6px 0 0 #fdfa69;
+          box-shadow: -6px 6px 0 0 #fdfa69;
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
+  padding: 375px 65px 0 60px;
+  position: relative;
+}
+
+.blogMain .blogContainer .articleContainer .blogPostImageContainer {
+  -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
+          box-shadow: -40px 40px 0 0 #fdfa69;
+  position: absolute;
+  left: 34px;
+  top: -12%;
+  width: calc(100% - 34px);
+}
+
+.blogMain .blogContainer .articleContainer .article .blogDate {
+  margin-bottom: 60px;
 }
