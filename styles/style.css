@@ -1164,7 +1164,7 @@ a,
   padding-top: 150px;
 }
 
-.blogMain .blogContainer {
+.blogContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
@@ -1176,7 +1176,7 @@ a,
   row-gap: 40px;
 }
 
-.blogMain .blogContainer .blogSideBar {
+.blogSideBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1202,36 +1202,36 @@ a,
   width: 75%;
 }
 
-.blogMain .blogContainer .blogSideBar .sideBlogImageContainer {
+.blogSideBar .sideBlogImageContainer {
   position: absolute;
   left: 0;
   top: -20px;
   width: 32%;
 }
 
-.blogMain .blogContainer .blogSideBar .aboutContainer > h3,
-.blogMain .blogContainer .blogSideBar .recentPostsContainer > h3 {
+.blogSideBar .aboutContainer > h3,
+.blogSideBar .recentPostsContainer > h3 {
   margin-bottom: 25px;
 }
 
-.blogMain .blogContainer .blogSideBar .aboutContainer {
+.blogSideBar .aboutContainer {
   margin-bottom: 60px;
 }
 
-.blogMain .blogContainer .blogSideBar .aboutContainer p {
+.blogSideBar .aboutContainer p {
   padding: 0 5px;
 }
 
-.blogMain .blogContainer .blogSideBar .recentPostsLink {
+.recentPostsContainer .recentPostsLink {
   list-style: none;
 }
 
-.blogMain .blogContainer .blogSideBar .recentPostsLink .recentPost {
+.recentPostsContainer .recentPostsLink .recentPost {
   margin-bottom: 5px;
   position: relative;
 }
 
-.blogMain .blogContainer .blogSideBar .recentPostsLink .recentPost::before {
+.recentPostsContainer .recentPostsLink .recentPost::before {
   background-color: #4ceea7;
   border-radius: 50%;
   content: '';
@@ -1242,7 +1242,7 @@ a,
   width: 5px;
 }
 
-.blogMain .blogContainer .blogPostImageContainer {
+.blogPostImageContainer {
   -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
           box-shadow: -40px 40px 0 0 #fdfa69;
   max-width: 1000px;
@@ -1252,7 +1252,7 @@ a,
   width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
 
-.blogMain .blogContainer .articleContainer {
+.articleContainer {
   -webkit-box-shadow: -6px 6px 0 0 #fdfa69;
           box-shadow: -6px 6px 0 0 #fdfa69;
   -ms-grid-row: 1;
@@ -1266,15 +1266,15 @@ a,
   width: 85%;
 }
 
-.blogMain .blogContainer .articleContainer .article p {
+.articleContainer .article p {
   margin-bottom: 1rem;
 }
 
-.blogMain .blogContainer .articleContainer .article .blogDate {
+.articleContainer .article .blogDate {
   margin-bottom: 60px;
 }
 
-.blogMain .blogContainer .commentsContainer {
+.commentsContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -1284,16 +1284,16 @@ a,
   width: 85%;
 }
 
-.blogMain .blogContainer .commentsContainer .commentsListContainer {
+.commentsContainer .commentsListContainer {
   margin-right: 20px;
   padding-left: 40px;
 }
 
-.blogMain .blogContainer .commentsContainer .sectionHeading {
+.commentsContainer .sectionHeading {
   margin-bottom: 40px;
 }
 
-.blogMain .blogContainer .commentsContainer .commentContainer {
+.commentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1310,22 +1310,22 @@ a,
   margin-bottom: 8rem;
 }
 
-.blogMain .blogContainer .commentsContainer .commentContainer .imageContainer {
+.commentContainer .imageContainer {
   -ms-flex-preferred-size: 92px;
       flex-basis: 92px;
   width: 92px;
 }
 
-.blogMain .blogContainer .commentsContainer .commentContainer .commentTextContainer {
+.commentContainer .commentTextContainer {
   -ms-flex-preferred-size: calc(100% - 92px - 4%);
       flex-basis: calc(100% - 92px - 4%);
 }
 
-.blogMain .blogContainer .commentsContainer .commentContainer .commentTextContainer .commentByLine {
+.commentContainer .commentTextContainer .commentByLine {
   margin-bottom: 1rem;
 }
 
-.blogMain .blogContainer .commentsForm {
+.commentsForm {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1336,7 +1336,7 @@ a,
   margin-bottom: 80px;
 }
 
-.blogMain .blogContainer .commentsForm .commentFormField {
+.commentsForm .commentFormField {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #4ceea7;
@@ -1345,17 +1345,17 @@ a,
   width: 100%;
 }
 
-.blogMain .blogContainer .commentsForm .commentField {
+.commentsForm .commentField {
   border: 2px solid #4ceea7;
   height: 100%;
   resize: none;
 }
 
-.blogMain .blogContainer .commentsForm .commentSubmitButton {
+.commentsForm .commentSubmitButton {
   margin: 10px 0;
 }
 
-.blogMain .blogContainer .commentsForm .formNameFieldContainer {
+.commentsForm .formNameFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -1363,7 +1363,7 @@ a,
   grid-area: 1 / 1 / 2 / 2;
 }
 
-.blogMain .blogContainer .commentsForm .formEmailFieldContainer {
+.commentsForm .formEmailFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -1371,7 +1371,7 @@ a,
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.blogMain .blogContainer .commentsForm .formCommentFieldContainer {
+.commentsForm .formCommentFieldContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -1379,7 +1379,7 @@ a,
   grid-area: 2 / 1 / 4 / 3;
 }
 
-.blogMain .blogContainer .commentsForm .commentSubmitButton {
+.commentsForm .commentSubmitButton {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;

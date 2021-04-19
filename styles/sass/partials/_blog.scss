@@ -27,166 +27,166 @@
 .blogMain {
     background-color: $seaGreenBackground;
     padding-top: 150px;
+}
 
-    .blogContainer {
-        @include setGrid(1fr 2fr, repeat(2, auto), 7.8%);
+.blogContainer {
+    @include setGrid(1fr 2fr, repeat(2, auto), 7.8%);
 
+    position: relative;
+    row-gap: 40px;
+}
+
+.blogSideBar {
+    @include setFlex(column, space-between, default);
+
+    background: $white;
+    grid-area: 1 / 1 / 2 / 2;
+    height: 900px;
+    margin-left: 33%;
+    padding: 450px 20px 0 20px;
+    width: 75%;
+
+    .sideBlogImageContainer {
+        position: absolute;
+        left: 0;
+        top: -20px;
+        width: 32%;
+    }
+
+    .aboutContainer > h3,
+    .recentPostsContainer > h3 {
+        margin-bottom: 25px;
+    }
+
+    .aboutContainer {
+        margin-bottom: 60px;
+
+        p {
+            padding: 0 5px;
+        }
+    }
+}
+
+.recentPostsContainer .recentPostsLink {
+    list-style: none;
+
+    .recentPost {
+        margin-bottom: 5px;
         position: relative;
-        row-gap: 40px;
 
-        .blogSideBar {
-            @include setFlex(column, space-between, default);
-
-            background: $white;
-            grid-area: 1 / 1 / 2 / 2;
-            height: 900px;
-            margin-left: 33%;
-            padding: 450px 20px 0 20px;
-            width: 75%;
-
-            .sideBlogImageContainer {
-                position: absolute;
-                left: 0;
-                top: -20px;
-                width: 32%;
-            }
-
-            .aboutContainer > h3,
-            .recentPostsContainer > h3 {
-                margin-bottom: 25px;
-            }
-
-            .aboutContainer {
-                margin-bottom: 60px;
-
-                p {
-                    padding: 0 5px;
-                }
-            }
-
-            .recentPostsLink {
-                list-style: none;
-
-                .recentPost {
-                    margin-bottom: 5px;
-                    position: relative;
-
-                    &::before {
-                        background-color: $seaGreen;
-                        border-radius: 50%;
-                        content: '';
-                        height: 5px;
-                        left: -30px;
-                        position: absolute;
-                        top: calc(30% + 5px);
-                        width: 5px;
-                    }
-                }
-            }
-        }
-
-        .blogPostImageContainer {
-            box-shadow: -40px 40px 0 0 $canary;
-            max-width: 1000px;
+        &::before {
+            background-color: $seaGreen;
+            border-radius: 50%;
+            content: '';
+            height: 5px;
+            left: -30px;
             position: absolute;
-            left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
-            top: -400px;
-            width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
+            top: calc(30% + 5px);
+            width: 5px;
+        }
+    }
+}
+
+.blogPostImageContainer {
+    box-shadow: -40px 40px 0 0 $canary;
+    max-width: 1000px;
+    position: absolute;
+    left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
+    top: -400px;
+    width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
+}
+
+.articleContainer {
+    box-shadow: -6px 6px 0 0 $canary;
+    grid-area: 1 / 2 / 2 / 3;
+
+    max-width: 1000px;
+    padding: calc(-200px + 30vw) 0 20px 60px;
+    position: relative;
+    width: 85%;
+
+    .article {
+        p {
+            margin-bottom: 1rem;
         }
 
-        .articleContainer {
-            box-shadow: -6px 6px 0 0 $canary;
-            grid-area: 1 / 2 / 2 / 3;
-
-            max-width: 1000px;
-            padding: calc(-200px + 30vw) 0 20px 60px;
-            position: relative;
-            width: 85%;
-
-            .article {
-                p {
-                    margin-bottom: 1rem;
-                }
-
-                .blogDate {
-                    margin-bottom: 60px;
-                }
-            }
+        .blogDate {
+            margin-bottom: 60px;
         }
+    }
+}
 
-        .commentsContainer {
-            grid-area: 2 / 2 / 3 / 3;
-            max-width: 1000px;
-            width: 85%;
+.commentsContainer {
+    grid-area: 2 / 2 / 3 / 3;
+    max-width: 1000px;
+    width: 85%;
 
-            .commentsListContainer {
-                margin-right: 20px;
-                padding-left: 40px;
-            }
+    .commentsListContainer {
+        margin-right: 20px;
+        padding-left: 40px;
+    }
 
-            .sectionHeading {
-                margin-bottom: 40px;
-            }
+    .sectionHeading {
+        margin-bottom: 40px;
+    }
+}
 
-            .commentContainer {
-                @include setFlex(row, space-between, flex-start);
+.commentContainer {
+    @include setFlex(row, space-between, flex-start);
 
-                margin-bottom: 8rem;
+    margin-bottom: 8rem;
 
-                .imageContainer {
-                    flex-basis: 92px;
-                    width: 92px;
-                }
+    .imageContainer {
+        flex-basis: 92px;
+        width: 92px;
+    }
 
-                .commentTextContainer {
-                    flex-basis: calc(100% - 92px - 4%);
+    .commentTextContainer {
+        flex-basis: calc(100% - 92px - 4%);
 
-                    .commentByLine {
-                        margin-bottom: 1rem;
-                    }
-                }
-            }
+        .commentByLine {
+            margin-bottom: 1rem;
         }
+    }
+}
 
-        .commentsForm {
-            @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
+.commentsForm {
+    @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
 
-            margin-bottom: 80px;
+    margin-bottom: 80px;
 
-            .commentFormField {
-                background-color: transparent;
-                border: none;
-                border-bottom: 2px solid $seaGreen;
-                color: $black;
-                padding: 30px;
-                width: 100%;
-            }
+    .commentFormField {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $seaGreen;
+        color: $black;
+        padding: 30px;
+        width: 100%;
+    }
 
-            .commentField {
-                border: 2px solid $seaGreen;
-                height: 100%;
-                resize: none;
-            }
+    .commentField {
+        border: 2px solid $seaGreen;
+        height: 100%;
+        resize: none;
+    }
 
-            .commentSubmitButton {
-                margin: 10px 0;
-            }
+    .commentSubmitButton {
+        margin: 10px 0;
+    }
 
-            .formNameFieldContainer {
-                grid-area: 1 / 1 / 2 / 2;
-            }
+    .formNameFieldContainer {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
-            .formEmailFieldContainer {
-                grid-area: 1 / 2 / 2 / 3;
-            }
+    .formEmailFieldContainer {
+        grid-area: 1 / 2 / 2 / 3;
+    }
 
-            .formCommentFieldContainer {
-                grid-area: 2 / 1 / 4 / 3;
-            }
+    .formCommentFieldContainer {
+        grid-area: 2 / 1 / 4 / 3;
+    }
 
-            .commentSubmitButton {
-                grid-area: 4 / 1 / 5 / 3;
-            }
-        }
+    .commentSubmitButton {
+        grid-area: 4 / 1 / 5 / 3;
     }
 }
