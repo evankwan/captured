@@ -337,19 +337,21 @@
 
     .featureContainer {
         flex-direction: column;
+
+        .featureTextContainer {
+            margin: 40px 0;
+            
+            .sectionTitle {
+                margin: 10px auto;
+            }
+
+            .button {
+                margin: 0 auto;
+            }
+        }
     }
 
-    .featureTextContainer {
-        margin: 40px 0;
-        
-        .sectionTitle {
-            margin: 10px auto;
-        }
-
-        .button {
-            margin: 0 auto;
-        }
-    }
+    
 
     .gallerySection {
         height: 100%;
@@ -393,111 +395,32 @@
         padding: 5px 0;  
     }
 
-    .hamburgerToggler {
-        @include resetMarginAndPadding();
-
-        cursor: pointer;
-        height: 100px;
-        opacity: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        visibility: visible;
-        width: 100px;
-        z-index: 10;
-
-        &:checked {
-            & + .hamburger .middleLine {
-                transform: rotate(225deg);
-            }
-
-            & + .hamburger .middleLine::before {
-                transform: rotate(90deg) translate(20px);
-            }
-
-            & + .hamburger .middleLine::after {
-                transform: rotate(90deg) translate(-20px);
-            }
-
-            &:hover + .hamburger .middleLine{
-                transform: rotate(135deg);
-            }
-
-            & + .hamburger + .topNavList {
-                @include setFlex(column, space-around, center);
-
-                opacity: 100;
-                padding-top: 100px;
-                visibility: visible;
-            }
-        }
+    .aboutSectionWrapper {
+        text-align: center;
     }
 
-    .hamburger {
-        @include setFlex(column, center, center);
-
-        height: 80px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        visibility: visible;
-        width: 80px;
-
-        .middleLine {
-            background-color: $black;
-            height: 5px;
-            position: relative;
-            transition: all .5s ease-in-out;
-            width: 50px;
-
-            &::before,
-            &::after {
-                background-color: $black;
-                content: '';
-                height: 5px;
-                position: absolute;
-                transition: all .5s ease-in-out;
-                width: 50px;
-            }
-
-            &::before {
-                top: -20px;
-            }
-
-            &::after {
-                bottom: -20px;
-            }
-        }
+    .guidesImageContainer1 .imageContainer {
+        box-shadow: 10px 10px 0 0 $canary;
     }
 
-    .guidesGridContainer {
-        .guidesImageContainer1 .imageContainer {
-            box-shadow: 10px 10px 0 0 $canary;
-        }
-
-        .guidesImageContainer2 .imageContainer {
-            box-shadow: -10px 10px 0 0 $canary;
-        }
-        
-        .guidesTextContainer {
-            padding: 0;
-            text-align: center;
-            width: 80%;
-        }
+    .guidesImageContainer2 .imageContainer {
+        box-shadow: -10px 10px 0 0 $canary;
+    }
+    
+    .guidesTextContainer {
+        padding: 0;
+        text-align: center;
+        width: 80%;
     }
 
 
-    .featureSection .featureContainer {
+    .featureContainer {
         .featureImageContainer .imageContainer {
             box-shadow: 10px 10px 0 0 $canary;
         }
 
         .featureTextContainer {
             text-align: center;
-
-            .featureTextContainerInner .sectionTitle {
-                margin-bottom: 20px;
-            }
         }
     }
 }
@@ -511,11 +434,10 @@
         padding: 40px 0;
     }
 
-    .linksSection .linksGridContainer .linkContainer {
+
         
-        .linkTextContainer {
-            width: 100%;
-        }
+    .linkContainer .linkTextContainer {
+        width: 100%;
     }
 
 }

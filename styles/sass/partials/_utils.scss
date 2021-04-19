@@ -70,3 +70,82 @@
     max-width: 1350px;
     width: 95%;
 }
+
+@media (max-width: 768px) {
+    .hamburgerToggler {
+        @include resetMarginAndPadding();
+
+        cursor: pointer;
+        height: 100px;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        visibility: visible;
+        width: 100px;
+        z-index: 10;
+
+        &:checked {
+            & + .hamburger .middleLine {
+                transform: rotate(225deg);
+            }
+
+            & + .hamburger .middleLine::before {
+                transform: rotate(90deg) translate(20px);
+            }
+
+            & + .hamburger .middleLine::after {
+                transform: rotate(90deg) translate(-20px);
+            }
+
+            &:hover + .hamburger .middleLine{
+                transform: rotate(135deg);
+            }
+
+            & + .hamburger + .topNavList {
+                @include setFlex(column, space-around, center);
+
+                opacity: 100;
+                padding-top: 100px;
+                visibility: visible;
+            }
+        }
+    }
+
+    .hamburger {
+        @include setFlex(column, center, center);
+
+        height: 80px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        visibility: visible;
+        width: 80px;
+
+        .middleLine {
+            background-color: $black;
+            height: 5px;
+            position: relative;
+            transition: all .5s ease-in-out;
+            width: 50px;
+
+            &::before,
+            &::after {
+                background-color: $black;
+                content: '';
+                height: 5px;
+                position: absolute;
+                transition: all .5s ease-in-out;
+                width: 50px;
+            }
+
+            &::before {
+                top: -20px;
+            }
+
+            &::after {
+                bottom: -20px;
+            }
+        }
+    }
+}
