@@ -256,6 +256,10 @@
     .homeHeader {
         background-position: -200px top;
 
+        .topNav .topNavList a {
+            margin: 0 15px;
+        }
+
         .homeHeaderContainer .homeTitle {
             margin-bottom: 0;
         }
@@ -264,9 +268,10 @@
             width: 0;
         }
         
-        .topNav .topNavList a {
-            margin: 0 15px;
+        .homeTitle {
+            font-size: calc(4rem + 8vw);
         }
+        
     }
 
     .aboutSection {
@@ -468,4 +473,52 @@
             }
         }
     }
+
+    .guidesSection .guidesGridContainer .guidesTextContainer {
+        padding: 0;
+        text-align: center;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeHeader .homeTitle {
+        font-size: 6rem;
+    }
+
+    .aboutSection {
+        padding: 40px 0;
+    }
+
+    .guidesSection .guidesGridContainer {
+        .guidesImageContainer1 .imageContainer {
+            box-shadow: 10px 10px 0 0 $canary;
+        }
+
+        .guidesImageContainer2 .imageContainer {
+            box-shadow: -10px 10px 0 0 $canary;
+        }
+    }
+
+.linksSection .linksGridContainer .linkContainer {
+    
+    .linkTextContainer {
+        width: 100%;
+    }
+}
+
+.featureSection .featureContainer {
+    .featureImageContainer .imageContainer {
+        box-shadow: 10px 10px 0 0 $canary;
+    }
+
+    .featureTextContainer {
+        text-align: center;
+
+        .featureTextContainerInner .sectionTitle {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 }
