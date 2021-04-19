@@ -363,8 +363,32 @@
 @media (max-width: 768px) {
 
     .topNav {
+        padding: 0;
+
         .topNavList {
+            @include setFlex(column, space-around, center);
+
+            background-color: $seaGreen;
+            opacity: 0;
+            padding: 0 20px;
+            transition: all .5s ease;
             visibility: hidden;
+            z-index: 10;
+
+            .topNavListItem {
+                margin: 10px 0;
+                padding: 5px 0;
+
+                a {
+                    @include resetMarginAndPadding();
+
+                    font-size: 3rem;
+
+                    &.active {
+                        border-bottom: 3px solid $white;
+                    }
+                }
+            }
         }
     
         .hamburgerToggler {
@@ -380,20 +404,30 @@
             width: 100px;
             z-index: 10;
 
-            &:checked + .hamburger .middleLine {
-                transform: rotate(225deg);
-            }
+            &:checked {
+                & + .hamburger .middleLine {
+                    transform: rotate(225deg);
+                }
 
-            &:checked + .hamburger .middleLine::before {
-                transform: rotate(90deg) translate(20px);
-            }
+                & + .hamburger .middleLine::before {
+                    transform: rotate(90deg) translate(20px);
+                }
 
-            &:checked + .hamburger .middleLine::after {
-                transform: rotate(90deg) translate(-20px);
-            }
+                & + .hamburger .middleLine::after {
+                    transform: rotate(90deg) translate(-20px);
+                }
 
-            &:checked:hover + .hamburger .middleLine{
-                transform: rotate(45deg);
+                &:hover + .hamburger .middleLine{
+                    transform: rotate(135deg);
+                }
+
+                & + .hamburger + .topNavList {
+                    @include setFlex(column, space-around, center);
+
+                    opacity: 100;
+                    padding-top: 100px;
+                    visibility: visible;
+                }
             }
         }
     
