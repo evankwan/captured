@@ -1,5 +1,5 @@
 .homeHeader {
-    background-image: url(../../assets/header-image.jpg);
+    background-image: url(../assets/header-image.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -254,7 +254,7 @@
 
 @media (max-width: 1024px) {
     .homeHeader {
-        background-position: left top;
+        background-position: -200px top;
 
         .homeHeaderContainer .homeTitle {
             margin-bottom: 0;
@@ -360,15 +360,43 @@
     }
 }
 
-// .gallerySection {
-//     @include setFlex(column, center, center);
+@media (max-width: 768px) {
+    .topNavList {
+        visibility: hidden;
+    }
 
-//     background-color: $white;
-//     height: 600px;
+    .hamburger {
+        @include setFlex(column, center, center);
 
-//     .galleryGridContainer {
-//         @include setGrid(repeat(3, 1fr), 1fr, 40px);
+        height: 80px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
 
-//         padding: 0 20px;
-//     }
-// }
+        .middleLine {
+            background-color: $black;
+            height: 5px;
+            width: 50px;
+
+            &::before,
+            &::after {
+                background-color: $black;
+                content: '';
+                height: 5px;
+                position: absolute;
+                width: 50px;
+            }
+
+            &::before {
+                top: 20px;
+                left: 15px;
+            }
+
+            &::after {
+                bottom: 20px;
+                left: 15px;
+            }
+        }
+    }
+}
