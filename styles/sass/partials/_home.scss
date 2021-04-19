@@ -7,159 +7,156 @@
     max-height: 850px;
     transition: background-position 0.5s ease;
     width: 100%;
+}
 
-    .homeHeaderContainer {
-        @include setFlex(column, flex-end, center);
+.homeHeaderContainer {
+    @include setFlex(column, flex-end, center);
 
-        height: 100%;
-        position: relative;
+    height: 100%;
+    position: relative;
 
-        .homeTitle {
-            margin-bottom: 50px;
-            z-index: 10;
-        }
+    .homeTitle {
+        margin-bottom: 50px;
+        z-index: 10;
     }
+}
 
-    .headerImageContainer {
-        border: 60px solid $canary;
-        border-left: 50px solid $canary;
-        border-right: none;
-        bottom: -200px;
-        max-width: 800px;
-        position: absolute;
-        right: 0;
-        transition: all 1s ease;
-        width: 45%;
-    }
+.headerImageContainer {
+    border: 60px solid $canary;
+    border-left: 50px solid $canary;
+    border-right: none;
+    bottom: -200px;
+    max-width: 800px;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    width: 45%;
 }
 
 .aboutSection {
     background-color: $seaGreenBackground;
     height: 800px;
+}
 
-    .aboutSectionWrapper {
-        @include setFlex(column, center, center);
+.aboutSectionWrapper {
+    @include setFlex(column, center, center);
 
-        height: 100%;
+    height: 100%;
 
-        h2,
-        p {
-            padding: 0 15px;
-            width: 85%;
-        }
+    h2,
+    p {
+        padding: 0 15px;
+        width: 85%;
+    }
 
-        & > * {
-            margin: 15px 0;
-        }
+    & > * {
+        margin: 15px 0;
     }
 }
 
 .guidesSection {
     height: 850px;
     position: relative;
+}
 
-    .guidesGridContainer {
-        @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 80px);
+.guidesGridContainer {
+    @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 80px);
 
-        height: 100%;
-        max-width: 1600px;
+    height: 100%;
+    max-width: 1600px;
 
-        .guidesImageContainer1,
-        .guidesImageContainer2 {
-            .imageContainer {
-                max-width: 700px;
-                position: absolute;
-                width: 50%;
-            }
-        }
-
-        .guidesImageContainer1 {
-            .imageContainer {
-                box-shadow: 40px 40px 0 0 $canary;
-                left: 0;
-                top: -40px;
-            }
-        }
-
-        .guidesImageContainer2 {
-            .imageContainer {
-                bottom: -40px;
-                box-shadow: -40px 40px 0 0px $canary;
-                right: 0;
-            }
-        }
-
-        .guidesTextContainer1,
-        .guidesTextContainer2 {
-            @include setFlex(column, center, flex-start);
-
-            margin: 0 auto;
-
-            * {
-                margin: 15px 0;
-            }
-        }
-
-        .guidesTextContainer1 {
-            padding-left: 100px;
-        }
-
-        .guidesTextContainer2 {
-            align-items: flex-end;
-            padding-right: 100px;
-        }
+    .imageContainer {
+        max-width: 700px;
+        position: absolute;
+        width: 50%;
     }
+}
+
+.guidesImageContainer1 {
+    .imageContainer {
+        box-shadow: 40px 40px 0 0 $canary;
+        left: 0;
+        top: -40px;
+    }
+}
+
+.guidesImageContainer2 {
+    .imageContainer {
+        bottom: -40px;
+        box-shadow: -40px 40px 0 0px $canary;
+        right: 0;
+    }
+}
+
+.guidesTextContainer1,
+.guidesTextContainer2 {
+    @include setFlex(column, center, flex-start);
+
+    margin: 0 auto;
+
+    * {
+        margin: 15px 0;
+    }
+}
+
+.guidesTextContainer1 {
+    padding-left: 100px;
+}
+
+.guidesTextContainer2 {
+    align-items: flex-end;
+    padding-right: 100px;
 }
 
 .linksSection {
     background: $seaGreenBackground;
     height: 650px;
+}
 
-    .linksGridContainer {
-        @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 20px);
+.linksGridContainer {
+    @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 20px);
 
-        height: 100%;
-        margin: 0 auto;
-        padding: 100px 20px;
-        width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 100px 20px;
+    width: 100%;
+}
 
-        .linkContainer {
-            @include setFlex(row, space-between, flex-start);
+.linkContainer {
+    @include setFlex(row, space-between, flex-start);
 
-            margin: 50px 0 0;
-            width: 100%;
+    margin: 50px 0 0;
+    width: 100%;
 
-            .linkIconContainer {
-                @include setFlex(row, center, center);
+    .linkIconContainer {
+        @include setFlex(row, center, center);
 
-                background-color: $seaGreen;
-                border-radius: 50%;
-                height: 55px;
-                width: 55px;
-            }
+        background-color: $seaGreen;
+        border-radius: 50%;
+        height: 55px;
+        width: 55px;
+    }
 
-            .fa-camera {
-                font-size: 3.6rem;
-            }
+    .fa-camera {
+        font-size: 3.6rem;
+    }
 
-            .fa-users,
-            .fa-file {
-                font-size: 2.8rem;
-            }
+    .fa-users,
+    .fa-file {
+        font-size: 2.8rem;
+    }
 
-            .fa-phone {
-                font-size: 2.4rem;
-            }
+    .fa-phone {
+        font-size: 2.4rem;
+    }
 
-            .linkTextContainer {
-                margin-left: 20px;
-                padding-top: 10px;
-                width: calc(100% - 75px);
+    .linkTextContainer {
+        margin-left: 20px;
+        padding-top: 10px;
+        width: calc(100% - 75px);
 
-                .sectionHeading {
-                    margin-bottom: 20px;
-                }
-            }
+        .sectionHeading {
+            margin-bottom: 20px;
         }
     }
 }
@@ -175,37 +172,37 @@
 .featureSection {
     background-color: $seaGreenBackground;
     height: 550px;
+}
 
-    .featureContainer {
-        @include setFlex(row, space-between, center);
+.featureContainer {
+    @include setFlex(row, space-between, center);
 
-        height: 100%;
-        padding: 20px;
+    height: 100%;
+    padding: 20px;
 
-        .featureImageContainer {
-            flex-basis: calc((100% / 3) - 10px);
+    .featureImageContainer {
+        flex-basis: calc((100% / 3) - 10px);
 
-            .imageContainer {
-                box-shadow: 40px 40px 0 0 $canary;
-                width: 320px;
-            }
+        .imageContainer {
+            box-shadow: 40px 40px 0 0 $canary;
+            width: 320px;
         }
+    }
 
-        .featureTextContainer {
+    .featureTextContainer {
+        @include setFlex(column, space-between, flex-start);
+
+        flex-basis: calc(((100% / 3) * 2) - 10px);
+        height: 60%;
+        transition: all 0.3s ease;
+
+        .featureTextContainerInner {
             @include setFlex(column, space-between, flex-start);
 
-            flex-basis: calc(((100% / 3) * 2) - 10px);
-            height: 60%;
-            transition: all 0.3s ease;
+            margin-bottom: 50px;
 
-            .featureTextContainerInner {
-                @include setFlex(column, space-between, flex-start);
-
-                margin-bottom: 50px;
-
-                h2 {
-                    margin-bottom: 20px;
-                }
+            h2 {
+                margin-bottom: 20px;
             }
         }
     }
@@ -247,31 +244,30 @@
         }
     }
     
-    .featureSection .featureContainer .featureTextContainer {
+    .featureContainer .featureTextContainer {
         margin-left: 60px;
     }
 }
 
 @media (max-width: 1024px) {
+    .topNav .topNavList a {
+        margin: 0 15px;
+    }
+    
     .homeHeader {
-        background-position: -200px top;
+        background-position: -200px top;      
+    }
 
-        .topNav .topNavList a {
-            margin: 0 15px;
-        }
-
-        .homeHeaderContainer .homeTitle {
-            margin-bottom: 0;
-        }
-        .headerImageContainer {
-            border: none;
-            width: 0;
-        }
-        
-        .homeTitle {
-            font-size: calc(4rem + 8vw);
-        }
-        
+    .homeHeaderContainer .homeTitle {
+        margin-bottom: 0;
+    }
+    .headerImageContainer {
+        border: none;
+        width: 0;
+    }
+    
+    .homeTitle {
+        font-size: calc(4rem + 8vw);
     }
 
     .aboutSection {
@@ -281,77 +277,77 @@
 
     .guidesSection {
         height: 100%;
+    }
 
-        .guidesGridContainer {
-            @include setFlex(column, space-between, center);
+    .guidesGridContainer {
+        @include setFlex(column, space-between, center);
 
-            padding: 20px 0;
+        padding: 20px 0;
 
-            & > * {
-                margin-bottom: 50px;
-            }
+        & > * {
+            margin-bottom: 50px;
+        }
 
-            .guidesImageContainer1 .imageContainer,
-            .guidesImageContainer2 .imageContainer {
-                margin: 0 auto;
-                position: static;
-                width: 90%;
-            }
+        .imageContainer,
+        .imageContainer {
+            margin: 0 auto;
+            position: static;
+            width: 90%;
+        }
+    }
 
-            .guidesTextContainer {
-                padding: 0 50px;
-                width: 70%;
+    .guidesTextContainer {
+        padding: 0 50px;
+        width: 70%;
 
-                .sectionHeading {
-                    margin: 20px auto 0;
-                    text-align: center;
-                }
+        .sectionHeading {
+            margin: 20px auto 0;
+            text-align: center;
+        }
 
-                .button {
-                    margin: 0 auto 40px;
-                }
-            }
+        .button {
+            margin: 0 auto 40px;
         }
     }
 
     .linksSection {
         height: 100%;
+    }
 
-        .linksGridContainer {
-            @include setFlex(column, space-around, center);
-            padding: 25px 20px;
+    .linksGridContainer {
+        @include setFlex(column, space-around, center);
+        padding: 25px 20px;
+    }
 
-            .linkContainer {
-                @include setFlex(column, space-between, center);
+    .linkContainer {
+        @include setFlex(column, space-between, center);
 
-                margin: 25px 0;
-                width: 70%;
+        margin: 25px 0;
+        width: 70%;
 
-                .linkTextContainer {
-                    margin-left: 0;
-                    text-align: center;
-                }
-            }
+        .linkTextContainer {
+            margin-left: 0;
+            text-align: center;
         }
     }
 
     .featureSection {
         height: 100%;
+    }
 
-        .featureContainer {
-            flex-direction: column;
+    .featureContainer {
+        flex-direction: column;
+    }
 
-            .featureTextContainer {
-                margin: 40px 0;
-                
-                .featureTextContainerInner .sectionTitle {
-                    margin: 10px auto;
-                }
+    .featureTextContainer {
+        margin: 40px 0;
+        
+        .sectionTitle {
+            margin: 10px auto;
+        }
 
-                .button {
-                    margin: 0 auto;
-                }
-            }
+        .button {
+            margin: 0 auto;
         }
     }
 
@@ -380,101 +376,101 @@
             visibility: hidden;
             z-index: 10;
 
-            .topNavListItem {
-                margin: 10px 0;
-                padding: 5px 0;
+            a {
+                @include resetMarginAndPadding();
 
-                a {
-                    @include resetMarginAndPadding();
+                font-size: 3rem;
 
-                    font-size: 3rem;
-
-                    &.active {
-                        border-bottom: 3px solid $white;
-                    }
-                }
-            }
-        }
-    
-        .hamburgerToggler {
-            @include resetMarginAndPadding();
-    
-            cursor: pointer;
-            height: 100px;
-            opacity: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            visibility: visible;
-            width: 100px;
-            z-index: 10;
-
-            &:checked {
-                & + .hamburger .middleLine {
-                    transform: rotate(225deg);
-                }
-
-                & + .hamburger .middleLine::before {
-                    transform: rotate(90deg) translate(20px);
-                }
-
-                & + .hamburger .middleLine::after {
-                    transform: rotate(90deg) translate(-20px);
-                }
-
-                &:hover + .hamburger .middleLine{
-                    transform: rotate(135deg);
-                }
-
-                & + .hamburger + .topNavList {
-                    @include setFlex(column, space-around, center);
-
-                    opacity: 100;
-                    padding-top: 100px;
-                    visibility: visible;
-                }
-            }
-        }
-    
-        .hamburger {
-            @include setFlex(column, center, center);
-    
-            height: 80px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            visibility: visible;
-            width: 80px;
-    
-            .middleLine {
-                background-color: $black;
-                height: 5px;
-                position: relative;
-                transition: all .5s ease-in-out;
-                width: 50px;
-    
-                &::before,
-                &::after {
-                    background-color: $black;
-                    content: '';
-                    height: 5px;
-                    position: absolute;
-                    transition: all .5s ease-in-out;
-                    width: 50px;
-                }
-    
-                &::before {
-                    top: -20px;
-                }
-    
-                &::after {
-                    bottom: -20px;
+                &.active {
+                    border-bottom: 3px solid $white;
                 }
             }
         }
     }
 
-    .guidesSection .guidesGridContainer {
+    .topNavListItem {
+        margin: 10px 0;
+        padding: 5px 0;  
+    }
+
+    .hamburgerToggler {
+        @include resetMarginAndPadding();
+
+        cursor: pointer;
+        height: 100px;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        visibility: visible;
+        width: 100px;
+        z-index: 10;
+
+        &:checked {
+            & + .hamburger .middleLine {
+                transform: rotate(225deg);
+            }
+
+            & + .hamburger .middleLine::before {
+                transform: rotate(90deg) translate(20px);
+            }
+
+            & + .hamburger .middleLine::after {
+                transform: rotate(90deg) translate(-20px);
+            }
+
+            &:hover + .hamburger .middleLine{
+                transform: rotate(135deg);
+            }
+
+            & + .hamburger + .topNavList {
+                @include setFlex(column, space-around, center);
+
+                opacity: 100;
+                padding-top: 100px;
+                visibility: visible;
+            }
+        }
+    }
+
+    .hamburger {
+        @include setFlex(column, center, center);
+
+        height: 80px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        visibility: visible;
+        width: 80px;
+
+        .middleLine {
+            background-color: $black;
+            height: 5px;
+            position: relative;
+            transition: all .5s ease-in-out;
+            width: 50px;
+
+            &::before,
+            &::after {
+                background-color: $black;
+                content: '';
+                height: 5px;
+                position: absolute;
+                transition: all .5s ease-in-out;
+                width: 50px;
+            }
+
+            &::before {
+                top: -20px;
+            }
+
+            &::after {
+                bottom: -20px;
+            }
+        }
+    }
+
+    .guidesGridContainer {
         .guidesImageContainer1 .imageContainer {
             box-shadow: 10px 10px 0 0 $canary;
         }
@@ -503,10 +499,6 @@
                 margin-bottom: 20px;
             }
         }
-    }
-
-    .gallerySection .galleryGridContainer {
-
     }
 }
 
