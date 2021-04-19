@@ -14,6 +14,11 @@
     text-align: center;
 }
 
+.hamburger,
+.hamburgerToggler {
+    visibility: hidden;
+}
+
 .imageContainer {
     overflow: hidden;
 

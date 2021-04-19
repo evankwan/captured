@@ -250,6 +250,11 @@ html {
   text-align: center;
 }
 
+.hamburger,
+.hamburgerToggler {
+  visibility: hidden;
+}
+
 .imageContainer {
   overflow: hidden;
 }
@@ -952,6 +957,35 @@ a,
   .topNav .topNavList {
     visibility: hidden;
   }
+  .topNav .hamburgerToggler {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 100px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: visible;
+    width: 100px;
+    z-index: 10;
+  }
+  .topNav .hamburgerToggler:checked + .hamburger .middleLine {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  .topNav .hamburgerToggler:checked + .hamburger .middleLine::before {
+    -webkit-transform: rotate(90deg) translate(20px);
+            transform: rotate(90deg) translate(20px);
+  }
+  .topNav .hamburgerToggler:checked + .hamburger .middleLine::after {
+    -webkit-transform: rotate(90deg) translate(-20px);
+            transform: rotate(90deg) translate(-20px);
+  }
+  .topNav .hamburgerToggler:checked:hover + .hamburger .middleLine {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
   .topNav .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -970,6 +1004,7 @@ a,
     position: absolute;
     right: 0;
     top: 0;
+    visibility: visible;
     width: 80px;
   }
   .topNav .hamburger .middleLine {
@@ -994,30 +1029,6 @@ a,
   }
   .topNav .hamburger .middleLine::after {
     bottom: -20px;
-  }
-  .topNav .hamburgerToggler {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    height: 100px;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100px;
-    z-index: 10;
-  }
-  .topNav .hamburgerToggler:checked + .hamburger .middleLine {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
-  .topNav .hamburgerToggler:checked + .hamburger .middleLine::before {
-    -webkit-transform: rotate(90deg) translate(20px);
-            transform: rotate(90deg) translate(20px);
-  }
-  .topNav .hamburgerToggler:checked + .hamburger .middleLine::after {
-    -webkit-transform: rotate(90deg) translate(-20px);
-            transform: rotate(90deg) translate(-20px);
   }
 }
 
