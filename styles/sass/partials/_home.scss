@@ -382,7 +382,7 @@
                 background-color: $black;
                 height: 5px;
                 position: relative;
-                transition: all .3s ease-in-out;
+                transition: all .5s ease-in-out;
                 width: 50px;
     
                 &::before,
@@ -391,7 +391,7 @@
                     content: '';
                     height: 5px;
                     position: absolute;
-                    transition: all .3s ease-in-out;
+                    transition: all .5s ease-in-out;
                     width: 50px;
                 }
     
@@ -421,10 +421,12 @@
                 transform: rotate(135deg);
             }
 
-            &:checked + .hamburger .middleLine::before, 
+            &:checked + .hamburger .middleLine::before {
+                transform: rotate(90deg) translate(20px);
+            }
+
             &:checked + .hamburger .middleLine::after {
-                top: 0;
-                transform: rotate(90deg);
+                transform: rotate(90deg) translate(-20px);
             }
 
         }
