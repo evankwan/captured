@@ -1083,20 +1083,6 @@ a,
   .topNav .hamburger .middleLine::after {
     bottom: -20px;
   }
-  .guidesSection .guidesGridContainer .guidesTextContainer {
-    padding: 0;
-    text-align: center;
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .homeHeader .homeTitle {
-    font-size: 6rem;
-  }
-  .aboutSection {
-    padding: 40px 0;
-  }
   .guidesSection .guidesGridContainer .guidesImageContainer1 .imageContainer {
     -webkit-box-shadow: 10px 10px 0 0 #fdfa69;
             box-shadow: 10px 10px 0 0 #fdfa69;
@@ -1105,8 +1091,10 @@ a,
     -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
             box-shadow: -10px 10px 0 0 #fdfa69;
   }
-  .linksSection .linksGridContainer .linkContainer .linkTextContainer {
-    width: 100%;
+  .guidesSection .guidesGridContainer .guidesTextContainer {
+    padding: 0;
+    text-align: center;
+    width: 80%;
   }
   .featureSection .featureContainer .featureImageContainer .imageContainer {
     -webkit-box-shadow: 10px 10px 0 0 #fdfa69;
@@ -1117,6 +1105,18 @@ a,
   }
   .featureSection .featureContainer .featureTextContainer .featureTextContainerInner .sectionTitle {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeHeader .homeTitle {
+    font-size: 6rem;
+  }
+  .aboutSection {
+    padding: 40px 0;
+  }
+  .linksSection .linksGridContainer .linkContainer .linkTextContainer {
+    width: 100%;
   }
 }
 
