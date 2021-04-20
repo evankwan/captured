@@ -236,10 +236,14 @@ html {
 }
 
 .button {
-  background: #4ceea7;
+  background-color: #4ceea7;
   color: #2c2c2c;
+  cursor: pointer;
   display: inline-block;
-  padding: 10px 20px;
+}
+
+.button:hover {
+  background-color: #1dea90;
 }
 
 .footer {

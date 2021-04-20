@@ -1,9 +1,13 @@
 // utility classes
 .button {
-    background: $seaGreen;
+    background-color: $seaGreen;
     color: $black;
+    cursor: pointer;
     display: inline-block;
-    padding: 10px 20px;
+    
+    &:hover {
+        background-color: darken($seaGreen, 10%);
+    }
 }
 
 .footer {
