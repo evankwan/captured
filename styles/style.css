@@ -1310,12 +1310,17 @@ a,
   color: #2c2c2c;
 }
 
+.blogSideBar a:hover {
+  -webkit-text-decoration: 3px underline #4ceea7;
+          text-decoration: 3px underline #4ceea7;
+}
+
 .recentPostsContainer .recentPostsLink {
   list-style: none;
 }
 
 .recentPostsContainer .recentPostsLink .recentPost {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   position: relative;
 }
 
