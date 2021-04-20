@@ -240,6 +240,7 @@ html {
   color: #2c2c2c;
   cursor: pointer;
   display: inline-block;
+  padding: 10px 20px;
 }
 
 .button:hover {
@@ -1720,7 +1721,7 @@ a,
 }
 
 .rightContainer .contactForm .contactSubmitButton {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .rightContainer .contactForm .formNameFieldContainer {
