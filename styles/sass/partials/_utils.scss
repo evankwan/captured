@@ -60,7 +60,7 @@
             }
 
             &:hover {
-                color: $white;
+                border-bottom: 3px solid $canary;
             }
         }
 
@@ -159,6 +159,11 @@
             border-bottom: none;
             outline: 3px solid $canary;
             padding: 10px;
+        }
+
+        &:hover {
+            border-bottom: none;
+            color: $white;
         }
     }
 }

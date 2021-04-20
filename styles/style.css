@@ -310,7 +310,7 @@ html {
 }
 
 .topNav .topNavList a:hover {
-  color: #fafafa;
+  border-bottom: 3px solid #fdfa69;
 }
 
 .topNav .topNavList li:last-child a {
@@ -419,6 +419,10 @@ html {
     border-bottom: none;
     outline: 3px solid #fdfa69;
     padding: 10px;
+  }
+  .topNav .topNavList .topNavListItem a:hover {
+    border-bottom: none;
+    color: #fafafa;
   }
 }
 
