@@ -18,92 +18,92 @@
     height: 55vh;
     max-height: 700px;
     width: 100%;
+}
 
-    .contactPageGridContainer {
-        @include setGrid(5fr 11fr, 1fr, 0);
+.contactPageGridContainer {
+    @include setGrid(5fr 11fr, 1fr, 0);
 
-        height: 100%;
-        position: relative;
-        width: 100%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}   
 
-        .contactPageSideContact {
-            @include setFlex(column, center, center);
+.contactPageSideContact {
+    @include setFlex(column, center, center);
 
+    height: 100%;
+    margin: 0 60px;
+    width: 300px;
+
+    .socialIcons {
+        @include setFlex(row, flex-start, center);
+
+        font-size: 2.4rem;
+        list-style: none;
+        padding-left: 0;
+
+        .socialIcon {
+            margin-right: 25px;
+        }
+    }
+
+    .emailHeading {
+        margin-bottom: 2rem;
+    }
+}
+
+.rightContainer {
+    position: absolute;
+    right: 0;
+    top: -350px;
+    width: 68%;
+
+    h1 {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .contactForm {
+        @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
+
+        background-color: $white;
+        box-shadow: -40px 40px 0 0 $canary;
+        margin-bottom: 80px;
+        padding: 70px;
+
+        .contactFormField {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $seaGreen;
+            color: $black;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .contactMessageField {
+            border: 2px solid $seaGreen;
             height: 100%;
-            margin: 0 60px;
-            width: 300px;
-
-            .socialIcons {
-                @include setFlex(row, flex-start, center);
-
-                font-size: 2.4rem;
-                list-style: none;
-                padding-left: 0;
-
-                .socialIcon {
-                    margin-right: 25px;
-                }
-            }
-
-            .emailHeading {
-                margin-bottom: 2rem;
-            }
+            resize: none;
         }
 
-        .rightContainer {
-            position: absolute;
-            right: 0;
-            top: -350px;
-            width: 68%;
-
-            h1 {
-                margin-bottom: 20px;
-                text-align: left;
-            }
-
-            .contactForm {
-                @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
-
-                background-color: $white;
-                box-shadow: -40px 40px 0 0 $canary;
-                margin-bottom: 80px;
-                padding: 70px;
-
-                .contactFormField {
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 2px solid $seaGreen;
-                    color: $black;
-                    padding: 30px;
-                    width: 100%;
-                }
-
-                .contactMessageField {
-                    border: 2px solid $seaGreen;
-                    height: 100%;
-                    resize: none;
-                }
-
-                .contactSubmitButton {
-                    margin: 20px 0;
-                }
-
-                .formNameFieldContainer {
-                    grid-area: 1 / 1 / 2 / 2;
-                }
-
-                .formEmailFieldContainer {
-                    grid-area: 1 / 2 / 2 / 3;
-                }
-
-                .formCommentFieldContainer {
-                    grid-area: 2 / 1 / 4 / 3;
-                }
-
-                .contactSubmitButton {
-                    grid-area: 4 / 1 / 5 / 3;
-                }
-            }
+        .contactSubmitButton {
+            margin: 20px 0;
         }
-    }   
+
+        .formNameFieldContainer {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .formEmailFieldContainer {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .formCommentFieldContainer {
+            grid-area: 2 / 1 / 4 / 3;
+        }
+
+        .contactSubmitButton {
+            grid-area: 4 / 1 / 5 / 3;
+        }
+    }
 }

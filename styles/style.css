@@ -1083,6 +1083,9 @@ a,
     margin: 10px 0;
     padding: 5px 0;
   }
+  .homeHeader .homeTitle {
+    font-size: calc(3rem + 10vw);
+  }
   .aboutSectionWrapper {
     text-align: center;
   }
@@ -1530,7 +1533,7 @@ a,
   width: 100%;
 }
 
-.contactPageMain .contactPageGridContainer {
+.contactPageGridContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5fr 11fr;
@@ -1543,7 +1546,7 @@ a,
   width: 100%;
 }
 
-.contactPageMain .contactPageGridContainer .contactPageSideContact {
+.contactPageSideContact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1562,7 +1565,7 @@ a,
   width: 300px;
 }
 
-.contactPageMain .contactPageGridContainer .contactPageSideContact .socialIcons {
+.contactPageSideContact .socialIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1581,27 +1584,27 @@ a,
   padding-left: 0;
 }
 
-.contactPageMain .contactPageGridContainer .contactPageSideContact .socialIcons .socialIcon {
+.contactPageSideContact .socialIcons .socialIcon {
   margin-right: 25px;
 }
 
-.contactPageMain .contactPageGridContainer .contactPageSideContact .emailHeading {
+.contactPageSideContact .emailHeading {
   margin-bottom: 2rem;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer {
+.rightContainer {
   position: absolute;
   right: 0;
   top: -350px;
   width: 68%;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer h1 {
+.rightContainer h1 {
   margin-bottom: 20px;
   text-align: left;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm {
+.rightContainer .contactForm {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1616,7 +1619,7 @@ a,
   padding: 70px;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactFormField {
+.rightContainer .contactForm .contactFormField {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #4ceea7;
@@ -1625,17 +1628,17 @@ a,
   width: 100%;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactMessageField {
+.rightContainer .contactForm .contactMessageField {
   border: 2px solid #4ceea7;
   height: 100%;
   resize: none;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactSubmitButton {
+.rightContainer .contactForm .contactSubmitButton {
   margin: 20px 0;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formNameFieldContainer {
+.rightContainer .contactForm .formNameFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -1643,7 +1646,7 @@ a,
   grid-area: 1 / 1 / 2 / 2;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formEmailFieldContainer {
+.rightContainer .contactForm .formEmailFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -1651,7 +1654,7 @@ a,
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .formCommentFieldContainer {
+.rightContainer .contactForm .formCommentFieldContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -1659,7 +1662,7 @@ a,
   grid-area: 2 / 1 / 4 / 3;
 }
 
-.contactPageMain .contactPageGridContainer .rightContainer .contactForm .contactSubmitButton {
+.rightContainer .contactForm .contactSubmitButton {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
