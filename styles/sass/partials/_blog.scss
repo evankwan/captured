@@ -251,22 +251,22 @@
     .blogPostImageContainer {
         box-shadow: -10px 10px 0 0 $canary;
         left: 20%;
+        position: static;
         top: -20vh;
-        width: 60%;
+        width: 80%;
     }
 
     .blogSideBar {
         margin: 0 auto;
-        padding: 100px 20px 70vw;
+        padding: 20px;
         position: relative;
         text-align: center;
         width: 90%;
 
         .sideBlogImageContainer {
-            bottom: 20px;
-            left: 10%;
-            top: auto;
-            width: 80%;
+            margin: 20px auto 40px;
+            position: static;
+            width: 50%;
         }
     }
 
@@ -297,7 +297,11 @@
 @media (max-width: 600px) {
     .blogPostImageContainer {
         left: 10%;
-        top: -20vh;
+        top: -25vh;
         width: 80%;
+    }
+
+    .articleContainer .blogTitle {
+        font-size: calc(2rem + 4vw);
     }
 }

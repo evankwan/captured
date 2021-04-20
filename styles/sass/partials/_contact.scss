@@ -25,7 +25,7 @@
     @include setGrid(5fr 11fr, 1fr, 0);
 
     height: 100%;
-    position: relative;
+    // position: relative;
     width: 100%;
 }   
 
@@ -55,9 +55,9 @@
 
 .rightContainer {
     position: absolute;
-    right: 0;
-    top: -350px;
-    width: 68%;
+    right: 5%;
+    top: 230px;
+    width: 60%;
 
     h1 {
         margin-bottom: 20px;
@@ -126,8 +126,8 @@
     }
 
     .rightContainer {
-        top: -30vw;
-        left: calc((100% - 68%) / 2);
+        top: 200px;
+        right: calc((100% - 60%) / 2);
 
         h1 {
             text-align: center;
@@ -155,7 +155,6 @@
     .rightContainer {
 
         left: calc((100% - 85%) / 2);
-        top: -50vw;
         width: 85%;
 
         h1 {
@@ -179,22 +178,13 @@
 }
 
 @media (max-width: 768px) {
-    .contactHeader {
-        height: 250px;
-    }
-
-    .rightContainer {
-        top: -50vw - 1vw;
-        
-        h1 {
-            font-size: calc(4rem + 4vw);
-        }
+    .rightContainer h1 {
+        font-size: calc(4rem + 4vw);
     }
 }
 
 @media (max-width: 480px) {
     .rightContainer {
-        top: -80vw;
 
         h1 {
             font-size: calc(3rem + 10vw);

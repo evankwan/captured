@@ -310,7 +310,7 @@ html {
 }
 
 .topNav .topNavList a:hover {
-  border-bottom: 3px solid #fcf704;
+  color: #fafafa;
 }
 
 .topNav .topNavList li:last-child a {
@@ -410,6 +410,15 @@ html {
   }
   .hamburger .middleLine::after {
     bottom: -20px;
+  }
+  .topNav .topNavList .topNavListItem a {
+    outline: 3px solid transparent;
+    padding: 10px;
+  }
+  .topNav .topNavList .topNavListItem a:focus {
+    border-bottom: none;
+    outline: 3px solid #fdfa69;
+    padding: 10px;
   }
 }
 
@@ -1095,6 +1104,7 @@ a,
   .topNav .topNavList a {
     margin: 0;
     padding: 0;
+    outline: 5px solid transparent;
     font-size: 3rem;
   }
   .topNav .topNavList a.active {
@@ -1134,13 +1144,20 @@ a,
 
 @media (max-width: 480px) {
   .homeHeader .homeTitle {
-    font-size: 6rem;
+    font-size: calc(5rem + 2vw);
+  }
+  h2.sectionTitle {
+    font-size: 4rem;
   }
   .aboutSection {
     padding: 40px 0;
   }
   .linkContainer .linkTextContainer {
     width: 100%;
+  }
+  .featureContainer .featureImageContainer .imageContainer {
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
@@ -1476,21 +1493,21 @@ a,
     -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
             box-shadow: -10px 10px 0 0 #fdfa69;
     left: 20%;
+    position: static;
     top: -20vh;
-    width: 60%;
+    width: 80%;
   }
   .blogSideBar {
     margin: 0 auto;
-    padding: 100px 20px 70vw;
+    padding: 20px;
     position: relative;
     text-align: center;
     width: 90%;
   }
   .blogSideBar .sideBlogImageContainer {
-    bottom: 20px;
-    left: 10%;
-    top: auto;
-    width: 80%;
+    margin: 20px auto 40px;
+    position: static;
+    width: 50%;
   }
   .recentPostsContainer .recentPostsLink {
     padding-left: 0;
@@ -1516,8 +1533,11 @@ a,
 @media (max-width: 600px) {
   .blogPostImageContainer {
     left: 10%;
-    top: -20vh;
+    top: -25vh;
     width: 80%;
+  }
+  .articleContainer .blogTitle {
+    font-size: calc(2rem + 4vw);
   }
 }
 
@@ -1564,7 +1584,6 @@ a,
       grid-template-rows: 1fr;
   grid-gap: 0;
   height: 100%;
-  position: relative;
   width: 100%;
 }
 
@@ -1616,9 +1635,9 @@ a,
 
 .rightContainer {
   position: absolute;
-  right: 0;
-  top: -350px;
-  width: 68%;
+  right: 5%;
+  top: 230px;
+  width: 60%;
 }
 
 .rightContainer h1 {
@@ -1721,8 +1740,8 @@ a,
     height: min-content;
   }
   .rightContainer {
-    top: -30vw;
-    left: calc((100% - 68%) / 2);
+    top: 200px;
+    right: calc((100% - 60%) / 2);
   }
   .rightContainer h1 {
     text-align: center;
@@ -1745,7 +1764,6 @@ a,
   }
   .rightContainer {
     left: calc((100% - 85%) / 2);
-    top: -50vw;
     width: 85%;
   }
   .rightContainer h1 {
@@ -1775,21 +1793,12 @@ a,
 }
 
 @media (max-width: 768px) {
-  .contactHeader {
-    height: 250px;
-  }
-  .rightContainer {
-    top: -51vw;
-  }
   .rightContainer h1 {
     font-size: calc(4rem + 4vw);
   }
 }
 
 @media (max-width: 480px) {
-  .rightContainer {
-    top: -80vw;
-  }
   .rightContainer h1 {
     font-size: calc(3rem + 10vw);
   }

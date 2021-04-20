@@ -380,6 +380,7 @@
             a {
                 @include resetMarginAndPadding();
 
+                outline: 5px solid transparent;
                 font-size: 3rem;
 
                 &.active {
@@ -391,7 +392,7 @@
 
     .topNavListItem {
         margin: 10px 0;
-        padding: 5px 0;  
+        padding: 5px 0;
     }
 
     .homeHeader .homeTitle {
@@ -430,16 +431,23 @@
 
 @media (max-width: 480px) {
     .homeHeader .homeTitle {
-        font-size: 6rem;
+        font-size: calc(5rem + 2vw);
+    }
+
+    h2.sectionTitle {
+        font-size: 4rem;
     }
 
     .aboutSection {
         padding: 40px 0;
     }
-
-
         
     .linkContainer .linkTextContainer {
         width: 100%;
+    }
+
+    .featureContainer .featureImageContainer .imageContainer {
+        margin: 0 auto;
+        width: 80%;
     }
 }
