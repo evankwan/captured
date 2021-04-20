@@ -4,6 +4,7 @@
     background-size: cover;
     height: 60vh;
     max-height: 600px;
+    min-height: 500px;
 
     .contactHeaderContainer {
         @include setFlex(column, center, center);
@@ -104,6 +105,70 @@
 
         .contactSubmitButton {
             grid-area: 4 / 1 / 5 / 3;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .contactPageGridContainer {
+        @include setFlex(column-reverse, space-between, center);
+
+        padding-top: 150px;
+    }
+
+    .rightContainer {
+        position: static;
+
+        h1 {
+            text-align: center;
+        }
+
+        .contactForm {
+            box-shadow: -20px 20px 0 0 $canary; 
+        }
+    }
+
+    .contactPageSideContact {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contactPageMain {
+        min-height: 800px;
+    }
+
+    .contactPageGridContainer {
+        padding-top: 200px;
+    }
+
+    .rightContainer {
+        width: 85%;
+
+        .contactForm {
+            @include setFlex(column, space-around, center);
+            
+            padding: 20px;
+
+            & > div {
+                width: 80%;
+            }
+
+            .formCommentFieldContainer {
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .rightContainer {
+        h1 {
+            font-size: calc(3rem + 10vw);
+        }
+        .contactForm {
+            box-shadow: -10px 10px 0 0 $canary;
         }
     }
 }

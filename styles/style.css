@@ -1506,6 +1506,7 @@ a,
   background-size: cover;
   height: 60vh;
   max-height: 600px;
+  min-height: 500px;
 }
 
 .contactHeader .contactHeaderContainer {
@@ -1668,4 +1669,79 @@ a,
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 4 / 1 / 5 / 3;
+}
+
+@media (max-width: 1250px) {
+  .contactPageGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 150px;
+  }
+  .rightContainer {
+    position: static;
+  }
+  .rightContainer h1 {
+    text-align: center;
+  }
+  .rightContainer .contactForm {
+    -webkit-box-shadow: -20px 20px 0 0 #fdfa69;
+            box-shadow: -20px 20px 0 0 #fdfa69;
+  }
+  .contactPageSideContact {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contactPageMain {
+    min-height: 800px;
+  }
+  .contactPageGridContainer {
+    padding-top: 200px;
+  }
+  .rightContainer {
+    width: 85%;
+  }
+  .rightContainer .contactForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+  }
+  .rightContainer .contactForm > div {
+    width: 80%;
+  }
+  .rightContainer .contactForm .formCommentFieldContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rightContainer h1 {
+    font-size: calc(3rem + 10vw);
+  }
+  .rightContainer .contactForm {
+    -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
+            box-shadow: -10px 10px 0 0 #fdfa69;
+  }
 }
