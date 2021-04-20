@@ -49,6 +49,11 @@ p {
 	@include setFont($robotoStack, 2.0rem, default, default, default, 0, 32px, none);
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 h1,
 h2,
 h3,
