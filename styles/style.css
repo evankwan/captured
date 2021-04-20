@@ -421,8 +421,8 @@ a:focus {
   outline: 3px solid #4ceea7;
 }
 
-a.button:focus {
-  outline: 3px solid #fdfa69;
+.button:focus {
+  outline: 3px solid #f2db83;
 }
 
 html {
@@ -1693,24 +1693,36 @@ a,
 }
 
 @media (max-width: 1250px) {
+  .contactPageMain {
+    min-height: 800px;
+  }
   .contactPageGridContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 150px;
+    padding-top: 500px;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .contactPageSideContact {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
   .rightContainer {
-    position: static;
+    top: -30vw;
+    left: calc((100% - 68%) / 2);
   }
   .rightContainer h1 {
     text-align: center;
@@ -1729,10 +1741,15 @@ a,
     min-height: 800px;
   }
   .contactPageGridContainer {
-    padding-top: 200px;
+    padding-top: calc(600px - 20vw);
   }
   .rightContainer {
+    left: calc((100% - 85%) / 2);
+    top: -50vw;
     width: 85%;
+  }
+  .rightContainer h1 {
+    font-size: calc(4rem + 4vw);
   }
   .rightContainer .contactForm {
     display: -webkit-box;
@@ -1757,7 +1774,22 @@ a,
   }
 }
 
+@media (max-width: 768px) {
+  .contactHeader {
+    height: 250px;
+  }
+  .rightContainer {
+    top: -51vw;
+  }
+  .rightContainer h1 {
+    font-size: calc(4rem + 4vw);
+  }
+}
+
 @media (max-width: 480px) {
+  .rightContainer {
+    top: -80vw;
+  }
   .rightContainer h1 {
     font-size: calc(3rem + 10vw);
   }

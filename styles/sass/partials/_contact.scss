@@ -110,14 +110,24 @@
 }
 
 @media (max-width: 1250px) {
-    .contactPageGridContainer {
-        @include setFlex(column-reverse, space-between, center);
+    .contactPageMain {
+        min-height: 800px;
+    }
 
-        padding-top: 150px;
+    .contactPageGridContainer {
+        @include setFlex(column, flex-start, center);
+
+        padding-top: 500px;
+        max-height: min-content;
+    }
+
+    .contactPageSideContact {
+        height: min-content;
     }
 
     .rightContainer {
-        position: static;
+        top: -30vw;
+        left: calc((100% - 68%) / 2);
 
         h1 {
             text-align: center;
@@ -139,11 +149,18 @@
     }
 
     .contactPageGridContainer {
-        padding-top: 200px;
+        padding-top: calc(600px - 20vw);
     }
 
     .rightContainer {
+
+        left: calc((100% - 85%) / 2);
+        top: -50vw;
         width: 85%;
+
+        h1 {
+            font-size: calc(4rem + 4vw);
+        }
 
         .contactForm {
             @include setFlex(column, space-around, center);
@@ -161,9 +178,24 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .contactHeader {
+        height: 250px;
+    }
 
     .rightContainer {
+        top: -50vw - 1vw;
+        
+        h1 {
+            font-size: calc(4rem + 4vw);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .rightContainer {
+        top: -80vw;
+
         h1 {
             font-size: calc(3rem + 10vw);
         }
