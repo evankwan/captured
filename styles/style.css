@@ -309,6 +309,10 @@ html {
   border-bottom: 3px solid #4ceea7;
 }
 
+.topNav .topNavList a:hover {
+  border-bottom: 3px solid #fcf704;
+}
+
 .topNav .topNavList li:last-child a {
   margin-right: 0;
 }
@@ -407,6 +411,18 @@ html {
   .hamburger .middleLine::after {
     bottom: -20px;
   }
+}
+
+footer a:hover {
+  color: #ea593e;
+}
+
+a:focus {
+  outline: 3px solid #4ceea7;
+}
+
+a.button:focus {
+  outline: 3px solid #fdfa69;
 }
 
 html {

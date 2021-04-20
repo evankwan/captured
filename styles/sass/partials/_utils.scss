@@ -58,6 +58,10 @@
             &.active {
                 border-bottom: 3px solid $seaGreen;
             }
+
+            &:hover {
+                border-bottom: 3px solid darken($canary, 20%);
+            }
         }
 
         & li:last-child a {

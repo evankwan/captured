@@ -1,0 +1,11 @@
+footer a:hover {
+    color: #ea593e;
+}
+
+a:focus {
+    outline: 3px solid $seaGreen;
+}
+
+a.button:focus {
+    outline: 3px solid $canary;
+}
