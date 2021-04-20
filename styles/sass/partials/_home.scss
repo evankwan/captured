@@ -364,7 +364,6 @@
 }
 
 @media (max-width: 768px) {
-
     .topNav {
         padding: 0;
 
@@ -373,7 +372,7 @@
 
             background-color: $seaGreen;
             opacity: 0;
-            padding: 0 20px;
+            padding: 5px 20px;
             transition: all .5s ease;
             visibility: hidden;
             z-index: 10;

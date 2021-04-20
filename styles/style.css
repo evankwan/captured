@@ -324,13 +324,13 @@ html {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    height: 100px;
+    height: 80px;
     opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
     visibility: visible;
-    width: 100px;
+    width: 80px;
     z-index: 20;
   }
   .hamburgerToggler:checked + .hamburger .middleLine {
@@ -359,7 +359,7 @@ html {
         -ms-flex-align: center;
             align-items: center;
     opacity: 100;
-    padding-top: 100px;
+    padding-top: 60px;
     visibility: visible;
   }
   .hamburger {
@@ -1065,7 +1065,7 @@ a,
             align-items: center;
     background-color: #4ceea7;
     opacity: 0;
-    padding: 0 20px;
+    padding: 5px 20px;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     visibility: hidden;

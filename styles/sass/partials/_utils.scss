@@ -77,13 +77,13 @@
         @include resetMarginAndPadding();
 
         cursor: pointer;
-        height: 100px;
+        height: 80px;
         opacity: 0;
         position: absolute;
         right: 0;
         top: 0;
         visibility: visible;
-        width: 100px;
+        width: 80px;
         z-index: 20;
 
         &:checked {
@@ -103,7 +103,7 @@
                 @include setFlex(column, space-around, center);
 
                 opacity: 100;
-                padding-top: 100px;
+                padding-top: 60px;
                 visibility: visible;
             }
         }
