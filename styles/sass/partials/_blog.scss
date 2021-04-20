@@ -94,9 +94,9 @@
 
 .blogPostImageContainer {
     box-shadow: -40px 40px 0 0 $canary;
+    left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
     max-width: 1000px;
     position: absolute;
-    left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
     top: -400px;
     width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
@@ -228,5 +228,19 @@
 
     .articleContainer {
         padding-top: 100px;
+    }
+}
+
+@media (max-width: 810px) {
+    .blogTitleContainer {
+        width: 100%;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .blogMain {
+        padding: 0;
     }
 }

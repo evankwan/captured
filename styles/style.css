@@ -1425,6 +1425,25 @@ a,
   }
 }
 
+@media (max-width: 810px) {
+  .blogTitleContainer {
+    width: 100%;
+  }
+  .blogTitleContainer h1 {
+    text-align: center;
+  }
+  .blogMain {
+    padding: 0;
+  }
+  .blogPostImageContainer {
+    -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
+            box-shadow: -10px 10px 0 0 #fdfa69;
+    left: auto;
+    right: auto;
+    top: -200px;
+  }
+}
+
 .contactHeader {
   background-image: url(../assets/contact-header.jpg);
   background-position: center center;
