@@ -241,6 +241,41 @@
     }
 
     .blogMain {
-        padding: 0;
+        padding: 40px 0;
+    }
+
+    .blogContainer {
+        @include setFlex(column, space-between, center);
+    }
+
+    .blogPostImageContainer {
+        box-shadow: -10px 10px 0 0 $canary;
+        left: 20%;
+        top: -20vh;
+        width: 60%;
+    }
+
+    .blogSideBar {
+        margin: 0 auto;
+        padding: 100px 20px 70vw;
+        position: relative;
+        text-align: center;
+        width: 90%;
+
+        .sideBlogImageContainer {
+            bottom: 20px;
+            left: 10%;
+            top: auto;
+            width: 80%;
+        }
+    }
+
+    .recentPostsContainer .recentPostsLink {
+        padding-left: 0;
+
+        .recentPost {
+            margin: 0 auto;
+            width: 40%;
+        }
     }
 }

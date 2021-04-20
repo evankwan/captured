@@ -1252,9 +1252,9 @@ a,
 .blogPostImageContainer {
   -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
           box-shadow: -40px 40px 0 0 #fdfa69;
+  left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
   max-width: 1000px;
   position: absolute;
-  left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
   top: -400px;
   width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
@@ -1433,14 +1433,49 @@ a,
     text-align: center;
   }
   .blogMain {
-    padding: 0;
+    padding: 40px 0;
+  }
+  .blogContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .blogPostImageContainer {
     -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
             box-shadow: -10px 10px 0 0 #fdfa69;
-    left: auto;
-    right: auto;
-    top: -200px;
+    left: 20%;
+    top: -20vh;
+    width: 60%;
+  }
+  .blogSideBar {
+    margin: 0 auto;
+    padding: 100px 20px 70vw;
+    position: relative;
+    text-align: center;
+    width: 90%;
+  }
+  .blogSideBar .sideBlogImageContainer {
+    bottom: 20px;
+    left: 10%;
+    top: auto;
+    width: 80%;
+  }
+  .recentPostsContainer .recentPostsLink {
+    padding-left: 0;
+  }
+  .recentPostsContainer .recentPostsLink .recentPost {
+    margin: 0 auto;
+    width: 40%;
   }
 }
 
