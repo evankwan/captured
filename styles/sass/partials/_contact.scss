@@ -7,7 +7,7 @@
     min-height: 500px;
 
     .contactHeaderContainer {
-        @include setFlex(column, center, center);
+        @include setFlex(column, flex-start, center);
 
         height: 100%;
         position: relative;

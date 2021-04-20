@@ -35,6 +35,14 @@
     font-style: italic;
 }
 
+.skipMenu {
+    opacity: 0;
+
+    &:focus {
+        opacity: 100;
+    }
+}
+
 .topNav {
     margin: 15px 0;
     padding: 20px 0;
