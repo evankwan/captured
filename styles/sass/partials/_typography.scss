@@ -26,6 +26,13 @@ h2 {
 	}
 	&.emailHeading {
 		@include setFont($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2, uppercase);
+
+		border-bottom: 3px solid transparent;
+		padding-bottom: 5px;
+
+		&:hover {
+			border-bottom: 3px solid $seaGreen;
+		}
 	}
 }
 

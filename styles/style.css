@@ -527,6 +527,12 @@ h2.emailHeading {
   line-height: 1.2;
   text-align: left;
   text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 5px;
+}
+
+h2.emailHeading:hover {
+  border-bottom: 3px solid #4ceea7;
 }
 
 h3.sectionHeading {
@@ -1664,9 +1670,9 @@ a,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   margin: 0 60px;
   width: 300px;
@@ -1686,7 +1692,7 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   list-style: none;
   padding-left: 0;
 }
@@ -1697,6 +1703,22 @@ a,
 
 .contactPageSideContact .emailHeading {
   margin-bottom: 2rem;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #e95950;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.fa-whatsapp:hover {
+  color: #25d366;
 }
 
 .rightContainer {
@@ -1801,9 +1823,15 @@ a,
     max-height: min-content;
   }
   .contactPageSideContact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+  }
+  .contactPageSideContact .socialIcons .socialIcon {
+    margin: 0 15px;
   }
   .rightContainer {
     top: 200px;

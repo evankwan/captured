@@ -25,12 +25,11 @@
     @include setGrid(5fr 11fr, 1fr, 0);
 
     height: 100%;
-    // position: relative;
     width: 100%;
 }   
 
 .contactPageSideContact {
-    @include setFlex(column, center, center);
+    @include setFlex(column, center, flex-start);
 
     height: 100%;
     margin: 0 60px;
@@ -39,7 +38,7 @@
     .socialIcons {
         @include setFlex(row, flex-start, center);
 
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         list-style: none;
         padding-left: 0;
 
@@ -52,6 +51,11 @@
         margin-bottom: 2rem;
     }
 }
+
+.fa-facebook-f:hover { color: #3b5998 }
+.fa-instagram:hover { color: #e95950 }
+.fa-twitter:hover { color: #1da1f2 }
+.fa-whatsapp:hover { color: #25d366 }
 
 .rightContainer {
     position: absolute;
@@ -122,8 +126,15 @@
     }
 
     .contactPageSideContact {
+        align-items: center;
         height: min-content;
+
+        .socialIcons .socialIcon {
+            margin: 0 15px;
+        }
     }
+
+    
 
     .rightContainer {
         top: 200px;
