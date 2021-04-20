@@ -293,7 +293,7 @@ html {
   z-index: 10;
 }
 
-.topNav .topNavList {
+.topNavList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,21 +312,29 @@ html {
   z-index: 10;
 }
 
-.topNav .topNavList a {
+.topNavList a {
   color: #2c2c2c;
   margin: 0 25px;
   padding: 10px 4px;
 }
 
-.topNav .topNavList a.active {
+.topNavList a.active {
   border-bottom: 3px solid #4ceea7;
 }
 
-.topNav .topNavList a:hover {
+.topNavList a.active:focus {
+  border-bottom: none;
+}
+
+.topNavList a:hover {
   border-bottom: 3px solid #fdfa69;
 }
 
-.topNav .topNavList li:last-child a {
+.topNavList a:active {
+  border-bottom: none;
+}
+
+.topNavList li:last-child a {
   margin-right: 0;
 }
 
@@ -510,6 +518,17 @@ h2.blogTitle {
   text-transform: uppercase;
 }
 
+h2.emailHeading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 h3.sectionHeading {
   font-family: "Playfair Display", serif;
   font-size: 3.2rem;
@@ -521,7 +540,7 @@ h3.sectionHeading {
   text-transform: uppercase;
 }
 
-h3.emailHeading {
+h3.subSectionHeading {
   font-family: "Playfair Display", serif;
   font-size: 2.6rem;
   font-style: italic;
@@ -574,8 +593,7 @@ a {
 h1,
 h2,
 h3,
-p,
-.topNav a {
+p {
   margin: 0;
   padding: 0;
 }
@@ -621,9 +639,9 @@ a,
 }
 
 .headerImageContainer {
-  border: 60px solid #fdfa69;
+  border-bottom: 60px solid #fdfa69;
   border-left: 50px solid #fdfa69;
-  border-right: none;
+  border-top: 60px solid #fdfa69;
   bottom: -200px;
   max-width: 800px;
   position: absolute;
@@ -929,6 +947,7 @@ a,
   padding: 0 20px;
 }
 
+.gallery
 .footer {
   background-color: #2c2c2c;
   color: #fafafa;
@@ -1097,7 +1116,7 @@ a,
   .topNav {
     padding: 0;
   }
-  .topNav .topNavList {
+  .topNavList {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1118,13 +1137,13 @@ a,
     visibility: hidden;
     z-index: 10;
   }
-  .topNav .topNavList a {
+  .topNavList a {
     margin: 0;
     padding: 0;
     outline: 5px solid transparent;
     font-size: 3rem;
   }
-  .topNav .topNavList a.active {
+  .topNavList a.active {
     border-bottom: 3px solid #fafafa;
   }
   .topNavListItem {
@@ -1256,7 +1275,7 @@ a,
   height: -moz-min-content;
   height: min-content;
   margin-left: 33%;
-  padding: calc(200px + 16vw) 20px 0 20px;
+  padding: calc(50px + 25vw) 20px 0 20px;
   width: 75%;
 }
 
@@ -1452,6 +1471,9 @@ a,
 }
 
 @media (min-width: 1600px) {
+  .blogSideBar {
+    padding-top: 475px;
+  }
   .blogSideBar .sideBlogImageContainer {
     left: calc(-500px + 29vw);
     top: -20px;
@@ -1470,7 +1492,6 @@ a,
   }
   .blogSideBar {
     margin-left: 25%;
-    padding: calc(200px + 16vw) 10px 0;
     width: 85%;
   }
   .blogSideBar .aboutContainer > h3,

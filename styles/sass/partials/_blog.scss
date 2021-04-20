@@ -43,7 +43,7 @@
     grid-area: 1 / 1 / 2 / 2;
     height: min-content;
     margin-left: 33%;
-    padding: calc(200px + 16vw) 20px 0 20px;
+    padding: calc(50px + 25vw) 20px 0 20px;
     width: 75%;
 
     .sideBlogImageContainer {
@@ -197,9 +197,13 @@
 }
 
 @media (min-width: 1600px) {
-    .blogSideBar .sideBlogImageContainer {
-        left: calc(-500px + 29vw);
-        top: -20px;
+    .blogSideBar {
+        padding-top: 475px;
+
+        .sideBlogImageContainer {
+            left: calc(-500px + 29vw);
+            top: -20px;
+        }
     }
 
     .articleContainer {
@@ -218,7 +222,7 @@
 
     .blogSideBar {
         margin-left: 25%;
-        padding: calc(200px + 16vw) 10px 0;
+        // padding: calc(200px + 16vw) 10px 0;
         width: 85%;
 
         .aboutContainer > h3,

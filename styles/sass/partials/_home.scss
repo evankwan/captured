@@ -22,9 +22,9 @@
 }
 
 .headerImageContainer {
-    border: 60px solid $canary;
+    border-bottom: 60px solid $canary;
     border-left: 50px solid $canary;
-    border-right: none;
+    border-top: 60px solid $canary;
     bottom: -200px;
     max-width: 800px;
     position: absolute;
@@ -221,6 +221,8 @@
     }
 }
 
+.gallery
+
 .footer {
     background-color: $black;
     color: $white;
@@ -366,26 +368,26 @@
 @media (max-width: 768px) {
     .topNav {
         padding: 0;
+    }
 
-        .topNavList {
-            @include setFlex(column, space-around, center);
+    .topNavList {
+        @include setFlex(column, space-around, center);
 
-            background-color: $seaGreen;
-            opacity: 0;
-            padding: 5px 20px;
-            transition: all .5s ease;
-            visibility: hidden;
-            z-index: 10;
+        background-color: $seaGreen;
+        opacity: 0;
+        padding: 5px 20px;
+        transition: all .5s ease;
+        visibility: hidden;
+        z-index: 10;
 
-            a {
-                @include resetMarginAndPadding();
+        a {
+            @include resetMarginAndPadding();
 
-                outline: 5px solid transparent;
-                font-size: 3rem;
+            outline: 5px solid transparent;
+            font-size: 3rem;
 
-                &.active {
-                    border-bottom: 3px solid $white;
-                }
+            &.active {
+                border-bottom: 3px solid $white;
             }
         }
     }

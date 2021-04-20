@@ -24,6 +24,9 @@ h2 {
 	&.blogTitle {
 		@include setFont($playfairStack, 4.2rem, bold, italic, left, 1px, 1.2, uppercase);
 	}
+	&.emailHeading {
+		@include setFont($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2, uppercase);
+	}
 }
 
 h3 {
@@ -31,7 +34,7 @@ h3 {
 		@include setFont($playfairStack, 3.2rem, bold, italic, default, 1px, 1.2, uppercase);
 	}
 
-	&.emailHeading {
+	&.subSectionHeading {
 		@include setFont($playfairStack, 2.6rem, bold, italic, left, 1.1px, 1.2, uppercase);
 	}
 }
@@ -57,8 +60,7 @@ a {
 h1,
 h2,
 h3,
-p,
-.topNav a {
+p {
 	@include resetMarginAndPadding();
 }
 
