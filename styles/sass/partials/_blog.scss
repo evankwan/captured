@@ -17,7 +17,7 @@
     height: 130px;
     max-width: 320px;
     width: 25%;
-    z-index: 20;
+    z-index: 0;
 
     h1 {
         text-align: left;
@@ -275,7 +275,29 @@
 
         .recentPost {
             margin: 0 auto;
-            width: 40%;
+            width: 50%;
         }
+    }
+
+    .articleContainer {
+        box-shadow: -6px 6px 0 0px $canary;
+        padding-top: 50px;
+
+        .blogTitle {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .blogDate {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .blogPostImageContainer {
+        left: 10%;
+        top: -20vh;
+        width: 80%;
     }
 }

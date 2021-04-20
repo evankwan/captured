@@ -296,6 +296,7 @@ html {
           align-items: center;
   list-style: none;
   margin: 0;
+  z-index: 10;
 }
 
 .topNav .topNavList a {
@@ -330,7 +331,7 @@ html {
     top: 0;
     visibility: visible;
     width: 100px;
-    z-index: 10;
+    z-index: 20;
   }
   .hamburgerToggler:checked + .hamburger .middleLine {
     -webkit-transform: rotate(225deg);
@@ -343,10 +344,6 @@ html {
   .hamburgerToggler:checked + .hamburger .middleLine::after {
     -webkit-transform: rotate(90deg) translate(-20px);
             transform: rotate(90deg) translate(-20px);
-  }
-  .hamburgerToggler:checked:hover + .hamburger .middleLine {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
   }
   .hamburgerToggler:checked + .hamburger + .topNavList {
     display: -webkit-box;
@@ -385,6 +382,7 @@ html {
     top: 0;
     visibility: visible;
     width: 80px;
+    z-index: 10;
   }
   .hamburger .middleLine {
     background-color: #2c2c2c;
@@ -1152,7 +1150,7 @@ a,
   height: 130px;
   max-width: 320px;
   width: 25%;
-  z-index: 20;
+  z-index: 0;
 }
 
 .blogTitleContainer h1 {
@@ -1475,7 +1473,27 @@ a,
   }
   .recentPostsContainer .recentPostsLink .recentPost {
     margin: 0 auto;
-    width: 40%;
+    width: 50%;
+  }
+  .articleContainer {
+    -webkit-box-shadow: -6px 6px 0 0px #fdfa69;
+            box-shadow: -6px 6px 0 0px #fdfa69;
+    padding-top: 50px;
+  }
+  .articleContainer .blogTitle {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .articleContainer .blogDate {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogPostImageContainer {
+    left: 10%;
+    top: -20vh;
+    width: 80%;
   }
 }
 

@@ -48,6 +48,7 @@
 
         list-style: none;
         margin: 0;
+        z-index: 10;
         
         & a {
             color: $black;
@@ -83,7 +84,7 @@
         top: 0;
         visibility: visible;
         width: 100px;
-        z-index: 10;
+        z-index: 20;
 
         &:checked {
             & + .hamburger .middleLine {
@@ -96,10 +97,6 @@
 
             & + .hamburger .middleLine::after {
                 transform: rotate(90deg) translate(-20px);
-            }
-
-            &:hover + .hamburger .middleLine{
-                transform: rotate(135deg);
             }
 
             & + .hamburger + .topNavList {
@@ -121,6 +118,7 @@
         top: 0;
         visibility: visible;
         width: 80px;
+        z-index: 10;
 
         .middleLine {
             background-color: $black;
