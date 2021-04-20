@@ -37,18 +37,19 @@
 }
 
 .blogSideBar {
-    @include setFlex(column, space-between, default);
+    @include setFlex(column, flex-start, default);
 
     background: $white;
     grid-area: 1 / 1 / 2 / 2;
-    height: 900px;
+    height: min-content;
     margin-left: 33%;
-    padding: 450px 20px 0 20px;
+    padding: calc(200px + 16vw) 20px 0 20px;
     width: 75%;
 
     .sideBlogImageContainer {
         position: absolute;
         left: 0;
+        max-width: 550px;
         top: -20px;
         width: 32%;
     }
@@ -64,6 +65,10 @@
         p {
             padding: 0 5px;
         }
+    }
+
+    a {
+        color: $black;
     }
 }
 
@@ -99,7 +104,6 @@
 .articleContainer {
     box-shadow: -6px 6px 0 0 $canary;
     grid-area: 1 / 2 / 2 / 3;
-
     max-width: 1000px;
     padding: calc(-200px + 30vw) 0 20px 60px;
     position: relative;
@@ -188,5 +192,41 @@
 
     .commentSubmitButton {
         grid-area: 4 / 1 / 5 / 3;
+    }
+}
+
+@media (min-width: 1600px) {
+    .blogSideBar .sideBlogImageContainer {
+        left: calc(-500px + 29vw);
+        top: -20px;
+    }
+
+    .articleContainer {
+        padding: 350px 0 20px 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blogPostImageContainer {       
+        top: calc(-340px - 1vw);
+    }
+
+    .blogMain {
+        padding-top: 80px;
+    }
+
+    .blogSideBar {
+        margin-left: 25%;
+        padding: calc(200px + 16vw) 10px 0;
+        width: 85%;
+
+        .aboutContainer > h3,
+        .recentPostsContainer > h3 {
+            text-align: center;
+        }
+    }
+
+    .articleContainer {
+        padding-top: 100px;
     }
 }
