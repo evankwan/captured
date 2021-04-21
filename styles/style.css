@@ -1167,8 +1167,8 @@ a:focus {
     height: 100%;
   }
   .guidesGridContainer,
-  .linkContainer
-.gallerySection .galleryGridContainer {
+  .linkContainer,
+  .gallerySection .galleryGridContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1317,6 +1317,9 @@ a:focus {
     padding: 0;
     text-align: center;
     width: 80%;
+  }
+  .imageBreak {
+    height: calc(100vw / 2);
   }
   .featureContainer .featureTextContainer {
     text-align: center;

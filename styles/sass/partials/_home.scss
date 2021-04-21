@@ -244,7 +244,7 @@
     }
 
     .guidesGridContainer,
-    .linkContainer
+    .linkContainer,
     .gallerySection .galleryGridContainer {
         @include setFlex(column, space-between, center);
     }
@@ -387,6 +387,9 @@
         width: 80%;
     }
 
+    .imageBreak {
+        height: calc(100vw / 2);
+    }
 
     .featureContainer .featureTextContainer {
         text-align: center;
