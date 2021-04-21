@@ -1,10 +1,7 @@
 .homeHeader {
-    background-image: url(../assets/header-image.jpg);
-    background-position: center center;
-    background-size: cover;
+    @include setBackground(url(../assets/header-image.jpg), center center, cover, 82vh, 850px);
+    
     position: relative;
-    height: 82vh;
-    max-height: 850px;
     transition: background-position 0.5s ease;
     width: 100%;
 }

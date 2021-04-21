@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+@mixin setBackground($imagePath, $position, $size, $height, $maxHeight) {
+    background-image: $imagePath;
+    background-position: $position;
+    background-size: $size;
+    height: $height;
+    max-height: $maxHeight;
+}
+
 @mixin setFlex($direction, $justify, $align) {
     display: flex; 
     flex-direction: $direction;

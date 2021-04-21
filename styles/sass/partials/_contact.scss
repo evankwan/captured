@@ -1,9 +1,5 @@
 .contactHeader {
-    background-image: url(../assets/contact-header.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 60vh;
-    max-height: 600px;
+    @include setBackground(url(../assets/contact-header.jpg), center center, cover, 60vh, 500px);
     min-height: 500px;
 
     .contactHeaderContainer {

@@ -1,9 +1,5 @@
 .blogHeader {
-    background-image: url(../assets/blog-header.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 65vh;
-    max-height: 600px;
+    @include setBackgorund(url(../assets/blog-header.jpg), center center, cover, 65vh, 600px);
 }
 
 .blogHeaderContainer {
