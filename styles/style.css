@@ -1290,6 +1290,11 @@ a:focus {
 }
 
 @media (max-width: 768px) {
+  .aboutSectionWrapper,
+  .featureContainer .featureTextContainer,
+  .guidesTextContainer {
+    text-align: center;
+  }
   .topNav {
     padding: 0;
   }
@@ -1330,19 +1335,12 @@ a:focus {
   .homeHeader .homeTitle {
     font-size: calc(3rem + 10vw);
   }
-  .aboutSectionWrapper {
-    text-align: center;
-  }
   .guidesTextContainer {
     padding: 0;
-    text-align: center;
     width: 80%;
   }
   .imageBreak {
     height: calc(100vw / 2);
-  }
-  .featureContainer .featureTextContainer {
-    text-align: center;
   }
 }
 

@@ -235,6 +235,7 @@
 }
 
 @media (min-width: 1800px) {
+    // positioning the guides images relative to the container instead of the edge of the browser to keep the design from stretching too far apart
     .guidesGridContainer {
         position: relative;
     }
@@ -255,6 +256,7 @@
 }
 
 @media (max-width: 1024px) {
+    // readjusting layout to fit flexbox column instead of grid. I did this a little early as I did not like the look of the grid as the browser got smaller
     .aboutSection,
     .guidesSection,
     .featureSection,
@@ -362,6 +364,12 @@
 }
 
 @media (max-width: 768px) {
+    .aboutSectionWrapper,
+    .featureContainer .featureTextContainer,
+    .guidesTextContainer {
+        text-align: center;
+    }
+
     .topNav {
         padding: 0;
     }
@@ -396,23 +404,14 @@
     .homeHeader .homeTitle {
         font-size: calc(3rem + 10vw);
     }
-
-    .aboutSectionWrapper {
-        text-align: center;
-    }
     
     .guidesTextContainer {
         padding: 0;
-        text-align: center;
         width: 80%;
     }
 
     .imageBreak {
         height: calc(100vw / 2);
-    }
-
-    .featureContainer .featureTextContainer {
-        text-align: center;
     }
 }
 
