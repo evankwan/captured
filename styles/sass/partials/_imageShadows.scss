@@ -1,0 +1,47 @@
+.guidesImageContainer1 .imageContainer,
+.featureContainer .featureImageContainer .imageContainer {
+    box-shadow: 40px 40px 0 0 $canary;
+}
+
+.guidesImageContainer2 .imageContainer,
+.blogPostImageContainer,
+.contactForm {
+    box-shadow: -40px 40px 0 0px $canary;
+}
+
+.articleContainer {
+    box-shadow: -6px 6px 0 0 $canary;
+}
+
+@media (max-width: 1250px) {
+    .rightContainer .contactForm {
+        box-shadow: -20px 20px 0 0 $canary; 
+    }
+}
+
+@media (max-width: 810px) {
+    .blogPostImageContainer {
+        box-shadow: -10px 10px 0 0 $canary;
+    }
+
+    .articleContainer {
+        box-shadow: -6px 6px 0 0px $canary;
+    }
+}
+
+@media (max-width: 768px) {
+    .guidesImageContainer1 .imageContainer,
+    .featureContainer .featureImageContainer .imageContainer {
+        box-shadow: 10px 10px 0 0 $canary;
+    }
+
+    .guidesImageContainer2 .imageContainer {
+        box-shadow: -10px 10px 0 0 $canary;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightContainer .contactForm {
+        box-shadow: -10px 10px 0 0 $canary;
+    }
+}

@@ -2,23 +2,14 @@
     @include setBackground(url(../assets/blog-header.jpg), center center, cover, 65vh, 600px);
 }
 
-.blogHeaderContainer {
-    @include setFlex(column, center, center);
-}
-
 .blogTitleContainer {
     height: 130px;
     max-width: 320px;
     width: 25%;
     z-index: 0;
-
-    h1 {
-        text-align: left;
-    }
 }
 
 .blogMain {
-    background-color: $seaGreenBackground;
     padding-top: 150px;
 }
 
@@ -31,7 +22,6 @@
 .blogSideBar {
     @include setFlex(column, flex-start, default);
 
-    background-color: $white;
     grid-area: 1 / 1 / 2 / 2;
     height: min-content;
     margin-left: 33%;
@@ -58,47 +48,36 @@
         }
     }
 
-    a {
-        color: $black;
-
-        &:hover {
-            text-decoration: 3px underline $seaGreen;
-        }
+    a:hover {
+        text-decoration: 3px underline $seaGreen;
     }
 }
 
-.recentPostsLink {
-    list-style: none;
+.recentPostsLink .recentPost {
+    margin-bottom: 2px;
 
-    .recentPost {
-        margin-bottom: 2px;
+    &::before {
+        @include setPosition(absolute, calc(30% + 5px), auto, auto, -30px);
 
-        &::before {
-            @include setPosition(absolute, calc(30% + 5px), auto, auto, -30px);
-
-            background-color: $seaGreen;
-            border-radius: 50%;
-            content: '';
-            height: 5px;
-            width: 5px;
-        }
+        content: '';
+        height: 5px;
+        width: 5px;
     }
 }
 
 .blogPostImageContainer {
     @include setPosition(absolute, -400px, auto, auto, calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px));
-    box-shadow: -40px 40px 0 0 $canary;
+
     max-width: 1000px;
     width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
 
 .articleContainer {
-    box-shadow: -6px 6px 0 0 $canary;
+
     grid-area: 1 / 2 / 2 / 3;
     max-width: 1000px;
     padding: calc(-200px + 30vw) 0 20px 60px;
     position: relative;
-    width: 85%;
 
     .article {
         p {
@@ -114,7 +93,6 @@
 .commentsContainer {
     grid-area: 2 / 2 / 3 / 3;
     max-width: 1000px;
-    width: 85%;
 
     .commentsListContainer {
         margin-right: 20px;
@@ -152,16 +130,7 @@
     margin-bottom: 80px;
 
     .commentFormField {
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid $seaGreen;
-        color: $black;
         padding: 30px;
-    }
-
-    .commentField {
-        border: 2px solid $seaGreen;
-        resize: none;
     }
 
     .commentSubmitButton {
@@ -261,7 +230,6 @@
     }
 
     .blogPostImageContainer {
-        box-shadow: -10px 10px 0 0 $canary;
         left: 20%;
         position: static;
         top: -20vh;
@@ -292,7 +260,6 @@
     }
 
     .articleContainer {
-        box-shadow: -6px 6px 0 0px $canary;
         padding-top: 50px;
 
         .blogTitle {

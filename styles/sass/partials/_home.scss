@@ -25,13 +25,10 @@
 }
 
 .aboutSection {
-    background-color: $seaGreenBackground;
     height: 800px;
 }
 
 .aboutSectionWrapper {
-    @include setFlex(column, center, center);
-
     h2,
     p {
         padding: 0 15px;
@@ -58,20 +55,12 @@
     }
 }
 
-.guidesImageContainer1 {
-    .imageContainer {
-        @include setPosition(absolute, -40px, auto, auto, 0);
-
-        box-shadow: 40px 40px 0 0 $canary;
-    }
+.guidesImageContainer1 .imageContainer {
+    @include setPosition(absolute, -40px, auto, auto, 0);
 }
 
-.guidesImageContainer2 {
-    .imageContainer {
-        @include setPosition(absolute, auto, 0, -40px, auto);
-
-        box-shadow: -40px 40px 0 0px $canary;
-    }
+.guidesImageContainer2 .imageContainer {
+    @include setPosition(absolute, auto, 0, -40px, auto);
 }
 
 .guidesTextContainer1,
@@ -93,7 +82,6 @@
 }
 
 .linksSection {
-    background: $seaGreenBackground;
     height: 650px;
 }
 
@@ -111,8 +99,6 @@
     .linkIconContainer {
         @include setFlex(row, center, center);
 
-        background-color: $seaGreen;
-        border-radius: 50%;
         height: 55px;
         width: 55px;
     }
@@ -146,7 +132,6 @@
 }
 
 .featureSection {
-    background-color: $seaGreenBackground;
     height: 550px;
 }
 
@@ -159,7 +144,6 @@
         flex-basis: calc((100% / 3) - 10px);
 
         .imageContainer {
-            box-shadow: 40px 40px 0 0 $canary;
             width: 320px;
         }
     }
@@ -184,9 +168,6 @@
 }
 
 .gallerySection {
-    @include setFlex(column, center, center);
-
-    background-color: $white;
     height: 600px;
 
     .galleryGridContainer {
@@ -197,18 +178,19 @@
 }
 
 .galleryGridContainer .imageContainer {
+    &::before,
+    &::after {
+        transition: all .5s ease;
+    }
+
     &::before {
-        @include setFlex(column, center, center);
         @include setFont($robotoStack, 2.5rem, bold, default, center, default, 1.5, default);
         @include setPosition(absolute, -200%, auto, auto, -50%);
 
         content: 'Juno ipsum dolor sit amet, college adipisicing elit. #c0ffee';
         background-color: #4ceea7bb;
-        border-radius: 50%;
-        color: $black;
         height: 200%;
         padding: 0 70%;
-        transition: all .5s ease;
         width: 200%;
         z-index: 30;
     }
@@ -219,7 +201,6 @@
         content: '';
         background-color: $black;
         opacity: 0;
-        transition: all .5s ease;
     }
 
     &:hover {
@@ -401,14 +382,6 @@
     .aboutSectionWrapper {
         text-align: center;
     }
-
-    .guidesImageContainer1 .imageContainer {
-        box-shadow: 10px 10px 0 0 $canary;
-    }
-
-    .guidesImageContainer2 .imageContainer {
-        box-shadow: -10px 10px 0 0 $canary;
-    }
     
     .guidesTextContainer {
         padding: 0;
@@ -417,14 +390,8 @@
     }
 
 
-    .featureContainer {
-        .featureImageContainer .imageContainer {
-            box-shadow: 10px 10px 0 0 $canary;
-        }
-
-        .featureTextContainer {
-            text-align: center;
-        }
+    .featureContainer .featureTextContainer {
+        text-align: center;
     }
 }
 

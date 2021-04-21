@@ -9,7 +9,6 @@
 }
 
 .contactPageMain {
-    background-color: $seaGreenBackground;
     height: 55vh;
     max-height: 700px;
 }
@@ -28,7 +27,6 @@
         @include setFlex(row, flex-start, center);
 
         font-size: 2.5rem;
-        list-style: none;
         padding-left: 0;
 
         .socialIcon {
@@ -53,29 +51,17 @@
 
     h1 {
         margin-bottom: 20px;
-        text-align: left;
     }
 }
 
 .contactForm {
     @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
 
-    background-color: $white;
-    box-shadow: -40px 40px 0 0 $canary;
     margin-bottom: 80px;
     padding: 70px;
 
     .contactFormField {
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid $seaGreen;
-        color: $black;
         padding: 30px;
-    }
-
-    .contactMessageField {
-        border: 2px solid $seaGreen;
-        resize: none;
     }
 
     .contactSubmitButton {
@@ -127,10 +113,6 @@
         h1 {
             text-align: center;
         }
-
-        .contactForm {
-            box-shadow: -20px 20px 0 0 $canary; 
-        }
     }
 
     .contactPageSideContact {
@@ -179,13 +161,7 @@
 }
 
 @media (max-width: 480px) { 
-    .rightContainer {
-
-        h1 {
-            font-size: calc(3rem + 10vw);
-        }
-        .contactForm {
-            box-shadow: -10px 10px 0 0 $canary;
-        }
+    .rightContainer h1 {
+        font-size: calc(3rem + 10vw);
     }
 }
