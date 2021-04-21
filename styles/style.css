@@ -1920,8 +1920,8 @@ a:focus {
     margin: 0 15px;
   }
   .rightContainer {
-    top: 200px;
     right: calc((100% - 60%) / 2);
+    top: 200px;
   }
   .rightContainer h1 {
     text-align: center;
