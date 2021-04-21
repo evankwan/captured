@@ -1,27 +1,9 @@
-.footer {
-    background-color: $black;
-    color: $white;
-    font-weight: 300;
-    padding: 10px 0;
-    text-align: center;
-
-    a:hover {
-        color: #ea593e;
-    }
-}
-
-a:focus {
-    outline: 3px solid $seaGreen;
-}
-
-.button:focus {
-    outline: 3px solid $outline;
-}
-
 .homeHeader,
 .homeHeaderContainer,
 .guidesSection,
-.gallerySection .galleryGridContainer, .imageContainer {
+.gallerySection .galleryGridContainer, .imageContainer,
+.blogHeaderContainer,
+.blogContainer {
     @include setPosition(relative, auto, auto, auto, auto);
 }
 
@@ -30,7 +12,8 @@ a:focus {
 .guidesGridContainer,
 .linksGridContainer,
 .featureContainer,
-.galleryGridContainer .imageContainer::after {
+.galleryGridContainer .imageContainer::after,
+.blogHeaderContainer {
     height: 100%;
 }
 
@@ -40,4 +23,12 @@ a:focus {
 .imageBreak,
 .galleryGridContainer .imageContainer::after {
     width: 100%;
+}
+
+a:focus {
+    outline: 3px solid $seaGreen;
+}
+
+.button:focus {
+    outline: 3px solid $outline;
 }

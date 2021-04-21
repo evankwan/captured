@@ -255,6 +255,10 @@ html {
   text-align: center;
 }
 
+.footer a:hover {
+  color: #ea593e;
+}
+
 .hamburger,
 .hamburgerToggler {
   visibility: hidden;
@@ -447,30 +451,12 @@ html {
   }
 }
 
-.footer {
-  background-color: #2c2c2c;
-  color: #fafafa;
-  font-weight: 300;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.footer a:hover {
-  color: #ea593e;
-}
-
-a:focus {
-  outline: 3px solid #4ceea7;
-}
-
-.button:focus {
-  outline: 3px solid #f2db83;
-}
-
 .homeHeader,
 .homeHeaderContainer,
 .guidesSection,
-.gallerySection .galleryGridContainer, .imageContainer {
+.gallerySection .galleryGridContainer, .imageContainer,
+.blogHeaderContainer,
+.blogContainer {
   bottom: auto;
   left: auto;
   position: relative;
@@ -483,7 +469,8 @@ a:focus {
 .guidesGridContainer,
 .linksGridContainer,
 .featureContainer,
-.galleryGridContainer .imageContainer::after {
+.galleryGridContainer .imageContainer::after,
+.blogHeaderContainer {
   height: 100%;
 }
 
@@ -493,6 +480,14 @@ a:focus {
 .imageBreak,
 .galleryGridContainer .imageContainer::after {
   width: 100%;
+}
+
+a:focus {
+  outline: 3px solid #4ceea7;
+}
+
+.button:focus {
+  outline: 3px solid #f2db83;
 }
 
 html {
@@ -1306,8 +1301,6 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  position: relative;
 }
 
 .blogTitleContainer {
@@ -1334,7 +1327,6 @@ a,
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
   grid-gap: 7.8%;
-  position: relative;
   row-gap: 40px;
 }
 

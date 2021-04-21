@@ -4,9 +4,6 @@
 
 .blogHeaderContainer {
     @include setFlex(column, center, center);
-
-    height: 100%;
-    position: relative;
 }
 
 .blogTitleContainer {
@@ -28,7 +25,6 @@
 .blogContainer {
     @include setGrid(1fr 2fr, repeat(2, auto), 7.8%);
 
-    position: relative;
     row-gap: 40px;
 }
 
