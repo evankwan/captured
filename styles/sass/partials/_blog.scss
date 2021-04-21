@@ -19,53 +19,6 @@
     row-gap: 40px;
 }
 
-.blogSideBar {
-    @include setFlex(column, flex-start, default);
-
-    grid-area: 1 / 1 / 2 / 2;
-    height: min-content;
-    margin-left: 33%;
-    padding: calc(50px + 25vw) 20px 0 20px;
-    width: 75%;
-
-    .sideBlogImageContainer {
-        @include setPosition(absolute, -20px, auto, auto, 0);
-        
-        max-width: 550px;
-        width: 32%;
-    }
-    
-
-    .aboutContainer > h3,
-    .recentPostsContainer > h3 {
-        margin-bottom: 25px;
-    }
-
-    .aboutContainer {
-        margin-bottom: 60px;
-
-        p {
-            padding: 0 5px;
-        }
-    }
-
-    a:hover {
-        text-decoration: 3px underline $seaGreen;
-    }
-}
-
-.recentPostsLink .recentPost {
-    margin-bottom: 2px;
-
-    &::before {
-        @include setPosition(absolute, calc(30% + 5px), auto, auto, -30px);
-
-        content: '';
-        height: 5px;
-        width: 5px;
-    }
-}
-
 .blogPostImageContainer {
     @include setPosition(absolute, -400px, auto, auto, calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px));
 
@@ -150,6 +103,53 @@
 
     .commentSubmitButton {
         grid-area: 4 / 1 / 5 / 3;
+    }
+}
+
+.blogSideBar {
+    @include setFlex(column, flex-start, default);
+
+    grid-area: 1 / 1 / 2 / 2;
+    height: min-content;
+    margin-left: 33%;
+    padding: calc(50px + 25vw) 20px 0 20px;
+    width: 75%;
+
+    .sideBlogImageContainer {
+        @include setPosition(absolute, -20px, auto, auto, 0);
+        
+        max-width: 550px;
+        width: 32%;
+    }
+    
+
+    .aboutContainer > h3,
+    .recentPostsContainer > h3 {
+        margin-bottom: 25px;
+    }
+
+    .aboutContainer {
+        margin-bottom: 60px;
+
+        p {
+            padding: 0 5px;
+        }
+    }
+
+    a:hover {
+        text-decoration: 3px underline $seaGreen;
+    }
+}
+
+.recentPostsLink .recentPost {
+    margin-bottom: 2px;
+
+    &::before {
+        @include setPosition(absolute, calc(30% + 5px), auto, auto, -30px);
+
+        content: '';
+        height: 5px;
+        width: 5px;
     }
 }
 

@@ -1394,76 +1394,6 @@ a:focus {
   row-gap: 40px;
 }
 
-.blogSideBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: default;
-      -ms-flex-align: default;
-          align-items: default;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 2 / 2;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin-left: 33%;
-  padding: calc(50px + 25vw) 20px 0 20px;
-  width: 75%;
-}
-
-.blogSideBar .sideBlogImageContainer {
-  bottom: auto;
-  left: 0;
-  position: absolute;
-  right: auto;
-  top: -20px;
-  max-width: 550px;
-  width: 32%;
-}
-
-.blogSideBar .aboutContainer > h3,
-.blogSideBar .recentPostsContainer > h3 {
-  margin-bottom: 25px;
-}
-
-.blogSideBar .aboutContainer {
-  margin-bottom: 60px;
-}
-
-.blogSideBar .aboutContainer p {
-  padding: 0 5px;
-}
-
-.blogSideBar a:hover {
-  -webkit-text-decoration: 3px underline #4ceea7;
-          text-decoration: 3px underline #4ceea7;
-}
-
-.recentPostsLink .recentPost {
-  margin-bottom: 2px;
-}
-
-.recentPostsLink .recentPost::before {
-  bottom: auto;
-  left: -30px;
-  position: absolute;
-  right: auto;
-  top: calc(30% + 5px);
-  content: '';
-  height: 5px;
-  width: 5px;
-}
-
 .blogPostImageContainer {
   bottom: auto;
   left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
@@ -1592,6 +1522,76 @@ a:focus {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 4 / 1 / 5 / 3;
+}
+
+.blogSideBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: default;
+      -ms-flex-align: default;
+          align-items: default;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-left: 33%;
+  padding: calc(50px + 25vw) 20px 0 20px;
+  width: 75%;
+}
+
+.blogSideBar .sideBlogImageContainer {
+  bottom: auto;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: -20px;
+  max-width: 550px;
+  width: 32%;
+}
+
+.blogSideBar .aboutContainer > h3,
+.blogSideBar .recentPostsContainer > h3 {
+  margin-bottom: 25px;
+}
+
+.blogSideBar .aboutContainer {
+  margin-bottom: 60px;
+}
+
+.blogSideBar .aboutContainer p {
+  padding: 0 5px;
+}
+
+.blogSideBar a:hover {
+  -webkit-text-decoration: 3px underline #4ceea7;
+          text-decoration: 3px underline #4ceea7;
+}
+
+.recentPostsLink .recentPost {
+  margin-bottom: 2px;
+}
+
+.recentPostsLink .recentPost::before {
+  bottom: auto;
+  left: -30px;
+  position: absolute;
+  right: auto;
+  top: calc(30% + 5px);
+  content: '';
+  height: 5px;
+  width: 5px;
 }
 
 @media (min-width: 1600px) {
