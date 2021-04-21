@@ -1,5 +1,5 @@
 .blogHeader {
-    @include setBackgorund(url(../assets/blog-header.jpg), center center, cover, 65vh, 600px);
+    @include setBackground(url(../assets/blog-header.jpg), center center, cover, 65vh, 600px);
 }
 
 .blogHeaderContainer {

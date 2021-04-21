@@ -447,7 +447,15 @@ html {
   }
 }
 
-footer a:hover {
+.footer {
+  background-color: #2c2c2c;
+  color: #fafafa;
+  font-weight: 300;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer a:hover {
   color: #ea593e;
 }
 
@@ -457,6 +465,34 @@ a:focus {
 
 .button:focus {
   outline: 3px solid #f2db83;
+}
+
+.homeHeader,
+.homeHeaderContainer,
+.guidesSection,
+.gallerySection .galleryGridContainer, .imageContainer {
+  bottom: auto;
+  left: auto;
+  position: relative;
+  right: auto;
+  top: auto;
+}
+
+.homeHeaderContainer,
+.aboutSectionWrapper,
+.guidesGridContainer,
+.linksGridContainer,
+.featureContainer,
+.galleryGridContainer .imageContainer::after {
+  height: 100%;
+}
+
+.homeHeader,
+.linksGridContainer,
+.linkContainer,
+.imageBreak,
+.galleryGridContainer .imageContainer::after {
+  width: 100%;
 }
 
 html {
@@ -613,12 +649,10 @@ a,
   background-image: url(../assets/header-image.jpg);
   background-position: center center;
   background-size: cover;
-  position: relative;
   height: 82vh;
   max-height: 850px;
   -webkit-transition: background-position 0.5s ease;
   transition: background-position 0.5s ease;
-  width: 100%;
 }
 
 .homeHeaderContainer {
@@ -635,8 +669,6 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  position: relative;
 }
 
 .homeHeaderContainer .homeTitle {
@@ -645,13 +677,15 @@ a,
 }
 
 .headerImageContainer {
+  bottom: -200px;
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: auto;
   border-bottom: 60px solid #fdfa69;
   border-left: 50px solid #fdfa69;
   border-top: 60px solid #fdfa69;
-  bottom: -200px;
   max-width: 800px;
-  position: absolute;
-  right: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   width: 45%;
@@ -676,7 +710,6 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
 }
 
 .aboutSectionWrapper h2,
@@ -691,7 +724,6 @@ a,
 
 .guidesSection {
   height: 850px;
-  position: relative;
 }
 
 .guidesGridContainer {
@@ -702,28 +734,32 @@ a,
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 80px;
-  height: 100%;
   max-width: 1600px;
 }
 
 .guidesGridContainer .imageContainer {
   max-width: 700px;
-  position: absolute;
   width: 50%;
 }
 
 .guidesImageContainer1 .imageContainer {
+  bottom: auto;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: -40px;
   -webkit-box-shadow: 40px 40px 0 0 #fdfa69;
           box-shadow: 40px 40px 0 0 #fdfa69;
-  left: 0;
-  top: -40px;
 }
 
 .guidesImageContainer2 .imageContainer {
   bottom: -40px;
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: auto;
   -webkit-box-shadow: -40px 40px 0 0px #fdfa69;
           box-shadow: -40px 40px 0 0px #fdfa69;
-  right: 0;
 }
 
 .guidesTextContainer1,
@@ -773,10 +809,8 @@ a,
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 20px;
-  height: 100%;
   margin: 0 auto;
   padding: 100px 20px;
-  width: 100%;
 }
 
 .linkContainer {
@@ -794,7 +828,6 @@ a,
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 50px 0 0;
-  width: 100%;
 }
 
 .linkContainer .linkIconContainer {
@@ -845,7 +878,7 @@ a,
   background-position: center center;
   background-size: cover;
   height: 500px;
-  width: 100%;
+  max-height: default;
 }
 
 .featureSection {
@@ -867,7 +900,6 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   padding: 20px;
 }
 
@@ -882,7 +914,7 @@ a,
   width: 320px;
 }
 
-.featureContainer .featureTextContainer {
+.featureTextContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -903,7 +935,7 @@ a,
   transition: all 0.3s ease;
 }
 
-.featureContainer .featureTextContainer .featureTextContainerInner {
+.featureTextContainer .featureTextContainerInner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -920,7 +952,7 @@ a,
   margin-bottom: 50px;
 }
 
-.featureContainer .featureTextContainer .featureTextContainerInner h2 {
+.featureTextContainer .featureTextContainerInner h2 {
   margin-bottom: 20px;
 }
 
@@ -953,10 +985,6 @@ a,
   padding: 0 20px;
 }
 
-.gallerySection .galleryGridContainer .imageContainer {
-  position: relative;
-}
-
 .galleryGridContainer .imageContainer::before {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,20 +999,25 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  font-style: default;
+  font-weight: bold;
+  letter-spacing: default;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: default;
+  bottom: auto;
+  left: -50%;
+  position: absolute;
+  right: auto;
+  top: -200%;
   content: 'Juno ipsum dolor sit amet, college adipisicing elit. #c0ffee';
   background-color: #4ceea7bb;
   border-radius: 50%;
   color: #2c2c2c;
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
   height: 200%;
-  left: -50%;
-  line-height: 1.5;
   padding: 0 70%;
-  position: absolute;
-  text-align: center;
-  top: -200%;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   width: 200%;
@@ -992,16 +1025,16 @@ a,
 }
 
 .galleryGridContainer .imageContainer::after {
+  bottom: auto;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: 0;
   content: '';
   background-color: #2c2c2c;
-  height: 100%;
   opacity: 0;
-  position: absolute;
-  top: 0;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  left: 0;
-  width: 100%;
 }
 
 .galleryGridContainer .imageContainer:hover::before {
@@ -1013,15 +1046,7 @@ a,
   opacity: .5;
 }
 
-.footer {
-  background-color: #2c2c2c;
-  color: #fafafa;
-  font-weight: 300;
-  padding: 10px 0;
-  text-align: center;
-}
-
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .guidesGridContainer {
     position: relative;
   }
@@ -1040,6 +1065,17 @@ a,
 }
 
 @media (max-width: 1024px) {
+  .aboutSection,
+  .guidesSection,
+  .featureSection,
+  .linksSection,
+  .gallerySection {
+    height: 100%;
+  }
+  .guidesTextContainer .sectionHeading,
+  .linkContainer .linkTextContainer {
+    text-align: center;
+  }
   .topNav .topNavList a {
     margin: 0 15px;
   }
@@ -1057,11 +1093,7 @@ a,
     font-size: calc(4rem + 8vw);
   }
   .aboutSection {
-    height: 100%;
     padding: 100px 0;
-  }
-  .guidesSection {
-    height: 100%;
   }
   .guidesGridContainer {
     display: -webkit-box;
@@ -1082,7 +1114,6 @@ a,
   .guidesGridContainer > * {
     margin-bottom: 50px;
   }
-  .guidesGridContainer .imageContainer,
   .guidesGridContainer .imageContainer {
     margin: 0 auto;
     position: static;
@@ -1094,13 +1125,9 @@ a,
   }
   .guidesTextContainer .sectionHeading {
     margin: 20px auto 0;
-    text-align: center;
   }
   .guidesTextContainer .button {
     margin: 0 auto 40px;
-  }
-  .linksSection {
-    height: 100%;
   }
   .linksGridContainer {
     display: -webkit-box;
@@ -1136,10 +1163,6 @@ a,
   }
   .linkContainer .linkTextContainer {
     margin-left: 0;
-    text-align: center;
-  }
-  .featureSection {
-    height: 100%;
   }
   .featureContainer {
     -webkit-box-orient: vertical;
@@ -1157,7 +1180,6 @@ a,
     margin: 0 auto;
   }
   .gallerySection {
-    height: 100%;
     padding: 50px 0;
   }
   .gallerySection .galleryGridContainer {
@@ -1682,7 +1704,7 @@ a,
   background-position: center center;
   background-size: cover;
   height: 60vh;
-  max-height: 600px;
+  max-height: 500px;
   min-height: 500px;
 }
 

@@ -1,16 +1,11 @@
 .homeHeader {
     @include setBackground(url(../assets/header-image.jpg), center center, cover, 82vh, 850px);
-    
-    position: relative;
+
     transition: background-position 0.5s ease;
-    width: 100%;
 }
 
 .homeHeaderContainer {
     @include setFlex(column, flex-end, center);
-
-    height: 100%;
-    position: relative;
 
     .homeTitle {
         margin-bottom: 50px;
@@ -19,13 +14,12 @@
 }
 
 .headerImageContainer {
+    @include setPosition(absolute, auto, 0, -200px, auto);
+
     border-bottom: 60px solid $canary;
     border-left: 50px solid $canary;
     border-top: 60px solid $canary;
-    bottom: -200px;
     max-width: 800px;
-    position: absolute;
-    right: 0;
     transition: all 1s ease;
     width: 45%;
 }
@@ -37,8 +31,6 @@
 
 .aboutSectionWrapper {
     @include setFlex(column, center, center);
-
-    height: 100%;
 
     h2,
     p {
@@ -53,35 +45,32 @@
 
 .guidesSection {
     height: 850px;
-    position: relative;
 }
 
 .guidesGridContainer {
     @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 80px);
 
-    height: 100%;
     max-width: 1600px;
 
     .imageContainer {
         max-width: 700px;
-        position: absolute;
         width: 50%;
     }
 }
 
 .guidesImageContainer1 {
     .imageContainer {
+        @include setPosition(absolute, -40px, auto, auto, 0);
+
         box-shadow: 40px 40px 0 0 $canary;
-        left: 0;
-        top: -40px;
     }
 }
 
 .guidesImageContainer2 {
     .imageContainer {
-        bottom: -40px;
+        @include setPosition(absolute, auto, 0, -40px, auto);
+
         box-shadow: -40px 40px 0 0px $canary;
-        right: 0;
     }
 }
 
@@ -113,17 +102,14 @@
 .linksGridContainer {
     @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 20px);
 
-    height: 100%;
     margin: 0 auto;
     padding: 100px 20px;
-    width: 100%;
 }
 
 .linkContainer {
     @include setFlex(row, space-between, flex-start);
 
     margin: 50px 0 0;
-    width: 100%;
 
     .linkIconContainer {
         @include setFlex(row, center, center);
@@ -159,11 +145,7 @@
 }
 
 .imageBreak {
-    background-image: url(../../assets/banner.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 500px;
-    width: 100%;
+    @include setBackground(url(../../assets/banner.jpg), center center, cover, 500px, default);
 }
 
 .featureSection {
@@ -174,7 +156,6 @@
 .featureContainer {
     @include setFlex(row, space-between, center);
 
-    height: 100%;
     padding: 20px;
 
     .featureImageContainer {
@@ -185,22 +166,22 @@
             width: 320px;
         }
     }
+}
 
-    .featureTextContainer {
+.featureTextContainer {
+    @include setFlex(column, space-between, flex-start);
+
+    flex-basis: calc(((100% / 3) * 2) - 10px);
+    height: 60%;
+    transition: all 0.3s ease;
+
+    .featureTextContainerInner {
         @include setFlex(column, space-between, flex-start);
 
-        flex-basis: calc(((100% / 3) * 2) - 10px);
-        height: 60%;
-        transition: all 0.3s ease;
+        margin-bottom: 50px;
 
-        .featureTextContainerInner {
-            @include setFlex(column, space-between, flex-start);
-
-            margin-bottom: 50px;
-
-            h2 {
-                margin-bottom: 20px;
-            }
+        h2 {
+            margin-bottom: 20px;
         }
     }
 }
@@ -215,46 +196,33 @@
         @include setGrid(repeat(3, 1fr), 1fr, 40px);
 
         padding: 0 20px;
-
-        .imageContainer {
-            position: relative;
-        }
     }
 }
 
-.galleryGridContainer .imageContainer{
+.galleryGridContainer .imageContainer {
     &::before {
         @include setFlex(column, center, center);
+        @include setFont($robotoStack, 2.5rem, bold, default, center, default, 1.5, default);
+        @include setPosition(absolute, -200%, auto, auto, -50%);
 
         content: 'Juno ipsum dolor sit amet, college adipisicing elit. #c0ffee';
         background-color: #4ceea7bb;
         border-radius: 50%;
         color: $black;
-        font-family: $robotoStack;
-        font-size: 2.5rem;
-        font-weight: bold;
         height: 200%;
-        left: -50%;
-        line-height: 1.5;
         padding: 0 70%;
-        position: absolute;
-        text-align: center;
-        top: -200%;
         transition: all .5s ease;
         width: 200%;
         z-index: 30;
     }
 
     &::after {
+        @include setPosition(absolute, 0, auto, auto, 0);
+
         content: '';
         background-color: $black;
-        height: 100%;
         opacity: 0;
-        position: absolute;
-        top: 0;
         transition: all .5s ease;
-        left: 0;
-        width: 100%;
     }
 
     &:hover {
@@ -268,15 +236,7 @@
     }
 }
 
-.footer {
-    background-color: $black;
-    color: $white;
-    font-weight: 300;
-    padding: 10px 0;
-    text-align: center;
-}
-
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
     .guidesGridContainer {
         position: relative;
     }
@@ -297,6 +257,19 @@
 }
 
 @media (max-width: 1024px) {
+    .aboutSection,
+    .guidesSection,
+    .featureSection,
+    .linksSection,
+    .gallerySection {
+        height: 100%;
+    }
+
+    .guidesTextContainer .sectionHeading,
+    .linkContainer .linkTextContainer {
+        text-align: center;
+    }
+
     .topNav .topNavList a {
         margin: 0 15px;
     }
@@ -318,12 +291,7 @@
     }
 
     .aboutSection {
-        height: 100%;
         padding: 100px 0;
-    }
-
-    .guidesSection {
-        height: 100%;
     }
 
     .guidesGridContainer {
@@ -335,7 +303,6 @@
             margin-bottom: 50px;
         }
 
-        .imageContainer,
         .imageContainer {
             margin: 0 auto;
             position: static;
@@ -349,7 +316,6 @@
 
         .sectionHeading {
             margin: 20px auto 0;
-            text-align: center;
         }
 
         .button {
@@ -357,12 +323,9 @@
         }
     }
 
-    .linksSection {
-        height: 100%;
-    }
-
     .linksGridContainer {
         @include setFlex(column, space-around, center);
+
         padding: 25px 20px;
     }
 
@@ -374,12 +337,7 @@
 
         .linkTextContainer {
             margin-left: 0;
-            text-align: center;
         }
-    }
-
-    .featureSection {
-        height: 100%;
     }
 
     .featureContainer {
@@ -398,10 +356,7 @@
         }
     }
 
-    
-
     .gallerySection {
-        height: 100%;
         padding: 50px 0;
 
         .galleryGridContainer {

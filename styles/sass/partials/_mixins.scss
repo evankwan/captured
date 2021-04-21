@@ -35,3 +35,11 @@
     grid-template-rows: $rows;
     grid-gap: $gap;
 }
+
+@mixin setPosition($position, $top, $right, $bottom, $left) {
+    bottom: $bottom;
+    left: $left;
+    position: $position;
+    right: $right;
+    top: $top;
+}

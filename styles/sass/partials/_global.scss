@@ -1,5 +1,13 @@
-footer a:hover {
-    color: #ea593e;
+.footer {
+    background-color: $black;
+    color: $white;
+    font-weight: 300;
+    padding: 10px 0;
+    text-align: center;
+
+    a:hover {
+        color: #ea593e;
+    }
 }
 
 a:focus {
@@ -8,4 +16,28 @@ a:focus {
 
 .button:focus {
     outline: 3px solid $outline;
+}
+
+.homeHeader,
+.homeHeaderContainer,
+.guidesSection,
+.gallerySection .galleryGridContainer, .imageContainer {
+    @include setPosition(relative, auto, auto, auto, auto);
+}
+
+.homeHeaderContainer,
+.aboutSectionWrapper,
+.guidesGridContainer,
+.linksGridContainer,
+.featureContainer,
+.galleryGridContainer .imageContainer::after {
+    height: 100%;
+}
+
+.homeHeader,
+.linksGridContainer,
+.linkContainer,
+.imageBreak,
+.galleryGridContainer .imageContainer::after {
+    width: 100%;
 }
