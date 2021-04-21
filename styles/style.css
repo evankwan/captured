@@ -1102,6 +1102,18 @@ a:focus {
   padding: 0 20px;
 }
 
+.galleryGridContainer .galleryImage1::before {
+  content: 'A camera sitting on a tripod, focus on something not distinguishable in the background';
+}
+
+.galleryGridContainer .galleryImage2::before {
+  content: 'An old style camera poking out from leaves and needles on a tree, as if hidden and taking a candid photo';
+}
+
+.galleryGridContainer .galleryImage3::before {
+  content: 'A row of Nikon cameras lined up against the wall, picture slightly from above';
+}
+
 .galleryGridContainer .imageContainer::before, .galleryGridContainer .imageContainer::after {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -1121,7 +1133,6 @@ a:focus {
   position: absolute;
   right: auto;
   top: -200%;
-  content: 'Juno ipsum dolor sit amet, college adipisicing elit. #c0ffee';
   background-color: #4ceea7bb;
   height: 200%;
   padding: 0 70%;

@@ -55,10 +55,12 @@
     }
 }
 
+// styles the left image container, which becomes the top container when the guides section is converted to flex column layout
 .guidesLeftImageContainer .imageContainer {
     @include setPosition(absolute, -40px, auto, auto, 0);
 }
 
+// styles the right image container, which becomes the bottom container when the guides section is converted to flex column layout
 .guidesRightImageContainer .imageContainer {
     @include setPosition(absolute, auto, 0, -40px, auto);
 }
@@ -72,10 +74,12 @@
     }
 }
 
+// styles the right text container, which becomes the top text container when the guides section is converted to flex column layout
 .guidesRightTextContainer {
     padding-left: 100px;
 }
 
+// styles the left text container, which becomes the bottom text container when the guides section is converted to flex column layout
 .guidesLeftTextContainer {
     align-items: flex-end;
     padding-right: 100px;
@@ -103,6 +107,7 @@
         width: 55px;
     }
 
+    // icon styling differs to better match the design provided
     .fa-camera {
         font-size: 3.6rem;
     }
@@ -177,6 +182,22 @@
     }
 }
 
+// I added in some hover effects to show what would be a caption for the image being hovered on.
+// Before content matches the alt text of each image to make sure experience is consistent for sighted and non-sighted users
+.galleryGridContainer {
+    .galleryImage1::before {
+        content: 'A camera sitting on a tripod, focus on something not distinguishable in the background';
+    }
+
+    .galleryImage2::before {
+        content: 'An old style camera poking out from leaves and needles on a tree, as if hidden and taking a candid photo';
+    }
+
+    .galleryImage3::before {
+        content: 'A row of Nikon cameras lined up against the wall, picture slightly from above';
+    }
+}
+
 .galleryGridContainer .imageContainer {
     &::before,
     &::after {
@@ -187,7 +208,6 @@
         @include setFont($robotoStack, 2.5rem, bold, default, center, default, 1.5, default);
         @include setPosition(absolute, -200%, auto, auto, -50%);
 
-        content: 'Juno ipsum dolor sit amet, college adipisicing elit. #c0ffee';
         background-color: #4ceea7bb;
         height: 200%;
         padding: 0 70%;
