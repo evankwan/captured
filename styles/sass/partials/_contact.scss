@@ -41,10 +41,10 @@
     }
 }
 
-.fa-facebook-f:hover { color: #3b5998 }
-.fa-instagram:hover { color: #e95950 }
-.fa-twitter:hover { color: #1da1f2 }
-.fa-whatsapp:hover { color: #25d366 }
+.fa-facebook-f:hover { color: $facebookBlue }
+.fa-instagram:hover { color: $instagramRed }
+.fa-twitter:hover { color: $twitterBlue }
+.fa-whatsapp:hover { color: $whatsappGreen }
 
 .rightContainer {
     @include setPosition(absolute, 230px, 5%, auto, auto);
@@ -178,7 +178,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { 
     .rightContainer {
 
         h1 {
