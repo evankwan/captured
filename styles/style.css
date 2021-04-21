@@ -608,6 +608,7 @@ a,
 .blogHeaderContainer,
 .blogContainer,
 .recentPostsContainer .recentPostsLink .recentPost,
+.articleContainer,
 .contactHeaderContainer {
   bottom: auto;
   left: auto;
@@ -1165,6 +1166,23 @@ a:focus {
   .gallerySection {
     height: 100%;
   }
+  .guidesGridContainer,
+  .linkContainer
+.gallerySection .galleryGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .guidesTextContainer .sectionHeading,
   .linkContainer .linkTextContainer {
     text-align: center;
@@ -1189,19 +1207,6 @@ a:focus {
     padding: 100px 0;
   }
   .guidesGridContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding: 20px 0;
   }
   .guidesGridContainer > * {
@@ -1238,19 +1243,6 @@ a:focus {
     padding: 25px 20px;
   }
   .linkContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin: 25px 0;
     width: 70%;
   }
@@ -1274,21 +1266,6 @@ a:focus {
   }
   .gallerySection {
     padding: 50px 0;
-  }
-  .gallerySection .galleryGridContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -1483,7 +1460,6 @@ a:focus {
   grid-area: 1 / 2 / 2 / 3;
   max-width: 1000px;
   padding: calc(-200px + 30vw) 0 20px 60px;
-  position: relative;
 }
 
 .articleContainer .article p {
@@ -1657,11 +1633,20 @@ a:focus {
 }
 
 @media (max-width: 810px) {
+  .blogTitleContainer h1,
+  .blogSideBar {
+    text-align: center;
+  }
+  .blogSideBar,
+  .recentPostsContainer .recentPostsLink .recentPost {
+    margin: 0 auto;
+  }
+  .blogSideBar .sideBlogImageContainer,
+  .recentPostsContainer .recentPostsLink .recentPost {
+    width: 50%;
+  }
   .blogTitleContainer {
     width: 100%;
-  }
-  .blogTitleContainer h1 {
-    text-align: center;
   }
   .blogMain {
     padding: 40px 0;
@@ -1682,29 +1667,20 @@ a:focus {
             align-items: center;
   }
   .blogPostImageContainer {
-    left: 20%;
     position: static;
-    top: -20vh;
     width: 80%;
   }
   .blogSideBar {
-    margin: 0 auto;
     padding: 20px;
     position: relative;
-    text-align: center;
     width: 90%;
   }
   .blogSideBar .sideBlogImageContainer {
     margin: 20px auto 40px;
     position: static;
-    width: 50%;
   }
   .recentPostsContainer .recentPostsLink {
     padding-left: 0;
-  }
-  .recentPostsContainer .recentPostsLink .recentPost {
-    margin: 0 auto;
-    width: 50%;
   }
   .articleContainer {
     padding-top: 50px;

@@ -77,7 +77,6 @@
     grid-area: 1 / 2 / 2 / 3;
     max-width: 1000px;
     padding: calc(-200px + 30vw) 0 20px 60px;
-    position: relative;
 
     .article {
         p {
@@ -180,7 +179,6 @@
 
     .blogSideBar {
         margin-left: 25%;
-        // padding: calc(200px + 16vw) 10px 0;
         width: 85%;
 
         .aboutContainer > h3,
@@ -213,12 +211,23 @@
 }
 
 @media (max-width: 810px) {
+    .blogTitleContainer h1,
+    .blogSideBar {
+        text-align: center;
+    }
+
+    .blogSideBar,
+    .recentPostsContainer .recentPostsLink .recentPost {
+        margin: 0 auto;
+    }
+
+    .blogSideBar .sideBlogImageContainer,
+    .recentPostsContainer .recentPostsLink .recentPost {
+        width: 50%;
+    }
+
     .blogTitleContainer {
         width: 100%;
-
-        h1 {
-            text-align: center;
-        }
     }
 
     .blogMain {
@@ -230,33 +239,23 @@
     }
 
     .blogPostImageContainer {
-        left: 20%;
         position: static;
-        top: -20vh;
         width: 80%;
     }
 
     .blogSideBar {
-        margin: 0 auto;
         padding: 20px;
         position: relative;
-        text-align: center;
         width: 90%;
 
         .sideBlogImageContainer {
             margin: 20px auto 40px;
             position: static;
-            width: 50%;
         }
     }
 
     .recentPostsContainer .recentPostsLink {
         padding-left: 0;
-
-        .recentPost {
-            margin: 0 auto;
-            width: 50%;
-        }
     }
 
     .articleContainer {

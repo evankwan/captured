@@ -5,6 +5,7 @@
 .blogHeaderContainer,
 .blogContainer,
 .recentPostsContainer .recentPostsLink .recentPost,
+.articleContainer,
 .contactHeaderContainer {
     @include setPosition(relative, auto, auto, auto, auto);
 }

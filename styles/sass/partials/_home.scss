@@ -243,6 +243,12 @@
         height: 100%;
     }
 
+    .guidesGridContainer,
+    .linkContainer
+    .gallerySection .galleryGridContainer {
+        @include setFlex(column, space-between, center);
+    }
+
     .guidesTextContainer .sectionHeading,
     .linkContainer .linkTextContainer {
         text-align: center;
@@ -273,8 +279,6 @@
     }
 
     .guidesGridContainer {
-        @include setFlex(column, space-between, center);
-
         padding: 20px 0;
 
         & > * {
@@ -308,8 +312,6 @@
     }
 
     .linkContainer {
-        @include setFlex(column, space-between, center);
-
         margin: 25px 0;
         width: 70%;
 
@@ -336,10 +338,6 @@
 
     .gallerySection {
         padding: 50px 0;
-
-        .galleryGridContainer {
-            @include setFlex(column, space-between, center);
-        }
     }
 }
 
