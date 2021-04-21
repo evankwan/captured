@@ -493,6 +493,12 @@ html {
   width: 100%;
 }
 
+.guidesTextContainer1,
+.guidesTextContainer2,
+.linksGridContainer {
+  margin: 0 auto;
+}
+
 a:focus {
   outline: 3px solid #4ceea7;
 }
@@ -783,7 +789,6 @@ a,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0 auto;
 }
 
 .guidesTextContainer1 *,
@@ -815,7 +820,6 @@ a,
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 20px;
-  margin: 0 auto;
   padding: 100px 20px;
 }
 

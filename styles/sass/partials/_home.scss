@@ -78,8 +78,6 @@
 .guidesTextContainer2 {
     @include setFlex(column, center, flex-start);
 
-    margin: 0 auto;
-
     * {
         margin: 15px 0;
     }
@@ -102,7 +100,6 @@
 .linksGridContainer {
     @include setGrid(repeat(2, 1fr), repeat(2, 1fr), 20px);
 
-    margin: 0 auto;
     padding: 100px 20px;
 }
 

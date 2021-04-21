@@ -36,6 +36,12 @@
     width: 100%;
 }
 
+.guidesTextContainer1,
+.guidesTextContainer2,
+.linksGridContainer {  
+    margin: 0 auto;
+}
+
 a:focus {
     outline: 3px solid $seaGreen;
 }
