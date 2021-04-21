@@ -1,65 +1,15 @@
-.homeHeader,
-.homeHeaderContainer,
-.guidesSection,
-.gallerySection .galleryGridContainer, .imageContainer,
-.blogHeaderContainer,
-.blogContainer,
-.recentPostsContainer .recentPostsLink .recentPost,
-.articleContainer,
-.contactHeaderContainer {
-    @include setPosition(relative, auto, auto, auto, auto);
-}
-
 .aboutSectionWrapper,
-.gallerySection,
+.blogHeaderContainer,
 .galleryGridContainer .imageContainer::before,
-.blogHeaderContainer {
+.gallerySection {
     @include setFlex(column, center, center);
 }
 
-.homeHeaderContainer,
-.aboutSectionWrapper,
-.guidesGridContainer,
-.linksGridContainer,
-.featureContainer,
-.galleryGridContainer .imageContainer::after,
-.blogHeaderContainer,
-.commentsForm .commentField,
-.contactHeaderContainer,
-.contactPageGridContainer,
-.contactPageSideContact,
-.contactForm .contactMessageField {
-    height: 100%;
-}
-
-.homeHeader,
-.linksGridContainer,
-.linkContainer,
-.imageBreak,
-.galleryGridContainer .imageContainer::after,
-.commentsForm .commentFormField,
-.contactPageMain,
-.contactPageGridContainer,
-.contactForm .contactFormField {
-    width: 100%;
-}
-
-.articleContainer,
-.commentsContainer {
-    width: 85%;
-}
-
-.guidesTextContainer1,
-.guidesTextContainer2,
-.linksGridContainer {  
-    margin: 0 auto;
-}
-
 .aboutSection,
-.linksSection,
-.featureSection,
 .blogMain,
-.contactPageMain {
+.contactPageMain,
+.featureSection,
+.linksSection {
     background-color: $ice;
 }
 
@@ -68,21 +18,15 @@
     background-color: $seaGreen;
 }
 
-.gallerySection,
-.blogSideBar,
-.contactForm {
-    background-color: $white;
-}
-
 .commentsForm .commentFormField,
 .contactForm .contactFormField {
     background-color: transparent;
 }
 
-.linkContainer .linkIconContainer,
-.galleryGridContainer .imageContainer::before,
-.recentPostsLink .recentPost::before {
-    border-radius: 50%;
+.blogSideBar,
+.contactForm,
+.gallerySection {
+    background-color: $white;
 }
 
 .commentsForm .commentFormField, 
@@ -93,25 +37,47 @@
 
 .commentsForm .commentField,
 .contactForm .contactMessageField {
-    resize: none;
     border: 2px solid $seaGreen;
+    resize: none;
 }
 
-.galleryGridContainer .imageContainer::before, 
+.galleryGridContainer .imageContainer::before,
+.linkContainer .linkIconContainer,
+.recentPostsLink .recentPost::before {
+    border-radius: 50%;
+}
+
 .blogSideBar a,
 .commentsForm .commentFormField,
-.contactForm .contactFormField {
+.contactForm .contactFormField,
+.galleryGridContainer .imageContainer::before {
     color: $black;
 }
 
-.blogTitleContainer h1,
-.rightContainer h1 {
-    text-align: left;
+.aboutSectionWrapper,
+.blogHeaderContainer,
+.commentsForm .commentField,
+.contactForm .contactMessageField,
+.contactHeaderContainer,
+.contactPageGridContainer,
+.contactPageSideContact,
+.featureContainer,
+.galleryGridContainer .imageContainer::after,
+.guidesGridContainer,
+.homeHeaderContainer,
+.linksGridContainer {
+    height: 100%;
 }
 
-.recentPostsLink,
-.contactPageSideContact .socialIcons {
+.contactPageSideContact .socialIcons,
+.recentPostsLink {
     list-style: none;
+}
+
+.guidesTextContainer1,
+.guidesTextContainer2,
+.linksGridContainer {  
+    margin: 0 auto;
 }
 
 a:focus {
@@ -120,4 +86,38 @@ a:focus {
 
 .button:focus {
     outline: 3px solid $outline;
+}
+
+.articleContainer,
+.blogContainer,
+.blogHeaderContainer,
+.contactHeaderContainer,
+.gallerySection .galleryGridContainer, .imageContainer,
+.guidesSection,
+.homeHeader,
+.homeHeaderContainer,
+.recentPostsContainer .recentPostsLink .recentPost {
+    position: relative;
+}
+
+.blogTitleContainer h1,
+.rightContainer h1 {
+    text-align: left;
+}
+
+.commentsForm .commentFormField,
+.contactForm .contactFormField,
+.contactPageGridContainer,
+.contactPageMain,
+.galleryGridContainer .imageContainer::after,
+.homeHeader,
+.imageBreak,
+.linkContainer,
+.linksGridContainer {
+    width: 100%;
+}
+
+.articleContainer,
+.commentsContainer {
+    width: 85%;
 }

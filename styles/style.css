@@ -270,14 +270,13 @@ html {
 
 .imageContainer img {
   display: block;
-  height: 100%;
   width: 100%;
 }
 
 .inlineLink {
   color: #2c2c2c;
-  font-weight: bold;
   font-style: italic;
+  font-weight: bold;
 }
 
 .skipMenu {
@@ -289,11 +288,13 @@ html {
 }
 
 .topNav {
-  margin: 15px 0;
-  padding: 20px 0;
+  bottom: auto;
+  left: auto;
   position: absolute;
   right: 0;
   top: 0;
+  margin: 15px 0;
+  padding: 20px 0;
   z-index: 10;
 }
 
@@ -352,12 +353,14 @@ html {
   .hamburgerToggler {
     margin: 0;
     padding: 0;
-    cursor: pointer;
-    height: 80px;
-    opacity: 0;
+    bottom: auto;
+    left: auto;
     position: absolute;
     right: 0;
     top: 0;
+    cursor: pointer;
+    height: 80px;
+    opacity: 0;
     visibility: visible;
     width: 80px;
     z-index: 20;
@@ -405,27 +408,37 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 80px;
+    bottom: auto;
+    left: auto;
     position: absolute;
     right: 0;
     top: 0;
+    height: 80px;
     visibility: visible;
     width: 80px;
     z-index: 10;
   }
   .hamburger .middleLine {
+    bottom: auto;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
     background-color: #2c2c2c;
     height: 5px;
-    position: relative;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     width: 50px;
   }
   .hamburger .middleLine::before, .hamburger .middleLine::after {
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    right: auto;
+    top: auto;
     background-color: #2c2c2c;
     content: '';
     height: 5px;
-    position: absolute;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     width: 50px;
@@ -601,26 +614,10 @@ a,
   text-decoration: none;
 }
 
-.homeHeader,
-.homeHeaderContainer,
-.guidesSection,
-.gallerySection .galleryGridContainer, .imageContainer,
-.blogHeaderContainer,
-.blogContainer,
-.recentPostsContainer .recentPostsLink .recentPost,
-.articleContainer,
-.contactHeaderContainer {
-  bottom: auto;
-  left: auto;
-  position: relative;
-  right: auto;
-  top: auto;
-}
-
 .aboutSectionWrapper,
-.gallerySection,
+.blogHeaderContainer,
 .galleryGridContainer .imageContainer::before,
-.blogHeaderContainer {
+.gallerySection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,49 +633,11 @@ a,
           align-items: center;
 }
 
-.homeHeaderContainer,
-.aboutSectionWrapper,
-.guidesGridContainer,
-.linksGridContainer,
-.featureContainer,
-.galleryGridContainer .imageContainer::after,
-.blogHeaderContainer,
-.commentsForm .commentField,
-.contactHeaderContainer,
-.contactPageGridContainer,
-.contactPageSideContact,
-.contactForm .contactMessageField {
-  height: 100%;
-}
-
-.homeHeader,
-.linksGridContainer,
-.linkContainer,
-.imageBreak,
-.galleryGridContainer .imageContainer::after,
-.commentsForm .commentFormField,
-.contactPageMain,
-.contactPageGridContainer,
-.contactForm .contactFormField {
-  width: 100%;
-}
-
-.articleContainer,
-.commentsContainer {
-  width: 85%;
-}
-
-.guidesTextContainer1,
-.guidesTextContainer2,
-.linksGridContainer {
-  margin: 0 auto;
-}
-
 .aboutSection,
-.linksSection,
-.featureSection,
 .blogMain,
-.contactPageMain {
+.contactPageMain,
+.featureSection,
+.linksSection {
   background-color: #effdf3;
 }
 
@@ -687,21 +646,15 @@ a,
   background-color: #4ceea7;
 }
 
-.gallerySection,
-.blogSideBar,
-.contactForm {
-  background-color: #fafafa;
-}
-
 .commentsForm .commentFormField,
 .contactForm .contactFormField {
   background-color: transparent;
 }
 
-.linkContainer .linkIconContainer,
-.galleryGridContainer .imageContainer::before,
-.recentPostsLink .recentPost::before {
-  border-radius: 50%;
+.blogSideBar,
+.contactForm,
+.gallerySection {
+  background-color: #fafafa;
 }
 
 .commentsForm .commentFormField,
@@ -712,25 +665,47 @@ a,
 
 .commentsForm .commentField,
 .contactForm .contactMessageField {
-  resize: none;
   border: 2px solid #4ceea7;
+  resize: none;
 }
 
 .galleryGridContainer .imageContainer::before,
+.linkContainer .linkIconContainer,
+.recentPostsLink .recentPost::before {
+  border-radius: 50%;
+}
+
 .blogSideBar a,
 .commentsForm .commentFormField,
-.contactForm .contactFormField {
+.contactForm .contactFormField,
+.galleryGridContainer .imageContainer::before {
   color: #2c2c2c;
 }
 
-.blogTitleContainer h1,
-.rightContainer h1 {
-  text-align: left;
+.aboutSectionWrapper,
+.blogHeaderContainer,
+.commentsForm .commentField,
+.contactForm .contactMessageField,
+.contactHeaderContainer,
+.contactPageGridContainer,
+.contactPageSideContact,
+.featureContainer,
+.galleryGridContainer .imageContainer::after,
+.guidesGridContainer,
+.homeHeaderContainer,
+.linksGridContainer {
+  height: 100%;
 }
 
-.recentPostsLink,
-.contactPageSideContact .socialIcons {
+.contactPageSideContact .socialIcons,
+.recentPostsLink {
   list-style: none;
+}
+
+.guidesTextContainer1,
+.guidesTextContainer2,
+.linksGridContainer {
+  margin: 0 auto;
 }
 
 a:focus {
@@ -739,6 +714,40 @@ a:focus {
 
 .button:focus {
   outline: 3px solid #f2db83;
+}
+
+.articleContainer,
+.blogContainer,
+.blogHeaderContainer,
+.contactHeaderContainer,
+.gallerySection .galleryGridContainer, .imageContainer,
+.guidesSection,
+.homeHeader,
+.homeHeaderContainer,
+.recentPostsContainer .recentPostsLink .recentPost {
+  position: relative;
+}
+
+.blogTitleContainer h1,
+.rightContainer h1 {
+  text-align: left;
+}
+
+.commentsForm .commentFormField,
+.contactForm .contactFormField,
+.contactPageGridContainer,
+.contactPageMain,
+.galleryGridContainer .imageContainer::after,
+.homeHeader,
+.imageBreak,
+.linkContainer,
+.linksGridContainer {
+  width: 100%;
+}
+
+.articleContainer,
+.commentsContainer {
+  width: 85%;
 }
 
 .guidesImageContainer1 .imageContainer,
@@ -1790,7 +1799,9 @@ a:focus {
 }
 
 .contactPageSideContact .emailHeading {
-  margin-bottom: 2rem;
+  border-bottom: 3px solid transparent;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 .fa-facebook-f:hover {
@@ -1892,10 +1903,10 @@ a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 500px;
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;
+    padding-top: 500px;
   }
   .contactPageSideContact {
     -webkit-box-align: center;
