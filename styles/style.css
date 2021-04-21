@@ -1334,7 +1334,8 @@ a:focus {
     padding: 40px 0;
   }
   .linkContainer .linkTextContainer {
-    width: 100%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
   }
   .featureContainer .featureImageContainer .imageContainer {
     margin: 0 auto;
