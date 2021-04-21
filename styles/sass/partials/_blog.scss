@@ -157,6 +157,7 @@
     .blogSideBar {
         padding-top: 475px;
 
+        // repositioned image to prevent it from moving off the line with the box-shadow of the article once the max-width is reached
         .sideBlogImageContainer {
             left: calc(-500px + 29vw);
             top: -20px;
