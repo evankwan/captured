@@ -31,7 +31,7 @@
 .blogSideBar {
     @include setFlex(column, flex-start, default);
 
-    background: $white;
+    background-color: $white;
     grid-area: 1 / 1 / 2 / 2;
     height: min-content;
     margin-left: 33%;
@@ -39,10 +39,9 @@
     width: 75%;
 
     .sideBlogImageContainer {
-        position: absolute;
-        left: 0;
+        @include setPosition(absolute, -20px, auto, auto, 0);
+        
         max-width: 550px;
-        top: -20px;
         width: 32%;
     }
 
@@ -68,32 +67,28 @@
     }
 }
 
-.recentPostsContainer .recentPostsLink {
+.recentPostsLink {
     list-style: none;
 
     .recentPost {
         margin-bottom: 2px;
-        position: relative;
 
         &::before {
+            @include setPosition(absolute, calc(30% + 5px), auto, auto, -30px);
+
             background-color: $seaGreen;
             border-radius: 50%;
             content: '';
             height: 5px;
-            left: -30px;
-            position: absolute;
-            top: calc(30% + 5px);
             width: 5px;
         }
     }
 }
 
 .blogPostImageContainer {
+    @include setPosition(absolute, -400px, auto, auto, calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px));
     box-shadow: -40px 40px 0 0 $canary;
-    left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
     max-width: 1000px;
-    position: absolute;
-    top: -400px;
     width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
 
@@ -107,7 +102,7 @@
 
     .article {
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
         }
 
         .blogDate {
@@ -145,7 +140,7 @@
         flex-basis: calc(100% - 92px - 4%);
 
         .commentByLine {
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
         }
     }
 }
@@ -162,12 +157,10 @@
         border-bottom: 2px solid $seaGreen;
         color: $black;
         padding: 30px;
-        width: 100%;
     }
 
     .commentField {
         border: 2px solid $seaGreen;
-        height: 100%;
         resize: none;
     }
 
@@ -304,9 +297,9 @@
 
         .blogTitle {
             margin-bottom: 20px;
-            text-align: left;
         }
 
+        .blogTitle,
         .blogDate {
             text-align: left;
         }

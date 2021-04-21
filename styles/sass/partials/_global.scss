@@ -3,7 +3,9 @@
 .guidesSection,
 .gallerySection .galleryGridContainer, .imageContainer,
 .blogHeaderContainer,
-.blogContainer {
+.blogContainer,
+.recentPostsContainer .recentPostsLink .recentPost,
+.contactHeaderContainer {
     @include setPosition(relative, auto, auto, auto, auto);
 }
 
@@ -13,7 +15,12 @@
 .linksGridContainer,
 .featureContainer,
 .galleryGridContainer .imageContainer::after,
-.blogHeaderContainer {
+.blogHeaderContainer,
+.commentsForm .commentField,
+.contactHeaderContainer,
+.contactPageGridContainer,
+.contactPageSideContact,
+.contactForm .contactMessageField {
     height: 100%;
 }
 
@@ -21,7 +28,11 @@
 .linksGridContainer,
 .linkContainer,
 .imageBreak,
-.galleryGridContainer .imageContainer::after {
+.galleryGridContainer .imageContainer::after,
+.commentsForm .commentFormField,
+.contactPageMain,
+.contactPageGridContainer,
+.contactForm .contactFormField {
     width: 100%;
 }
 

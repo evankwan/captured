@@ -456,7 +456,9 @@ html {
 .guidesSection,
 .gallerySection .galleryGridContainer, .imageContainer,
 .blogHeaderContainer,
-.blogContainer {
+.blogContainer,
+.recentPostsContainer .recentPostsLink .recentPost,
+.contactHeaderContainer {
   bottom: auto;
   left: auto;
   position: relative;
@@ -470,7 +472,12 @@ html {
 .linksGridContainer,
 .featureContainer,
 .galleryGridContainer .imageContainer::after,
-.blogHeaderContainer {
+.blogHeaderContainer,
+.commentsForm .commentField,
+.contactHeaderContainer,
+.contactPageGridContainer,
+.contactPageSideContact,
+.contactForm .contactMessageField {
   height: 100%;
 }
 
@@ -478,7 +485,11 @@ html {
 .linksGridContainer,
 .linkContainer,
 .imageBreak,
-.galleryGridContainer .imageContainer::after {
+.galleryGridContainer .imageContainer::after,
+.commentsForm .commentFormField,
+.contactPageMain,
+.contactPageGridContainer,
+.contactForm .contactFormField {
   width: 100%;
 }
 
@@ -1344,7 +1355,7 @@ a,
   -webkit-box-align: default;
       -ms-flex-align: default;
           align-items: default;
-  background: #fafafa;
+  background-color: #fafafa;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -1359,10 +1370,12 @@ a,
 }
 
 .blogSideBar .sideBlogImageContainer {
-  position: absolute;
+  bottom: auto;
   left: 0;
-  max-width: 550px;
+  position: absolute;
+  right: auto;
   top: -20px;
+  max-width: 550px;
   width: 32%;
 }
 
@@ -1388,33 +1401,36 @@ a,
           text-decoration: 3px underline #4ceea7;
 }
 
-.recentPostsContainer .recentPostsLink {
+.recentPostsLink {
   list-style: none;
 }
 
-.recentPostsContainer .recentPostsLink .recentPost {
+.recentPostsLink .recentPost {
   margin-bottom: 2px;
-  position: relative;
 }
 
-.recentPostsContainer .recentPostsLink .recentPost::before {
+.recentPostsLink .recentPost::before {
+  bottom: auto;
+  left: -30px;
+  position: absolute;
+  right: auto;
+  top: calc(30% + 5px);
   background-color: #4ceea7;
   border-radius: 50%;
   content: '';
   height: 5px;
-  left: -30px;
-  position: absolute;
-  top: calc(30% + 5px);
   width: 5px;
 }
 
 .blogPostImageContainer {
+  bottom: auto;
+  left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
+  position: absolute;
+  right: auto;
+  top: -400px;
   -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
           box-shadow: -40px 40px 0 0 #fdfa69;
-  left: calc(((100% - 7.8%) / 3) + 7.8% + 40px - 6px);
   max-width: 1000px;
-  position: absolute;
-  top: -400px;
   width: calc(((100% - 7.8%) / 3 * 2) - 40px + 6px);
 }
 
@@ -1433,7 +1449,7 @@ a,
 }
 
 .articleContainer .article p {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .articleContainer .article .blogDate {
@@ -1488,7 +1504,7 @@ a,
 }
 
 .commentContainer .commentTextContainer .commentByLine {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .commentsForm {
@@ -1509,12 +1525,10 @@ a,
   border-bottom: 2px solid #4ceea7;
   color: #2c2c2c;
   padding: 30px;
-  width: 100%;
 }
 
 .commentsForm .commentField {
   border: 2px solid #4ceea7;
-  height: 100%;
   resize: none;
 }
 
@@ -1673,8 +1687,8 @@ a,
   }
   .articleContainer .blogTitle {
     margin-bottom: 20px;
-    text-align: left;
   }
+  .articleContainer .blogTitle,
   .articleContainer .blogDate {
     text-align: left;
   }
@@ -1700,7 +1714,7 @@ a,
   min-height: 500px;
 }
 
-.contactHeader .contactHeaderContainer {
+.contactHeaderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1714,15 +1728,12 @@ a,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  position: relative;
 }
 
 .contactPageMain {
   background-color: #4ceea815;
   height: 55vh;
   max-height: 700px;
-  width: 100%;
 }
 
 .contactPageGridContainer {
@@ -1733,8 +1744,6 @@ a,
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-gap: 0;
-  height: 100%;
-  width: 100%;
 }
 
 .contactPageSideContact {
@@ -1751,7 +1760,6 @@ a,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 100%;
   margin: 0 60px;
   width: 300px;
 }
@@ -1800,6 +1808,8 @@ a,
 }
 
 .rightContainer {
+  bottom: auto;
+  left: auto;
   position: absolute;
   right: 5%;
   top: 230px;
@@ -1811,7 +1821,7 @@ a,
   text-align: left;
 }
 
-.rightContainer .contactForm {
+.contactForm {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1826,26 +1836,24 @@ a,
   padding: 70px;
 }
 
-.rightContainer .contactForm .contactFormField {
+.contactForm .contactFormField {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #4ceea7;
   color: #2c2c2c;
   padding: 30px;
-  width: 100%;
 }
 
-.rightContainer .contactForm .contactMessageField {
+.contactForm .contactMessageField {
   border: 2px solid #4ceea7;
-  height: 100%;
   resize: none;
 }
 
-.rightContainer .contactForm .contactSubmitButton {
+.contactForm .contactSubmitButton {
   margin: 10px 0;
 }
 
-.rightContainer .contactForm .formNameFieldContainer {
+.contactForm .formNameFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -1853,7 +1861,7 @@ a,
   grid-area: 1 / 1 / 2 / 2;
 }
 
-.rightContainer .contactForm .formEmailFieldContainer {
+.contactForm .formEmailFieldContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -1861,7 +1869,7 @@ a,
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.rightContainer .contactForm .formCommentFieldContainer {
+.contactForm .formCommentFieldContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -1869,7 +1877,7 @@ a,
   grid-area: 2 / 1 / 4 / 3;
 }
 
-.rightContainer .contactForm .contactSubmitButton {
+.contactForm .contactSubmitButton {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;

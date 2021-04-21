@@ -1,33 +1,26 @@
 .contactHeader {
     @include setBackground(url(../assets/contact-header.jpg), center center, cover, 60vh, 500px);
+
     min-height: 500px;
+}
 
-    .contactHeaderContainer {
-        @include setFlex(column, flex-start, center);
-
-        height: 100%;
-        position: relative;
-    }
+.contactHeaderContainer {
+    @include setFlex(column, flex-start, center);
 }
 
 .contactPageMain {
     background-color: $seaGreenBackground;
     height: 55vh;
     max-height: 700px;
-    width: 100%;
 }
 
 .contactPageGridContainer {
     @include setGrid(5fr 11fr, 1fr, 0);
-
-    height: 100%;
-    width: 100%;
 }   
 
 .contactPageSideContact {
     @include setFlex(column, center, flex-start);
 
-    height: 100%;
     margin: 0 60px;
     width: 300px;
 
@@ -54,58 +47,55 @@
 .fa-whatsapp:hover { color: #25d366 }
 
 .rightContainer {
-    position: absolute;
-    right: 5%;
-    top: 230px;
+    @include setPosition(absolute, 230px, 5%, auto, auto);
+
     width: 60%;
 
     h1 {
         margin-bottom: 20px;
         text-align: left;
     }
+}
 
-    .contactForm {
-        @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
+.contactForm {
+    @include setGrid(repeat(2, 1fr), repeat(4, 1fr), 40px);
 
-        background-color: $white;
-        box-shadow: -40px 40px 0 0 $canary;
-        margin-bottom: 80px;
-        padding: 70px;
+    background-color: $white;
+    box-shadow: -40px 40px 0 0 $canary;
+    margin-bottom: 80px;
+    padding: 70px;
 
-        .contactFormField {
-            background-color: transparent;
-            border: none;
-            border-bottom: 2px solid $seaGreen;
-            color: $black;
-            padding: 30px;
-            width: 100%;
-        }
+    .contactFormField {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $seaGreen;
+        color: $black;
+        padding: 30px;
+    }
 
-        .contactMessageField {
-            border: 2px solid $seaGreen;
-            height: 100%;
-            resize: none;
-        }
+    .contactMessageField {
+        border: 2px solid $seaGreen;
+        resize: none;
+    }
 
-        .contactSubmitButton {
-            margin: 10px 0;
-        }
+    .contactSubmitButton {
+        margin: 10px 0;
+    }
 
-        .formNameFieldContainer {
-            grid-area: 1 / 1 / 2 / 2;
-        }
+    .formNameFieldContainer {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
-        .formEmailFieldContainer {
-            grid-area: 1 / 2 / 2 / 3;
-        }
+    .formEmailFieldContainer {
+        grid-area: 1 / 2 / 2 / 3;
+    }
 
-        .formCommentFieldContainer {
-            grid-area: 2 / 1 / 4 / 3;
-        }
+    .formCommentFieldContainer {
+        grid-area: 2 / 1 / 4 / 3;
+    }
 
-        .contactSubmitButton {
-            grid-area: 4 / 1 / 5 / 3;
-        }
+    .contactSubmitButton {
+        grid-area: 4 / 1 / 5 / 3;
     }
 }
 
@@ -128,9 +118,7 @@
         .socialIcons .socialIcon {
             margin: 0 15px;
         }
-    }
-
-    
+    }    
 
     .rightContainer {
         top: 200px;
