@@ -702,8 +702,8 @@ a,
   list-style: none;
 }
 
-.guidesTextContainer1,
-.guidesTextContainer2,
+.guidesRightTextContainer,
+.guidesLeftTextContainer,
 .linksGridContainer {
   margin: 0 auto;
 }
@@ -720,7 +720,7 @@ a:focus {
 .blogContainer,
 .blogHeaderContainer,
 .contactHeaderContainer,
-.gallerySection .galleryGridContainer, .imageContainer,
+.gallerySection .galleryGridContainer .imageContainer,
 .guidesSection,
 .homeHeader,
 .homeHeaderContainer,
@@ -750,13 +750,13 @@ a:focus {
   width: 85%;
 }
 
-.guidesImageContainer1 .imageContainer,
+.guidesLeftImageContainer .imageContainer,
 .featureContainer .featureImageContainer .imageContainer {
   -webkit-box-shadow: 40px 40px 0 0 #fdfa69;
           box-shadow: 40px 40px 0 0 #fdfa69;
 }
 
-.guidesImageContainer2 .imageContainer,
+.guidesRightImageContainer .imageContainer,
 .blogPostImageContainer,
 .contactForm {
   -webkit-box-shadow: -40px 40px 0 0px #fdfa69;
@@ -787,12 +787,12 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .guidesImageContainer1 .imageContainer,
+  .guidesLeftImageContainer .imageContainer,
   .featureContainer .featureImageContainer .imageContainer {
     -webkit-box-shadow: 10px 10px 0 0 #fdfa69;
             box-shadow: 10px 10px 0 0 #fdfa69;
   }
-  .guidesImageContainer2 .imageContainer {
+  .guidesRightImageContainer .imageContainer {
     -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
             box-shadow: -10px 10px 0 0 #fdfa69;
   }
@@ -885,7 +885,7 @@ a:focus {
   width: 50%;
 }
 
-.guidesImageContainer1 .imageContainer {
+.guidesLeftImageContainer .imageContainer {
   bottom: auto;
   left: 0;
   position: absolute;
@@ -893,7 +893,7 @@ a:focus {
   top: -40px;
 }
 
-.guidesImageContainer2 .imageContainer {
+.guidesRightImageContainer .imageContainer {
   bottom: -40px;
   left: auto;
   position: absolute;
@@ -901,8 +901,8 @@ a:focus {
   top: auto;
 }
 
-.guidesTextContainer1,
-.guidesTextContainer2 {
+.guidesRightTextContainer,
+.guidesLeftTextContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,16 +918,16 @@ a:focus {
           align-items: flex-start;
 }
 
-.guidesTextContainer1 *,
-.guidesTextContainer2 * {
+.guidesRightTextContainer *,
+.guidesLeftTextContainer * {
   margin: 15px 0;
 }
 
-.guidesTextContainer1 {
+.guidesRightTextContainer {
   padding-left: 100px;
 }
 
-.guidesTextContainer2 {
+.guidesLeftTextContainer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;

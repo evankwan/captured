@@ -55,16 +55,16 @@
     }
 }
 
-.guidesImageContainer1 .imageContainer {
+.guidesLeftImageContainer .imageContainer {
     @include setPosition(absolute, -40px, auto, auto, 0);
 }
 
-.guidesImageContainer2 .imageContainer {
+.guidesRightImageContainer .imageContainer {
     @include setPosition(absolute, auto, 0, -40px, auto);
 }
 
-.guidesTextContainer1,
-.guidesTextContainer2 {
+.guidesRightTextContainer,
+.guidesLeftTextContainer {
     @include setFlex(column, center, flex-start);
 
     * {
@@ -72,11 +72,11 @@
     }
 }
 
-.guidesTextContainer1 {
+.guidesRightTextContainer {
     padding-left: 100px;
 }
 
-.guidesTextContainer2 {
+.guidesLeftTextContainer {
     align-items: flex-end;
     padding-right: 100px;
 }

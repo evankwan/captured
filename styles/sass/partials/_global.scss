@@ -1,3 +1,5 @@
+// global rules organized in alphabetical order of first property
+
 .aboutSectionWrapper,
 .blogHeaderContainer,
 .galleryGridContainer .imageContainer::before,
@@ -74,8 +76,8 @@
     list-style: none;
 }
 
-.guidesTextContainer1,
-.guidesTextContainer2,
+.guidesRightTextContainer,
+.guidesLeftTextContainer,
 .linksGridContainer {  
     margin: 0 auto;
 }
@@ -92,7 +94,7 @@ a:focus {
 .blogContainer,
 .blogHeaderContainer,
 .contactHeaderContainer,
-.gallerySection .galleryGridContainer, .imageContainer,
+.gallerySection .galleryGridContainer .imageContainer,
 .guidesSection,
 .homeHeader,
 .homeHeaderContainer,

@@ -1,9 +1,11 @@
-.guidesImageContainer1 .imageContainer,
+// all initial and altered box shadows managed in this partial
+
+.guidesLeftImageContainer .imageContainer,
 .featureContainer .featureImageContainer .imageContainer {
     box-shadow: 40px 40px 0 0 $canary;
 }
 
-.guidesImageContainer2 .imageContainer,
+.guidesRightImageContainer .imageContainer,
 .blogPostImageContainer,
 .contactForm {
     box-shadow: -40px 40px 0 0px $canary;
@@ -30,12 +32,12 @@
 }
 
 @media (max-width: 768px) {
-    .guidesImageContainer1 .imageContainer,
+    .guidesLeftImageContainer .imageContainer,
     .featureContainer .featureImageContainer .imageContainer {
         box-shadow: 10px 10px 0 0 $canary;
     }
 
-    .guidesImageContainer2 .imageContainer {
+    .guidesRightImageContainer .imageContainer {
         box-shadow: -10px 10px 0 0 $canary;
     }
 }
