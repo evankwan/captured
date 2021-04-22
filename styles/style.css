@@ -1360,6 +1360,7 @@ a:focus {
   .linkContainer .linkTextContainer {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
+    width: 100%;
   }
   .featureContainer .featureImageContainer .imageContainer {
     margin: 0 auto;
