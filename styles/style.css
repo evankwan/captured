@@ -1365,6 +1365,10 @@ a:focus {
     margin: 0 auto;
     width: 80%;
   }
+  .galleryGridContainer .imageContainer::before {
+    font-size: 1.6rem;
+    padding: 0 60%;
+  }
 }
 
 .blogHeader {
