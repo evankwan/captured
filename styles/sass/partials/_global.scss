@@ -36,6 +36,7 @@
     border: none;
     border-bottom: 2px solid $seaGreen;
     border-radius: none;
+    -webkit-border-radius: 0; 
 }
 
 .commentsForm .commentField,
