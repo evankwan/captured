@@ -1918,7 +1918,10 @@ a:focus {
 
 @media (max-width: 1250px) {
   .contactPageMain {
-    min-height: 800px;
+    min-height: 900px;
+  }
+  .rightContainer h1 {
+    font-size: 6rem;
   }
   .contactPageGridContainer {
     display: -webkit-box;
@@ -1928,16 +1931,16 @@ a:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;
-    padding-top: 500px;
+    padding-top: 600px;
   }
   .contactPageSideContact {
     -webkit-box-align: center;

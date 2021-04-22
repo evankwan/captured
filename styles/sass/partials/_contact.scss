@@ -102,14 +102,18 @@
 
 @media (max-width: 1250px) {
     .contactPageMain {
-        min-height: 800px;
+        min-height: 900px;
+    }
+
+    .rightContainer h1 {
+        font-size: 6rem;
     }
 
     .contactPageGridContainer {
-        @include setFlex(column, flex-end, center);
+        @include setFlex(column, flex-start, center);
 
         max-height: min-content;
-        padding-top: 500px;
+        padding-top: 600px;
     }
 
     .contactPageSideContact {
