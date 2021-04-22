@@ -10,7 +10,7 @@
 
 .contactPageMain {
     height: 55vh;
-    max-height: 700px;
+    min-height: calc(100vh - 550px);
 }
 
 .contactPageGridContainer {
@@ -49,6 +49,7 @@
 .rightContainer {
     @include setPosition(absolute, 230px, 5%, auto, auto);
 
+    max-width: 1200px;
     width: 60%;
 
     h1 {
@@ -84,6 +85,17 @@
 
     .contactSubmitButton {
         grid-area: 4 / 1 / 5 / 3;
+    }
+}
+
+@media (min-width: 1800px) {
+    .contactPageGridContainer {
+        position: relative;
+    }
+
+    .rightContainer {
+        right: 135px;
+        top: -270px;
     }
 }
 
