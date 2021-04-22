@@ -1008,7 +1008,7 @@ a:focus {
 }
 
 .imageBreak {
-  background-image: url(../../assets/banner.jpg);
+  background-image: url(../assets/banner.jpg);
   background-position: center center;
   background-size: cover;
   height: 500px;

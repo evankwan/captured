@@ -133,7 +133,7 @@
 }
 
 .imageBreak {
-    @include setBackground(url(../../assets/banner.jpg), center center, cover, 500px, default);
+    @include setBackground(url(../assets/banner.jpg), center center, cover, 500px, default);
 }
 
 .featureSection {
