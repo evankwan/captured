@@ -1354,6 +1354,9 @@ a:focus {
   .aboutSection {
     padding: 40px 0;
   }
+  .linkContainer {
+    width: 100%;
+  }
   .linkContainer .linkTextContainer {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
