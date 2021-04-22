@@ -1966,11 +1966,8 @@ a:focus {
 }
 
 @media (max-width: 900px) {
-  .contactPageMain {
-    min-height: 800px;
-  }
   .contactPageGridContainer {
-    padding-top: calc(600px - 20vw);
+    padding-top: calc(600px - 10vw);
   }
   .rightContainer {
     left: calc((100% - 85%) / 2);
