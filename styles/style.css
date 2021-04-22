@@ -777,8 +777,8 @@ a:focus {
 
 @media (max-width: 810px) {
   .blogPostImageContainer {
-    -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
-            box-shadow: -10px 10px 0 0 #fdfa69;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .articleContainer {
     -webkit-box-shadow: -6px 6px 0 0px #fdfa69;
@@ -1698,7 +1698,7 @@ a:focus {
   }
   .blogPostImageContainer {
     position: static;
-    width: 80%;
+    width: 90%;
   }
   .blogSideBar {
     padding: 20px;
