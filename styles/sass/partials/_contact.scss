@@ -105,7 +105,7 @@
     }
 
     .contactPageGridContainer {
-        @include setFlex(column, flex-start, center);
+        @include setFlex(column, flex-end, center);
 
         max-height: min-content;
         padding-top: 500px;
@@ -177,7 +177,7 @@
     .contactPageMain {
         min-height: 850px;
     }
-    
+
     .rightContainer h1 {
         font-size: calc(3rem + 10vw);
     }

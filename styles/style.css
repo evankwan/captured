@@ -1708,6 +1708,7 @@ a:focus {
   }
   .articleContainer {
     padding-top: 50px;
+    padding-left: 20px;
   }
   .articleContainer .blogTitle {
     margin-bottom: 20px;
@@ -1919,9 +1920,9 @@ a:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
