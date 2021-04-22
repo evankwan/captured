@@ -792,13 +792,7 @@ a:focus {
     -webkit-box-shadow: 10px 10px 0 0 #fdfa69;
             box-shadow: 10px 10px 0 0 #fdfa69;
   }
-  .guidesRightImageContainer .imageContainer {
-    -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
-            box-shadow: -10px 10px 0 0 #fdfa69;
-  }
-}
-
-@media (max-width: 480px) {
+  .guidesRightImageContainer .imageContainer,
   .rightContainer .contactForm {
     -webkit-box-shadow: -10px 10px 0 0 #fdfa69;
             box-shadow: -10px 10px 0 0 #fdfa69;
@@ -2003,6 +1997,9 @@ a:focus {
 }
 
 @media (max-width: 480px) {
+  .contactPageMain {
+    min-height: 850px;
+  }
   .rightContainer h1 {
     font-size: calc(3rem + 10vw);
   }

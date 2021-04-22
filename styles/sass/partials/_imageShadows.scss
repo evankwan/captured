@@ -37,12 +37,7 @@
         box-shadow: 10px 10px 0 0 $canary;
     }
 
-    .guidesRightImageContainer .imageContainer {
-        box-shadow: -10px 10px 0 0 $canary;
-    }
-}
-
-@media (max-width: 480px) {
+    .guidesRightImageContainer .imageContainer,
     .rightContainer .contactForm {
         box-shadow: -10px 10px 0 0 $canary;
     }

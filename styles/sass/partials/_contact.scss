@@ -173,7 +173,11 @@
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
+    .contactPageMain {
+        min-height: 850px;
+    }
+    
     .rightContainer h1 {
         font-size: calc(3rem + 10vw);
     }
