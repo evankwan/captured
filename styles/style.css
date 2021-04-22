@@ -1708,7 +1708,7 @@ a:focus {
   }
   .articleContainer {
     padding-top: 50px;
-    padding-left: 20px;
+    padding-left: 40px;
   }
   .articleContainer .blogTitle {
     margin-bottom: 20px;
@@ -1716,6 +1716,9 @@ a:focus {
   .articleContainer .blogTitle,
   .articleContainer .blogDate {
     text-align: left;
+  }
+  .commentsListContainer {
+    padding-top: 40px;
   }
 }
 

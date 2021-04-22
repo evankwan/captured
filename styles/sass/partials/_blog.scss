@@ -261,7 +261,7 @@
 
     .articleContainer {
         padding-top: 50px;
-        padding-left: 20px;
+        padding-left: 40px;
 
         .blogTitle {
             margin-bottom: 20px;
@@ -271,6 +271,10 @@
         .blogDate {
             text-align: left;
         }
+    }
+
+    .commentsListContainer {
+        padding-top: 40px;
     }
 }
 
