@@ -35,11 +35,13 @@
 .contactForm .contactFormField {
     border: none;
     border-bottom: 2px solid $seaGreen;
+    border-radius: none;
 }
 
 .commentsForm .commentField,
 .contactForm .contactMessageField {
     border: 2px solid $seaGreen;
+    border-radius: none;
     resize: none;
 }
 
