@@ -4,6 +4,7 @@ animatedElements.forEach(function(element) {
 })
 
 document.addEventListener('scroll', isVisible);
+window.addEventListener('load', isVisible);
 
 function isVisible() {
   // select item and get bounding rectangle
