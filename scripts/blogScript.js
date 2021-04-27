@@ -70,8 +70,8 @@ const createNewCommentObject = (name, email, comment) => {
 	const timeOfComment = new Date;
 
 	return comment = {
-    	commenter: name,
-    	commenterEmail: email,
+    commenter: name,
+    commenterEmail: email,
 		commentDay: getDayOfWeek(timeOfComment.getDay()),
 		commentDate: timeOfComment.getDate(),
 		commentMonth: getMonthOfYear(timeOfComment.getMonth()),

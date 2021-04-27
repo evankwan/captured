@@ -266,6 +266,8 @@ html {
 
 .imageContainer {
   overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .imageContainer img {
@@ -341,6 +343,19 @@ html {
 
 .topNavList li:last-child a {
   margin-right: 0;
+}
+
+.notVisible {
+  opacity: 0;
+}
+
+.visibility {
+  opacity: 1;
+}
+
+.visibleTransition {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .wrapper {

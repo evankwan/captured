@@ -32,6 +32,7 @@
 
 .imageContainer {
     overflow: hidden;
+    transition: all 1s ease;
 
     img {
         display: block;
@@ -93,6 +94,18 @@
     & li:last-child a {
         margin-right: 0;
     }
+}
+
+.notVisible {
+    opacity: 0;
+}
+
+.visibility {
+    opacity: 1;
+}
+
+.visibleTransition {
+    transition: all 1s ease;
 }
 
 .wrapper {
