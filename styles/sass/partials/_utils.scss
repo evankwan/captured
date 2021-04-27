@@ -113,7 +113,7 @@
         width: 80px;
         z-index: 20;
 
-        &:checked {
+        &.checked {
             & + .hamburger .middleLine {
                 transform: rotate(225deg);
             }
