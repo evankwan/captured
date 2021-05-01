@@ -126,6 +126,10 @@
         width: 80px;
         z-index: 20;
 
+        &:focus + .hamburger {
+            border: 3px solid $canary;
+        }
+
         &.checked {
             & + .hamburger .middleLine {
                 transform: rotate(225deg);
@@ -147,15 +151,17 @@
                 visibility: visible;
             }
         }
+
+        
     }
 
     .hamburger {
         @include setFlex(column, center, center);
         @include setPosition(absolute, 0, 0, auto, auto);
 
-        height: 80px;
+        height: 75px;
         visibility: visible;
-        width: 80px;
+        width: 75px;
         z-index: 10;
 
         .middleLine {
