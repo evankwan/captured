@@ -20,7 +20,8 @@
 					for the JS projects in the future, it would be done by toggling a class to show/hide menu,
 					but for the purpose of this project, I will stick to a checkbox
 				-->
-				<input type="checkbox" name="hamburger" id="hamburger" class="hamburgerToggler">
+				<span class="sr-only"><label for="hamburger"></label></span>
+				<input type="checkbox" name="hamburger" id="hamburger" class="hamburgerToggler" role="button" aria-pressed="false" tabindex="0">
 				<div class="hamburger">
 					<div class="middleLine"></div>
 				</div>
