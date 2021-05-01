@@ -272,7 +272,7 @@
     }
 
     .guidesTextContainer .sectionHeading,
-    .linkContainer .linkTextContainer {
+    .linkContainer .linkTextContainer .sectionHeading {
         text-align: center;
     }
 
@@ -317,7 +317,6 @@
     }
 
     .guidesTextContainer {
-        padding: 0 50px;
         width: 70%;
 
         .sectionHeading {
@@ -332,7 +331,7 @@
     .linksGridContainer {
         @include setFlex(column, space-around, center);
 
-        padding: 25px 20px;
+        padding: 25px 0;
     }
 
     .linkContainer {
@@ -341,6 +340,7 @@
 
         .linkTextContainer {
             margin-left: 0;
+            width: 100%;
         }
     }
 
@@ -366,12 +366,6 @@
 }
 
 @media (max-width: 768px) {
-    .aboutSectionWrapper,
-    .featureContainer .featureTextContainer,
-    .guidesTextContainer {
-        text-align: center;
-    }
-
     .topNav {
         padding: 0;
     }

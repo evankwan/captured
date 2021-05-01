@@ -1219,7 +1219,7 @@ a:focus {
             align-items: center;
   }
   .guidesTextContainer .sectionHeading,
-  .linkContainer .linkTextContainer {
+  .linkContainer .linkTextContainer .sectionHeading {
     text-align: center;
   }
   .topNav .topNavList a {
@@ -1253,7 +1253,6 @@ a:focus {
     width: 90%;
   }
   .guidesTextContainer {
-    padding: 0 50px;
     width: 70%;
   }
   .guidesTextContainer .sectionHeading {
@@ -1275,7 +1274,7 @@ a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 25px 20px;
+    padding: 25px 0;
   }
   .linkContainer {
     margin: 25px 0;
@@ -1283,6 +1282,7 @@ a:focus {
   }
   .linkContainer .linkTextContainer {
     margin-left: 0;
+    width: 100%;
   }
   .featureContainer {
     -webkit-box-orient: vertical;
@@ -1305,11 +1305,6 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .aboutSectionWrapper,
-  .featureContainer .featureTextContainer,
-  .guidesTextContainer {
-    text-align: center;
-  }
   .topNav {
     padding: 0;
   }
