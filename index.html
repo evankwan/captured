@@ -20,7 +20,7 @@
 					for the JS projects in the future, it would be done by toggling a class to show/hide menu,
 					but for the purpose of this project, I will stick to a checkbox
 				-->
-				<span class="sr-only"><label for="hamburger"></label></span>
+				<span class="sr-only"><label for="hamburger">Open Navigation Menu</label></span>
 				<input type="checkbox" name="hamburger" id="hamburger" class="hamburgerToggler" role="button" aria-pressed="false" tabindex="0">
 				<div class="hamburger">
 					<div class="middleLine"></div>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="imageContainer headerImageContainer">
 			<!-- I do not consider this image as 'content', purely for stylistic usage -->
-			<img src="./assets/header-box-image.jpg" alt="" class="headerImage  notVisible visibleTransition">
+			<img src="./assets/header-box-image.jpg" aria-hidden="true" class="headerImage  notVisible visibleTransition">
 		</div>
 	</header>
 
@@ -86,7 +86,7 @@
 			<div class="wrapper linksGridContainer notVisible">
 				<div class="linkContainer notVisible visibleTransition">
 					<div class="linkIconContainer">
-						<i class="fas fa-camera"></i>
+						<i class="fas fa-camera" aria-hidden="true"></i>
 					</div>
 					<div class="linkTextContainer">
 						<h3 class="sectionHeading">Top Picks</h3>
@@ -95,7 +95,7 @@
 				</div>
 				<div class="linkContainer notVisible visibleTransition">
 					<div class="linkIconContainer">
-						<i class="fas fa-users"></i>
+						<i class="fas fa-users" aria-hidden="true"></i>
 					</div>
 					<div class="linkTextContainer">
 						<h3 class="sectionHeading">Community</h3>
@@ -104,7 +104,7 @@
 				</div>
 				<div class="linkContainer notVisible visibleTransition">
 					<div class="linkIconContainer">
-						<i class="fas fa-file"></i>
+						<i class="fas fa-file" aria-hidden="true"></i>
 					</div>
 					<div class="linkTextContainer">
 						<h3 class="sectionHeading">Blog</h3>
@@ -113,7 +113,7 @@
 				</div>
 				<div class="linkContainer notVisible visibleTransition">
 					<div class="linkIconContainer">
-						<i class="fas fa-phone"></i>
+						<i class="fas fa-phone" aria-hidden="true"></i>
 					</div>
 					<div class="linkTextContainer">
 						<h3 class="sectionHeading">Get In Touch</h3>
