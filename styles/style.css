@@ -266,6 +266,8 @@ html {
 
 .imageContainer {
   overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .imageContainer img {
@@ -343,6 +345,19 @@ html {
   margin-right: 0;
 }
 
+.notVisible {
+  opacity: 0;
+}
+
+.visibility {
+  opacity: 1;
+}
+
+.visibleTransition {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1350px;
@@ -365,19 +380,19 @@ html {
     width: 80px;
     z-index: 20;
   }
-  .hamburgerToggler:checked + .hamburger .middleLine {
+  .hamburgerToggler.checked + .hamburger .middleLine {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
   }
-  .hamburgerToggler:checked + .hamburger .middleLine::before {
+  .hamburgerToggler.checked + .hamburger .middleLine::before {
     -webkit-transform: rotate(90deg) translate(20px);
             transform: rotate(90deg) translate(20px);
   }
-  .hamburgerToggler:checked + .hamburger .middleLine::after {
+  .hamburgerToggler.checked + .hamburger .middleLine::after {
     -webkit-transform: rotate(90deg) translate(-20px);
             transform: rotate(90deg) translate(-20px);
   }
-  .hamburgerToggler:checked + .hamburger + .topNavList {
+  .hamburgerToggler.checked + .hamburger + .topNavList {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
