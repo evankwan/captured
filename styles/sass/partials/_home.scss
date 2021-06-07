@@ -383,8 +383,8 @@
         a {
             @include resetMarginAndPadding();
 
-            outline: 5px solid transparent;
             font-size: 3rem;
+            outline: 5px solid transparent;
 
             &.active {
                 border-bottom: 3px solid $white;
